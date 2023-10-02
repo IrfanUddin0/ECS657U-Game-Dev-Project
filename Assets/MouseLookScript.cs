@@ -4,22 +4,37 @@ using UnityEngine;
 
 public class PlayerInputScript : MonoBehaviour
 {
-    Vector2 rotation = Vector2.zero;
-    public float speed = 3;
+    public enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
+    public RotationAxes axes = RotationAxes.MouseXAndY;
+    public float sensitivityX = 1F;
+    public float sensitivityY = 1F;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-    }
+    public float minimumY = -90F;
+    public float maximumY = 90F;
 
-    // Update is called once per frame
+    float rotationY = 0F;
+    float rotationX = 0F;
+
     void Update()
     {
-        rotation.y += Input.GetAxis("Mouse X");
-        rotation.x += -Input.GetAxis("Mouse Y");
-        transform.eulerAngles = new Vector2(Mathf.Clamp(rotation.x * speed, -90, 90), rotation.y * speed);
-  
+        rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+        rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
+
+        rotationX += Input.GetAxis("Mouse X") * sensitivityX;
+
+        transform.localEulerAngles = new Vector3(0, rotationX, 0);
+        transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
+
+        Camera.main.transform.localEulerAngles = new Vector3(-rotationY, 0, 0);
+    }
+
+    void Start()
+    {
+        // Make the rigid body not change rotation
+        if (GetComponent<Rigidbody>())
+            GetComponent<Rigidbody>().freezeRotation = true;
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
