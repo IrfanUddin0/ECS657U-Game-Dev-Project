@@ -25,7 +25,7 @@ public class PlayerInputScript : MonoBehaviour
         transform.localEulerAngles = new Vector3(0, rotationX, 0);
         transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
 
-        Camera.main.transform.localEulerAngles = new Vector3(-rotationY, 0, 0);
+        GameObject.FindGameObjectsWithTag("CameraArm")[0].transform.localEulerAngles = new Vector3(-rotationY,0,0);
     }
 
     void Start()

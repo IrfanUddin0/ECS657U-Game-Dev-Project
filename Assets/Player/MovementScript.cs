@@ -5,14 +5,15 @@ using static UnityEngine.GraphicsBuffer;
 
 public class MovementScript : MonoBehaviour
 {
-    float walkspeed = 5F;
+    public float base_walk_speed;
+    float walkspeed;
     public float jumpforce = 15F;
     public MovementState movementState=MovementState.Normal;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        ChangeMovementState(MovementState.Normal);
     }
 
     // Update is called once per frame
@@ -28,16 +29,18 @@ public class MovementScript : MonoBehaviour
 
     // HANDLE INPUT FUNCTIONS
 
-    void handleDirectionInput()
+    private void handleDirectionInput()
     {
         float hAxis = Input.GetAxis("Horizontal");
         float vAxis = Input.GetAxis("Vertical");
 
-        transform.position = transform.position + (vAxis * (new Vector3(transform.forward.x, 0F, transform.forward.z) * walkspeed * Time.deltaTime));
-        transform.position = transform.position + (hAxis * (transform.right * walkspeed * Time.deltaTime));
+        Vector3 new_pos = transform.position + (vAxis * (new Vector3(transform.forward.x, 0F, transform.forward.z) * walkspeed * Time.deltaTime));
+        new_pos += (hAxis * (transform.right * walkspeed * Time.deltaTime));
+
+        transform.position = new_pos;
     }
     
-    void handleJumpInput()
+    private void handleJumpInput()
     {
         if (Input.GetButtonDown("Jump"))
         {
@@ -45,7 +48,7 @@ public class MovementScript : MonoBehaviour
         }
     }
 
-    void handleSprintInput()
+    private void handleSprintInput()
     {
         if (Input.GetButtonDown("Sprint"))
         {
@@ -53,7 +56,7 @@ public class MovementScript : MonoBehaviour
         }
     }
 
-    void handleCrouchInput()
+    private void handleCrouchInput()
     {
         if (Input.GetButtonDown("Crouch"))
         {
@@ -63,7 +66,7 @@ public class MovementScript : MonoBehaviour
 
     // ON MOVEMENT FUNCTIONS
 
-    void onJump()
+    private void onJump()
     {
         switch(movementState)
         {
@@ -78,7 +81,7 @@ public class MovementScript : MonoBehaviour
         jump();
     }
 
-    void onSprint()
+    private void onSprint()
     {
         switch(movementState)
         {
@@ -97,7 +100,7 @@ public class MovementScript : MonoBehaviour
         ChangeMovementState(MovementState.Sprinting);
     }
 
-    void onCrouch()
+    private void onCrouch()
     {
         switch(movementState)
         {
@@ -112,10 +115,10 @@ public class MovementScript : MonoBehaviour
             case MovementState.Sprinting: return;
         }
 
-        transform.GetChild(0).GetComponent<CapsuleCollider>().height = 1;
+        GetComponent<CapsuleCollider>().height = 1;
     }
 
-    void stopCrouch()
+    private void stopCrouch()
     {
         switch (movementState)
         {
@@ -125,7 +128,7 @@ public class MovementScript : MonoBehaviour
             case MovementState.CrouchADS: ChangeMovementState(MovementState.NormalADS); break;
             case MovementState.Sprinting: return;
         }
-        transform.GetChild(0).GetComponent<CapsuleCollider>().height = 2;
+        GetComponent<CapsuleCollider>().height = 2;
     }
 
     void onADS()
@@ -143,7 +146,7 @@ public class MovementScript : MonoBehaviour
 
     // OTHER MOVEMENT RELATED FUNCTIONS
 
-    bool isGrounded()
+    public bool isGrounded()
     {
         float height = transform.GetChild(0).GetComponent<Collider>().bounds.size.z + .1f;
         Debug.DrawLine(transform.position, transform.position + (transform.up * -height), Color.red, 10,true);
@@ -154,7 +157,7 @@ public class MovementScript : MonoBehaviour
         return false;
     }
 
-    void jump()
+    public void jump()
     {
         if (isGrounded())
         {
@@ -163,32 +166,37 @@ public class MovementScript : MonoBehaviour
         }
     }
 
-    void ChangeMovementState(MovementState state)
+    public void ChangeMovementState(MovementState state)
     {
         print("changed movement state to:"+state.ToString());
         switch (state)
         {
             case MovementState.Normal:
-                walkspeed = 5F;
+                walkspeed = base_walk_speed;
                 break;
             case MovementState.NormalADS:
-                walkspeed = 2.5F;
+                walkspeed = base_walk_speed * 0.5f;
                 break;
             case MovementState.Crouching:
-                walkspeed = 2.5F;
+                walkspeed = base_walk_speed * 0.5f;
                 break;
             case MovementState.CrouchADS:
-                walkspeed = 2F;
+                walkspeed = base_walk_speed * 0.33f;
                 break;
             case MovementState.Sprinting:
-                walkspeed = 8F;
+                walkspeed = base_walk_speed * 1.75f;
                 break;
         }
 
         movementState = state;
     }
 
-    void sprintTickCheck()
+    public MovementState getMovementState()
+    {
+        return movementState;
+    }
+
+    private void sprintTickCheck()
     {
         if(movementState==MovementState.Sprinting && Input.GetAxis("Vertical")<1)
         {
