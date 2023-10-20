@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CameraBob : MonoBehaviour
 {
-    private float timer = 0.0f;
     public float bobbingSpeed = 0.18f;
     public float bobbingAmount = 0.2f;
 

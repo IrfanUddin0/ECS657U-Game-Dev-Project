@@ -5,20 +5,24 @@ using UnityEngine;
 public class CameraLag : MonoBehaviour
 {
     private float swayAmountX = 5;
-    private float swayAmountY = 2;
+    private float swayAmountY = 5;
     private float smooth = 8;
+    private float rotationAmmountDegH = 7;
+    private float rotationAmmountDegV = 3;
 
     private void Update()
     {
         float mouseX = Input.GetAxisRaw("Mouse X") * swayAmountX;
         float mouseY = Input.GetAxisRaw("Mouse Y") * swayAmountY;
 
-        Quaternion rotationX = Quaternion.AngleAxis(-mouseY, Vector3.right);
+        float directionRotationAmmountHorizontal = Input.GetAxis("Horizontal") * rotationAmmountDegH * -1;
+        float directionRotationAmmountVerical = Input.GetAxis("Vertical") * rotationAmmountDegV;
+
+        Quaternion rotationX = Quaternion.AngleAxis(-mouseY + directionRotationAmmountVerical, Vector3.right);
         Quaternion rotationY = Quaternion.AngleAxis(mouseX, Vector3.up);
+        Quaternion rotationZ = Quaternion.AngleAxis(directionRotationAmmountHorizontal, Vector3.forward);
 
-        Quaternion targetRot = rotationX * rotationY;
-
-        print(targetRot);   
+        Quaternion targetRot = rotationX * rotationY * rotationZ;
 
         transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRot, smooth * Time.deltaTime);
     }

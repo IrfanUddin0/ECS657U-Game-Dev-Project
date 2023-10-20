@@ -135,7 +135,7 @@ public class MovementScript : MonoBehaviour
     {
         switch (movementState)
         {
-
+            
         }
     }
 
@@ -148,7 +148,7 @@ public class MovementScript : MonoBehaviour
 
     public bool isGrounded()
     {
-        float height = transform.GetChild(0).GetComponent<Collider>().bounds.size.z + .1f;
+        float height = transform.GetComponent<Collider>().bounds.size.z + .1f;
         Debug.DrawLine(transform.position, transform.position + (transform.up * -height), Color.red, 10,true);
         if (Physics.Linecast(transform.position, transform.position + (transform.up * -height)))
         {
