@@ -46,9 +46,11 @@ GameObject:
   - component: {fileID: 5156077803263477364}
   - component: {fileID: 5093322487426858403}
   - component: {fileID: 4600518989800103290}
+  - component: {fileID: 4640018199595226201}
+  - component: {fileID: 6977569306313549548}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,6 +153,30 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4640018199595226201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3882264334022184889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b64e0ef95a351546a4369813025a76f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6977569306313549548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3882264334022184889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f5266095d6e86342ac9704164e69da6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8040521109169198392
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,9 +287,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
-  field of view: 60
+  field of view: 77
   orthographic: 0
   orthographic size: 5
   m_Depth: 0

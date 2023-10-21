@@ -198,7 +198,7 @@ public class MovementScript : MonoBehaviour
 
     private void sprintTickCheck()
     {
-        if(movementState==MovementState.Sprinting && Input.GetAxis("Vertical")<1)
+        if(movementState==MovementState.Sprinting && Input.GetAxis("Vertical")<0.1f)
         {
             onSprint();
         }
