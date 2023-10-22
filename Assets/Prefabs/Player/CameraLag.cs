@@ -15,7 +15,7 @@ public class CameraLag : MonoBehaviour
         float mouseX = Input.GetAxisRaw("Mouse X") * swayAmountX;
         float mouseY = Input.GetAxisRaw("Mouse Y") * swayAmountY;
 
-        float directionRotationAmmountHorizontal = Input.GetAxis("Horizontal") * rotationAmmountDegH * -1;
+        float directionRotationAmmountHorizontal = Mathf.Clamp(Input.GetAxis("Horizontal") * rotationAmmountDegH * -1, -rotationAmmountDegH, rotationAmmountDegH/2);
         float directionRotationAmmountVerical = Input.GetAxis("Vertical") * rotationAmmountDegV;
 
         Quaternion rotationX = Quaternion.AngleAxis(-mouseY + directionRotationAmmountVerical, Vector3.right);

@@ -30,6 +30,11 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public ref List<Item> getItems()
+    {
+        return ref itemList;
+    }
+
     // Method to spawn an instance of the item in the world.
     private void SpawnItemInWorld(Item item)
     {
@@ -39,10 +44,6 @@ public class Inventory : MonoBehaviour
             Instantiate(item.PickupPrefab, spawnPoint.position, Quaternion.identity);
         }
     }
-
-    public void Update()
-    {
-    }
 }
 
 [System.Serializable]
@@ -51,4 +52,5 @@ public class Item
     public string itemName;
     public GameObject PickupPrefab;
     public GameObject EquipPrefab;
+    public Sprite image;
 }

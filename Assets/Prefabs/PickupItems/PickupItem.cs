@@ -11,6 +11,7 @@ public class PrefabMapping
     public string PrefabMappingName;
     public GameObject keyPrefab;
     public GameObject valuePrefab;
+    public Sprite image;
 }
 
 [CreateAssetMenu(fileName = "PrefabCollection", menuName = "Custom/Prefab Collection")]
@@ -45,6 +46,7 @@ public class PickupItem : PlayerInteractable
             item.PickupPrefab = mapping.keyPrefab;
             item.EquipPrefab = mapping.valuePrefab;
             item.itemName = mapping.valuePrefab.name;
+            item.image = mapping.image;
             playerInven.AddItem(item);
             Destroy(gameObject);
         }

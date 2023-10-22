@@ -23,8 +23,8 @@ public class MainPlayerScript : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Q))
         {
-            Inventory inven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
-            inven.RemoveItemByIndex(0);
+            Inventory playerInven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
+            playerInven.RemoveItemByIndex(0);
         }
     }
 
