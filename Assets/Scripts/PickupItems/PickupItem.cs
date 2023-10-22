@@ -40,7 +40,6 @@ public class PickupItem : PlayerInteractable
         Inventory playerInven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
         if(playerInven != null)
         {
-            print(gameObject.IsPrefabInstance());
             Item item = new Item();
             PrefabMapping mapping = prefabCollection.prefabMappings.Find(x => x.PrefabMappingName == MappingName);
             item.PickupPrefab = mapping.keyPrefab;

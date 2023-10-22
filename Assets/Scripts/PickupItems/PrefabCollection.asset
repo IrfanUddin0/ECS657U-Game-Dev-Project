@@ -15,5 +15,5 @@ MonoBehaviour:
   prefabMappings:
   - PrefabMappingName: Testing
     keyPrefab: {fileID: 994200610082977035, guid: ae70dbd9ca316ec48826977ccefe8bee, type: 3}
-    valuePrefab: {fileID: 6454320195760751793, guid: 250145e9ac4074b7bacc130ec1d651df, type: 3}
+    valuePrefab: {fileID: 5435844516253738363, guid: 397e66916c023c947b630eaf9b8771ce, type: 3}
     image: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}

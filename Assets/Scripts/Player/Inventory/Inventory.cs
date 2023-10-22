@@ -9,6 +9,13 @@ public class Inventory : MonoBehaviour
     public void AddItem(Item item)
     {
         itemList.Add(item);
+
+        // if this is the first item added, equip it
+        if(itemList.Count == 1)
+        {
+            InventoryEquipManager manager = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<InventoryEquipManager>();
+            manager.ChangeEquipIndex(0);
+        }
     }
 
     // Method to remove an item from the inventory.
@@ -16,8 +23,15 @@ public class Inventory : MonoBehaviour
     {
         if (itemList.Contains(item))
         {
+            InventoryEquipManager manager = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<InventoryEquipManager>();
+            if (manager.currentEquipIndex == FindIndexByItem(item))
+                manager.UnEquip();
+
+            if (FindIndexByItem(item) < manager.currentEquipIndex)
+                manager.currentEquipIndex -= 1;
             itemList.Remove(item);
             SpawnItemInWorld(item);
+
         }
     }
 
@@ -33,6 +47,25 @@ public class Inventory : MonoBehaviour
     public ref List<Item> getItems()
     {
         return ref itemList;
+    }
+
+    public int getSize()
+    {
+        return itemList.Count;
+    }
+
+    public int FindIndexByItem(Item item)
+    {
+        for (int i = 0; i < itemList.Count; i++)
+        {
+            if (itemList[i] == item) { return i; }
+        }
+        return -1;
+    }
+
+    public Item getItemAtIndex(int index)
+    {
+        return itemList[index];
     }
 
     // Method to spawn an instance of the item in the world.

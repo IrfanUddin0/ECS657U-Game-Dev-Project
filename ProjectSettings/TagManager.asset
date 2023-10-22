@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerCamera
   - CameraArm
+  - EquipSpawner
   layers:
   - Default
   - TransparentFX
