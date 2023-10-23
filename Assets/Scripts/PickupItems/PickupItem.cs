@@ -1,8 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 [System.Serializable]
