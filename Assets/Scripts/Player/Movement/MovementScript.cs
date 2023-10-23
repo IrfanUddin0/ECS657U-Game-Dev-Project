@@ -185,7 +185,7 @@ public class MovementScript : MonoBehaviour
         wep.OnADSClicked();
     }
 
-    void stopADS()
+    public void stopADS()
     {
         switch (movementState)
         {

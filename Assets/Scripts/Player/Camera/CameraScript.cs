@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInputScript : MonoBehaviour
+public class CameraScript : MonoBehaviour
 {
     public enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
     public RotationAxes axes = RotationAxes.MouseXAndY;
@@ -18,6 +18,8 @@ public class PlayerInputScript : MonoBehaviour
     float rotationY = 0F;
     float rotationX = 0F;
 
+    private float fov_transform_velocity;
+
     void Update()
     {
         rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
@@ -29,6 +31,8 @@ public class PlayerInputScript : MonoBehaviour
         transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
 
         GameObject.FindGameObjectsWithTag("CameraArm")[0].transform.localEulerAngles = new Vector3(-rotationY,0,0);
+
+        interpCameraFov();
     }
 
     void Start()
@@ -40,5 +44,20 @@ public class PlayerInputScript : MonoBehaviour
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    void interpCameraFov()
+    {
+        Camera activecam = GameObject.FindGameObjectsWithTag("CameraArm")[0].GetComponentInChildren<Camera>();
+        MovementState state = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<MovementScript>().getMovementState();
+        float ads_fov_scale = 1.0f;
+        if(GetComponentInChildren<EquippableItemEvents>()!=null)
+            ads_fov_scale = GetComponentInChildren<EquippableItemEvents>().ads_fov_scale;
+        
+        activecam.fieldOfView = Mathf.SmoothDamp(
+            activecam.fieldOfView,
+            (state == MovementState.NormalADS || state==MovementState.CrouchADS) ? cameraFieldOfView * ads_fov_scale : cameraFieldOfView,
+            ref fov_transform_velocity,
+            0.25f);
     }
 }

@@ -56,5 +56,8 @@ public class InventoryEquipManager : MonoBehaviour
         {
             GameObject.Destroy(child.gameObject);
         }
+
+        MovementScript player = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<MovementScript>();
+        player.stopADS();
     }
 }

@@ -6,12 +6,11 @@ using UnityEngine;
 public class EquippableItemEvents : MonoBehaviour
 {
     public float ads_time = 0.01f;
-    public float ads_fov_sacle = 0.8f;
+    public float ads_fov_scale = 0.8f;
     public Vector3 target_ads_transform_const = Vector3.zero;
 
     private Vector3 current_ads_translation = Vector3.zero;
     private Vector3 transform_velocity;
-    private float fov_transform_velocity;
 
     bool fire_held = false;
     // Start is called before the first frame update
@@ -75,16 +74,5 @@ public class EquippableItemEvents : MonoBehaviour
             current_ads_translation,
             ref transform_velocity,
             ads_time);
-
-        float base_fov = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerInputScript>().cameraFieldOfView;
-        Camera activecam = GameObject.FindGameObjectsWithTag("CameraArm")[0].GetComponentInChildren<Camera>();
-        if( activecam != null )
-        {
-            activecam.fieldOfView = Mathf.SmoothDamp(
-                activecam.fieldOfView,
-                (current_ads_translation==Vector3.zero)? base_fov :base_fov * ads_fov_sacle,
-                ref fov_transform_velocity,
-                ads_time);
-        }
     }
 }

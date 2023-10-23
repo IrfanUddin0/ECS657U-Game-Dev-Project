@@ -50,4 +50,9 @@ public class MainPlayerScript : MonoBehaviour
         if (FocusedInteractableObject != null)
             FocusedInteractableObject.GetComponent<PlayerInteractable>().OnInteract();
     }
+
+    public GameObject getFocusedInteractableObject()
+    {
+        return FocusedInteractableObject;
+    }
 }
