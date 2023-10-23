@@ -29,12 +29,13 @@ public class InventoryEquipManager : MonoBehaviour
     public void ChangeEquipIndex(int index)
     {
         print("changing to slot " + index);
+
+        UnEquip();
         Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
 
         // if out of range OR double clicked then unequip
         if (index >= inventory.getSize() || currentEquipIndex == index)
         {
-            UnEquip();
             return;
         }
 
