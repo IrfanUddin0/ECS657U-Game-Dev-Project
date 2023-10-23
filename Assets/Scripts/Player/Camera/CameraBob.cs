@@ -14,8 +14,12 @@ public class CameraBob : MonoBehaviour
         float sprint_multiplier = 1f;
         if (movementState==MovementState.Sprinting) { sprint_multiplier = 2f; }
 
+        float ads_multiplier = 1f;
+        if (movementState == MovementState.NormalADS || movementState == MovementState.CrouchADS)
+            ads_multiplier = 0.1f;
+
         float elapsed_time = Time.timeSinceLevelLoad;
-        Vector3 offset = input_axis.magnitude * bobbingAmount * new Vector3(
+        Vector3 offset = input_axis.magnitude * (ads_multiplier * bobbingAmount) * new Vector3(
             Mathf.Sin(elapsed_time * bobbingSpeed * sprint_multiplier),
             Mathf.Sin(elapsed_time * 2 * bobbingSpeed * sprint_multiplier),
             0);

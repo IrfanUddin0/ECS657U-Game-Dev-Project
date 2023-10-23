@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ads_time: 0.1
-  ads_fov_sacle: 0.8
-  target_ads_transform_const: {x: -0.2, y: 0.03, z: -0.1}
+  ads_fov_scale: 0.8
+  target_ads_transform_const: {x: -0.2, y: 0.035, z: -0.1}
 --- !u!1001 &3059391492279593106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82,7 +82,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3945439267341489056, guid: d203906c532c7414bb2292dc2ec075b5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.477
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 3945439267341489056, guid: d203906c532c7414bb2292dc2ec075b5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -111,6 +111,18 @@ PrefabInstance:
     - target: {fileID: 3945439267341489056, guid: d203906c532c7414bb2292dc2ec075b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057719828660112639, guid: d203906c532c7414bb2292dc2ec075b5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.132
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057719828660112639, guid: d203906c532c7414bb2292dc2ec075b5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.138
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057719828660112639, guid: d203906c532c7414bb2292dc2ec075b5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.043
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
