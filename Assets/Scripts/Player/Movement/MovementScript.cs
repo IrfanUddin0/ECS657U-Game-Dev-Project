@@ -24,6 +24,9 @@ public class MovementScript : MonoBehaviour
         handleSprintInput();
         handleCrouchInput();
 
+        handleFireInput();
+        handleAdsInput();
+
         sprintTickCheck();
     }
 
@@ -63,6 +66,41 @@ public class MovementScript : MonoBehaviour
             onCrouch();
         }
     }
+
+    private bool canFire()
+    {
+        return movementState != MovementState.Sprinting;
+    }
+
+    private void handleFireInput()
+    {
+        EquippableItemEvents wep = GetComponentInChildren<EquippableItemEvents>();
+        if (wep == null) { return; }
+
+        if(Input.GetButtonDown("Fire1") && canFire())
+        {
+            wep.OnFireClicked();
+        }
+
+        if(Input.GetButtonUp("Fire1"))
+        {
+            wep.OnFireReleased();
+        }
+    }
+
+    private void handleAdsInput()
+    {
+        if (Input.GetButtonDown("ADS")){ onADS(); }
+
+        if (Input.GetButtonUp("ADS")){ stopADS(); }
+    }
+
+    private void handleReloadInput()
+    {
+        
+    }
+
+
 
     // ON MOVEMENT FUNCTIONS
 
@@ -135,13 +173,31 @@ public class MovementScript : MonoBehaviour
     {
         switch (movementState)
         {
-            
+            case MovementState.Normal: ChangeMovementState(MovementState.NormalADS); break;
+            case MovementState.NormalADS: stopADS(); return;
+            case MovementState.Crouching: ChangeMovementState(MovementState.CrouchADS); break;
+            case MovementState.CrouchADS: stopADS(); return;
+            case MovementState.Sprinting: return;
         }
+
+        EquippableItemEvents wep = GetComponentInChildren<EquippableItemEvents>();
+        if (wep == null) { return; }
+        wep.OnADSClicked();
     }
 
     void stopADS()
     {
-
+        switch (movementState)
+        {
+            case MovementState.Normal: return;
+            case MovementState.NormalADS: ChangeMovementState(MovementState.Normal); break;
+            case MovementState.Crouching: return;
+            case MovementState.CrouchADS: ChangeMovementState(MovementState.Crouching); break;
+            case MovementState.Sprinting: return;
+        }
+        EquippableItemEvents wep = GetComponentInChildren<EquippableItemEvents>();
+        if (wep == null) { return; }
+        wep.OnADSReleased();
     }
 
     // OTHER MOVEMENT RELATED FUNCTIONS

@@ -9,8 +9,11 @@ public class PlayerInputScript : MonoBehaviour
     public float sensitivityX = 1F;
     public float sensitivityY = 1F;
 
+    public float cameraFieldOfView = 77.0f;
+
     public float minimumY = -90F;
     public float maximumY = 90F;
+
 
     float rotationY = 0F;
     float rotationX = 0F;
@@ -30,6 +33,7 @@ public class PlayerInputScript : MonoBehaviour
 
     void Start()
     {
+        GameObject.FindGameObjectsWithTag("CameraArm")[0].GetComponentInChildren<Camera>().fieldOfView = cameraFieldOfView;
         // Make the rigid body not change rotation
         if (GetComponent<Rigidbody>())
             GetComponent<Rigidbody>().freezeRotation = true;

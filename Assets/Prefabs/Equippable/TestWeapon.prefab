@@ -45,6 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b6249c860feb94ab1d1f9e5d54506d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ads_time: 0.1
+  ads_fov_sacle: 0.8
+  target_ads_transform_const: {x: -0.2, y: 0.03, z: -0.1}
 --- !u!1001 &3059391492279593106
 PrefabInstance:
   m_ObjectHideFlags: 0

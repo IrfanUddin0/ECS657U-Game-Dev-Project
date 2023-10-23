@@ -7,6 +7,7 @@ TagManager:
   - PlayerCamera
   - CameraArm
   - EquipSpawner
+  - ActiveWeapon
   layers:
   - Default
   - TransparentFX
