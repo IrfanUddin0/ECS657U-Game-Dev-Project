@@ -28,29 +28,35 @@ public class LineTraceWeapon : Weapon
         Debug.DrawLine(cam.transform.position + 0.01f * cam.transform.forward, range * cam.transform.forward + cam.transform.position,
             debugDraw?Color.red : Color.clear,15);
 
+        PlayCameraShake();
+
         if (hit.transform == null)
             return;
         else
         {
             //print("Hit");
             //TODO: take damage, bullethole, smoke, sound
-            Camera activecam = GameObject.FindGameObjectsWithTag("CameraArm")[0].GetComponentInChildren<Camera>();
-            CameraScript camscript = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<CameraScript>();
-            camscript.AddCameraShakeToPlay(
-                new CameraShakeRandom(
-                    activecam.transform,
-                    cameraShakeDuration,
-                    cameraShakeAmmount,
-                    cameraShakeDecreaseFactor,
-                    cameraShakeSmoothness));
-            camscript.AddCameraShakeToPlay(
-                new CameraShake(
-                    activecam.transform,
-                    0.1f,
-                    cameraShootJumpAmmount,
-                    1f,
-                    1f
-                    ));
         }
+    }
+
+    private void PlayCameraShake()
+    {
+        Camera activecam = GameObject.FindGameObjectsWithTag("CameraArm")[0].GetComponentInChildren<Camera>();
+        CameraScript camscript = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<CameraScript>();
+        camscript.AddCameraShakeToPlay(
+            new CameraShakeRandom(
+                activecam.transform,
+                cameraShakeDuration,
+                cameraShakeAmmount,
+                cameraShakeDecreaseFactor,
+                cameraShakeSmoothness));
+        camscript.AddCameraShakeToPlay(
+            new CameraShake(
+                activecam.transform,
+                0.1f,
+                cameraShootJumpAmmount,
+                1f,
+                1f
+                ));
     }
 }
