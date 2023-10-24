@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SemiAutoLineTraceWeapon : LineTraceWeapon
+public class FullAutoLineTraceWeapon : LineTraceWeapon
 {
     [Header("Weapon Details")]
     public float minShootTime;
@@ -20,9 +20,9 @@ public class SemiAutoLineTraceWeapon : LineTraceWeapon
         base.Update();
     }
 
-    public override void OnFireClicked()
+    protected override void OnFireHeld()
     {
-        base.OnFireClicked();
+        base.OnFireHeld();
         ShootEvent();
     }
 

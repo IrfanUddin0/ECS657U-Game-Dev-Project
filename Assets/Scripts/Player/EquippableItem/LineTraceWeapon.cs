@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LineTraceWeapon : Weapon
 {
+    [Header("Weapon Details")]
     public float range;
     public bool debugDraw;
     // Start is called before the first frame update

@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class EquippableItemEvents : MonoBehaviour
 {
-    public float ads_time = 0.01f;
+    [Header("ADS Transform")]
+    public float ads_time = 0.1f;
     public float ads_fov_scale = 0.8f;
     public Vector3 target_ads_transform_const = Vector3.zero;
 

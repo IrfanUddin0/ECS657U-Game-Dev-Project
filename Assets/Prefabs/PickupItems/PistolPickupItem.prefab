@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8843734445128468810}
   - component: {fileID: 3421309231120250638}
   m_Layer: 0
-  m_Name: TestPickupItem
+  m_Name: PistolPickupItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabCollection: {fileID: 11400000, guid: 2f03dafe98447824babde205cbdc17bd, type: 2}
-  MappingName: Testing
+  MappingName: Pistol
 --- !u!65 &8843734445128468810
 BoxCollider:
   m_ObjectHideFlags: 0

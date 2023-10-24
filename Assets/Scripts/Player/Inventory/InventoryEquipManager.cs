@@ -5,39 +5,35 @@ using UnityEngine;
 public class InventoryEquipManager : MonoBehaviour
 {
     public int currentEquipIndex = -1;
-    private bool[] keyDownSlots = null;
+    private int inventorySlots = 5;
 
     void Start()
     {
-        keyDownSlots = new bool[]{ false, false, false, false, false};
     }
 
     void Update()
     {
-        for (int i = 0; i < keyDownSlots.Length; i++)
+        for (int i = 0; i < inventorySlots; i++)
         {
-            if(Input.GetAxis("Slot"+(i+1))!=0 && keyDownSlots[i]==false)
+            if(Input.GetButtonDown("Slot"+(i+1)))
             {
                 ChangeEquipIndex(i);
-                keyDownSlots[i] = true;
             }
-            if (Input.GetAxis("Slot" + (i + 1)) == 0)
-                keyDownSlots[i] = false;
         }
     }
 
     public void ChangeEquipIndex(int index)
     {
         print("changing to slot " + index);
-
-        UnEquip();
         Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
 
         // if out of range OR double clicked then unequip
         if (index >= inventory.getSize() || currentEquipIndex == index)
         {
+            UnEquip();
             return;
         }
+        UnEquip();
 
         GameObject spawner = GameObject.FindGameObjectWithTag("EquipSpawner");
         GameObject spawnedEquippable = Instantiate(inventory.getItemAtIndex(index).EquipPrefab);

@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Weapon : EquippableItemEvents
 {
+    [Header("Weapon Details")]
     public float baseDamage;
-    public float cameraShakeDuration;
-    public float cameraShakeAmmount;
-    public float cameraShakeDecreaseFactor;
-    public float cameraShakeSmoothness;
-    public float cameraShootJumpAmmount;
+    [Header("CameraShake")]
+    public float cameraShakeDuration=0.1f;
+    public float cameraShakeAmmount=50f;
+    public float cameraShakeDecreaseFactor=3f;
+    public float cameraShakeSmoothness=1f;
+    public float cameraShootJumpAmmount=1f;
     // Start is called before the first frame update
     public override void Start()
     {
