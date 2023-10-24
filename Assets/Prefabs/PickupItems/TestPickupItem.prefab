@@ -32,7 +32,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6905735364745456501}
+  - {fileID: 5834305562461791559}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6820608043514734104
@@ -68,7 +68,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.7, y: 0.5, z: 0.2}
+  m_Size: {x: 0.4, y: 0.3, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3421309231120250638
 Rigidbody:
@@ -97,7 +97,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1001 &5150255695122004929
+--- !u!1001 &8420973884476831229
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -105,57 +105,57 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5689311372325314551}
     m_Modifications:
-    - target: {fileID: 1778776706986478740, guid: 3fab9dcca6a961845a178028d664ab59, type: 3}
-      propertyPath: m_Name
-      value: Pistol 92 Dark
-      objectReference: {fileID: 0}
-    - target: {fileID: 1778776706986578100, guid: 3fab9dcca6a961845a178028d664ab59, type: 3}
+    - target: {fileID: 2606127188911313082, guid: 05b1804e595465f4e88c04e3cdf6fb36, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.447
       objectReference: {fileID: 0}
-    - target: {fileID: 1778776706986578100, guid: 3fab9dcca6a961845a178028d664ab59, type: 3}
+    - target: {fileID: 2606127188911313082, guid: 05b1804e595465f4e88c04e3cdf6fb36, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.126
       objectReference: {fileID: 0}
-    - target: {fileID: 1778776706986578100, guid: 3fab9dcca6a961845a178028d664ab59, type: 3}
+    - target: {fileID: 2606127188911313082, guid: 05b1804e595465f4e88c04e3cdf6fb36, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 1778776706986578100, guid: 3fab9dcca6a961845a178028d664ab59, type: 3}
+    - target: {fileID: 2606127188911313082, guid: 05b1804e595465f4e88c04e3cdf6fb36, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 1778776706986578100, guid: 3fab9dcca6a961845a178028d664ab59, type: 3}
+    - target: {fileID: 2606127188911313082, guid: 05b1804e595465f4e88c04e3cdf6fb36, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1778776706986578100, guid: 3fab9dcca6a961845a178028d664ab59, type: 3}
+    - target: {fileID: 2606127188911313082, guid: 05b1804e595465f4e88c04e3cdf6fb36, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 1778776706986578100, guid: 3fab9dcca6a961845a178028d664ab59, type: 3}
+    - target: {fileID: 2606127188911313082, guid: 05b1804e595465f4e88c04e3cdf6fb36, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1778776706986578100, guid: 3fab9dcca6a961845a178028d664ab59, type: 3}
+    - target: {fileID: 2606127188911313082, guid: 05b1804e595465f4e88c04e3cdf6fb36, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1778776706986578100, guid: 3fab9dcca6a961845a178028d664ab59, type: 3}
+    - target: {fileID: 2606127188911313082, guid: 05b1804e595465f4e88c04e3cdf6fb36, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 1778776706986578100, guid: 3fab9dcca6a961845a178028d664ab59, type: 3}
+    - target: {fileID: 2606127188911313082, guid: 05b1804e595465f4e88c04e3cdf6fb36, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9129121161613545443, guid: 05b1804e595465f4e88c04e3cdf6fb36, type: 3}
+      propertyPath: m_Name
+      value: PistolTets
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3fab9dcca6a961845a178028d664ab59, type: 3}
---- !u!4 &6905735364745456501 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 05b1804e595465f4e88c04e3cdf6fb36, type: 3}
+--- !u!4 &5834305562461791559 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1778776706986578100, guid: 3fab9dcca6a961845a178028d664ab59, type: 3}
-  m_PrefabInstance: {fileID: 5150255695122004929}
+  m_CorrespondingSourceObject: {fileID: 2606127188911313082, guid: 05b1804e595465f4e88c04e3cdf6fb36, type: 3}
+  m_PrefabInstance: {fileID: 8420973884476831229}
   m_PrefabAsset: {fileID: 0}

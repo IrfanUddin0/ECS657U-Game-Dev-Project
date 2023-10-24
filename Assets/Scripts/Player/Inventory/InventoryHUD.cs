@@ -33,6 +33,8 @@ public class InventoryHUD : MonoBehaviour
             GameObject panel = Instantiate(inventoryHUDPanel);
             panel.transform.SetParent(transform, false);
             panel.transform.localPosition = new Vector3(0, i*-64, 0);
+
+            panel.transform.GetComponentInChildren<InventoryPanelScript>().SetItem(items[i]);
         }
     }
 }

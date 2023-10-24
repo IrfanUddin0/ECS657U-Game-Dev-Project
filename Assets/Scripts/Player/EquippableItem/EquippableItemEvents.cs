@@ -27,18 +27,15 @@ public class EquippableItemEvents : MonoBehaviour
 
     public virtual void OnFireClicked()
     {
-        print("FIre");
         fire_held = true;
     }
 
     protected virtual void OnFireHeld()
     {
-        print("fire held");
     }
 
     public virtual void OnFireReleased()
     {
-        print("Fire released");
         fire_held = false;
     }
 
