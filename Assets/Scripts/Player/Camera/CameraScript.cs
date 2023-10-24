@@ -19,6 +19,7 @@ public class CameraScript : MonoBehaviour
     float rotationX = 0F;
 
     private float fov_transform_velocity;
+    private List<CameraShake> activeCameraShakes = new List<CameraShake>();
 
     void Update()
     {
@@ -33,6 +34,7 @@ public class CameraScript : MonoBehaviour
         GameObject.FindGameObjectsWithTag("CameraArm")[0].transform.localEulerAngles = new Vector3(-rotationY,0,0);
 
         interpCameraFov();
+        PlayCameraShake();
     }
 
     void Start()
@@ -59,5 +61,94 @@ public class CameraScript : MonoBehaviour
             (state == MovementState.NormalADS || state==MovementState.CrouchADS) ? cameraFieldOfView * ads_fov_scale : cameraFieldOfView,
             ref fov_transform_velocity,
             0.25f);
+    }
+
+    public void AddCameraShakeToPlay(CameraShake shake)
+    {
+        activeCameraShakes.Add(shake);
+    }
+
+    void PlayCameraShake()
+    {
+        for (int i = 0;i< activeCameraShakes.Count;i++)
+        {
+            CameraShake cameraShake = activeCameraShakes[i];
+            cameraShake.PlayShakeUpdate();
+
+            if (cameraShake.duration == 0)
+                activeCameraShakes.Remove(cameraShake);
+        }
+    }
+}
+
+public class CameraShake
+{
+    public Transform camTransform;
+    public float duration;
+    public float shakeAmount;
+    public float decreaseFactor;
+    public float smoothness;
+
+    protected Vector3 originalPos;
+    protected Quaternion originalRot;
+    private Vector3 currentSmoothVelocity;
+
+    public CameraShake(Transform camT, float p_shakeDuration, float p_shakeAmount, float p_decreaseFactor, float p_smoothness)
+    {
+        camTransform = camT;
+        originalPos = camTransform.localPosition;
+        originalRot = camTransform.localRotation;
+        duration = p_shakeDuration;
+        shakeAmount = p_shakeAmount;
+        decreaseFactor = p_decreaseFactor;
+        smoothness = p_smoothness;
+    }
+
+    public virtual void PlayShakeUpdate()
+    {
+        if (duration > 0)
+        {
+            float jumpAngle = shakeAmount * Mathf.Sin(2 * Mathf.PI * 2f * duration);
+            camTransform.localRotation = Quaternion.Euler(jumpAngle, 0, 0);
+
+            duration -= Time.deltaTime * decreaseFactor;
+        }
+        else
+        {
+            duration = 0f;
+            camTransform.localPosition = originalPos;
+            camTransform.localRotation = originalRot;
+        }
+    }
+}
+
+
+
+public class CameraShakeRandom : CameraShake
+{
+    private Vector3 currentSmoothVelocity;
+
+    public CameraShakeRandom(Transform camT, float p_shakeDuration, float p_shakeAmount, float p_decreaseFactor, float p_smoothness)
+        : base(camT, p_shakeDuration, p_shakeAmount, p_decreaseFactor, p_smoothness)
+    {
+    }
+
+    public override void PlayShakeUpdate()
+    {
+        if (duration > 0)
+        {
+            camTransform.localPosition = Vector3.SmoothDamp(
+                camTransform.localPosition,
+                originalPos + Random.insideUnitSphere * shakeAmount,
+                ref currentSmoothVelocity,
+                smoothness);
+
+            duration -= Time.deltaTime * decreaseFactor;
+        }
+        else
+        {
+            duration = 0f;
+            camTransform.localPosition = originalPos;
+        }
     }
 }

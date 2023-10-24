@@ -14,12 +14,12 @@ public class EquippableItemEvents : MonoBehaviour
 
     bool fire_held = false;
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         adsAnimTick();
         if( fire_held ) { OnFireHeld(); }
@@ -32,6 +32,7 @@ public class EquippableItemEvents : MonoBehaviour
 
     protected virtual void OnFireHeld()
     {
+        ShootEvent();
     }
 
     public virtual void OnFireReleased()
@@ -57,6 +58,10 @@ public class EquippableItemEvents : MonoBehaviour
     public virtual void OnReloadCanceled()
     {
 
+    }
+
+    protected virtual void ShootEvent()
+    {
     }
 
     private void setAdsAnimNew(bool reverse)
