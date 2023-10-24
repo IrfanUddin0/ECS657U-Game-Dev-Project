@@ -32,7 +32,6 @@ public class EquippableItemEvents : MonoBehaviour
 
     protected virtual void OnFireHeld()
     {
-        ShootEvent();
     }
 
     public virtual void OnFireReleased()

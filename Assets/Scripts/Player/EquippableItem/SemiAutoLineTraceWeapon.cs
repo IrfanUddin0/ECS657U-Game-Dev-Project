@@ -19,6 +19,12 @@ public class SemiAutoLineTraceWeapon : LineTraceWeapon
         base.Update();
     }
 
+    public override void OnFireClicked()
+    {
+        base.OnFireClicked();
+        ShootEvent();
+    }
+
     protected override void ShootEvent()
     {
         base.ShootEvent();

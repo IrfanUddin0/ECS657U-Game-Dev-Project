@@ -25,7 +25,7 @@ public class LineTraceWeapon : Weapon
         RaycastHit hit;
         Physics.Linecast(cam.transform.position + 0.01f * cam.transform.forward, range * cam.transform.forward + cam.transform.position, out hit);
         Debug.DrawLine(cam.transform.position + 0.01f * cam.transform.forward, range * cam.transform.forward + cam.transform.position,
-            debugDraw?Color.red : Color.clear);
+            debugDraw?Color.red : Color.clear,15);
 
         if (hit.transform == null)
             return;
