@@ -15,6 +15,7 @@ public class InventoryUIBottom : MonoBehaviour
     void Update()
     {
         Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
+        int equipped = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<InventoryEquipManager>().currentEquipIndex;
         List<Item> items = inventory.getItems();
 
         foreach (Transform child in transform)
@@ -28,6 +29,11 @@ public class InventoryUIBottom : MonoBehaviour
 
             GameObject imageObject = new GameObject("ItemImage");
             Image imageComponent = imageObject.AddComponent<Image>();
+
+            if(equipped==i)
+                imageComponent.color = Color.white;
+            else
+                imageComponent.color = Color.gray;
 
             float currentHeight = GetComponent<RectTransform>().sizeDelta.y;
 
