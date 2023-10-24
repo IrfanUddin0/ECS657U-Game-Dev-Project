@@ -12,7 +12,7 @@ public class MainPlayerScript : MonoBehaviour
     void Update()
     {
         checkForInteractable();
-        if(Input.GetAxis("Interact")>0)
+        if(Input.GetButtonDown("Interact"))
         {
             onInteractClicked();
         }
