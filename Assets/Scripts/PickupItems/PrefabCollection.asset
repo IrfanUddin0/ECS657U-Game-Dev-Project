@@ -20,4 +20,4 @@ MonoBehaviour:
   - PrefabMappingName: SMG
     keyPrefab: {fileID: 994200610082977035, guid: 8dcfa32af0d826c4593c179d5bfc189f, type: 3}
     valuePrefab: {fileID: 5435844516253738363, guid: 6ec1ef7b82adf414e8c9862132f9dc85, type: 3}
-    image: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    image: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
