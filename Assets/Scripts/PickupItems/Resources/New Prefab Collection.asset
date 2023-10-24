@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 254eccdc05d33524c9ad0b0877478eeb, type: 3}
+  m_Name: New Prefab Collection
+  m_EditorClassIdentifier: 
+  prefabMappings:
+  - PrefabMappingName: Pistol
+    keyPrefab: {fileID: 994200610082977035, guid: ae70dbd9ca316ec48826977ccefe8bee, type: 3}
+    valuePrefab: {fileID: 5435844516253738363, guid: 397e66916c023c947b630eaf9b8771ce, type: 3}
+    image: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - PrefabMappingName: SMG
+    keyPrefab: {fileID: 994200610082977035, guid: 8dcfa32af0d826c4593c179d5bfc189f, type: 3}
+    valuePrefab: {fileID: 5435844516253738363, guid: 6ec1ef7b82adf414e8c9862132f9dc85, type: 3}
+    image: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}

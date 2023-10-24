@@ -1,28 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class PrefabMapping
-{
-    public string PrefabMappingName;
-    public GameObject keyPrefab;
-    public GameObject valuePrefab;
-    public Sprite image;
-}
-
-[CreateAssetMenu(fileName = "PrefabCollection", menuName = "Custom/Prefab Collection")]
-public class PrefabCollection : ScriptableObject
-{
-    public List<PrefabMapping> prefabMappings = new List<PrefabMapping>();
-}
-
 public class PickupItem : PlayerInteractable
 {
-    [SerializeField] public PrefabCollection prefabCollection;
+    public PrefabCollection prefabCollection;
     // Start is called before the first frame update
     public string MappingName;
     void Start()
     {
+        print(prefabCollection.name);
     }
 
     // Update is called once per frame
