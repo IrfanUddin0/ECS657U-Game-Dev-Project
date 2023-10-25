@@ -12,6 +12,7 @@ public class Weapon : EquippableItemEvents
     public float cameraShakeDecreaseFactor=3f;
     public float cameraShakeSmoothness=1f;
     public float cameraShootJumpAmmount=1f;
+    public bool PlayAttackingAnim = false;
     // Start is called before the first frame update
     public override void Start()
     {

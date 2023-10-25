@@ -30,6 +30,7 @@ public class LineTraceWeapon : Weapon
             debugDraw?Color.red : Color.clear,15);
 
         PlayCameraShake();
+        PlayAttackingAnim = true;
 
         if (hit.transform == null)
             return;
