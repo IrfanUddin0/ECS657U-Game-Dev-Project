@@ -20,7 +20,8 @@ public class MainPlayerScript : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Q))
         {
             Inventory playerInven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
-            playerInven.RemoveItemByIndex(0);
+            InventoryEquipManager inventoryEquipManager = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<InventoryEquipManager>();
+            playerInven.RemoveItemByIndex(inventoryEquipManager.currentEquipIndex);
         }
     }
 

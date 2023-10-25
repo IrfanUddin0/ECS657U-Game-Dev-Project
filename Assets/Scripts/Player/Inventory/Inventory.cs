@@ -8,9 +8,9 @@ public class Inventory : MonoBehaviour
     // Method to add an item to the inventory.
     public void AddItem(Item item)
     {
-        if(findItemAlreadyInInventory(item)!=null)
+        if(findLastItemAlreadyInInventory(item)!=null && item.maxInStack > findLastItemAlreadyInInventory(item).count)
         {
-            findItemAlreadyInInventory(item).count++;
+            findLastItemAlreadyInInventory(item).count++;
         }
         else
         {
@@ -39,6 +39,7 @@ public class Inventory : MonoBehaviour
                 manager.currentEquipIndex -= 1;
             SpawnItemInWorld(item);
 
+            print("REMOVING ITEM COUNT IS:" + item.count);
             if(item.count<=1)
                 itemList.Remove(item);
             else
@@ -91,14 +92,15 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    private Item findItemAlreadyInInventory(Item item)
+    private Item findLastItemAlreadyInInventory(Item item)
     {
+        Item outItem = null;
         foreach (Item invenItem in itemList)
         {
             if(invenItem.EquipPrefab == item.EquipPrefab)
-                return invenItem;
+                outItem = invenItem;
         }
-        return null;
+        return outItem;
     }
 }
 

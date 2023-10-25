@@ -8,7 +8,6 @@ public class PickupItem : PlayerInteractable
     public string MappingName;
     void Start()
     {
-        print(prefabCollection.name);
     }
 
     // Update is called once per frame
