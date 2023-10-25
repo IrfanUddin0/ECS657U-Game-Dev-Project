@@ -34,8 +34,8 @@ public class PlayerSurvival : MonoBehaviour
         thirst -= thirstDecreaseRate * Time.deltaTime;
 
         // Ensure hunger and thirst don't go below 0
-        hunger = Mathf.Clamp(hunger, 0, 1.0f);
-        thirst = Mathf.Clamp(thirst, 0, 1.0f);
+        hunger = Mathf.Clamp(hunger, 0.0f, 1.0f);
+        thirst = Mathf.Clamp(thirst, 0.0f, 1.0f);
 
         // If hunger or thirst reach zero, reduce health over time
         if (hunger <= 0 || thirst <= 0)
@@ -45,6 +45,8 @@ public class PlayerSurvival : MonoBehaviour
 
         if (health <= 0)
         {
+            if (!dead)
+                OnDeath();
             dead = true;
         }
     }
@@ -55,5 +57,25 @@ public class PlayerSurvival : MonoBehaviour
     public void ReplenishThirst()
     {
         thirst = 1.0f;
+    }
+
+    public float GetHealth()
+    {
+        return health;
+    }
+
+    public float getHunger()
+    {
+        return hunger;
+    }
+
+    public float GetThirst()
+    {
+        return thirst;
+    }
+
+    public void OnDeath()
+    {
+
     }
 }
