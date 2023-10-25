@@ -14,4 +14,5 @@ public class PrefabMapping
     public GameObject keyPrefab;
     public GameObject valuePrefab;
     public Sprite image;
+    public int maxInStack;
 }

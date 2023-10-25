@@ -8,10 +8,18 @@ public class Inventory : MonoBehaviour
     // Method to add an item to the inventory.
     public void AddItem(Item item)
     {
-        itemList.Add(item);
+        if(findItemAlreadyInInventory(item)!=null)
+        {
+            findItemAlreadyInInventory(item).count++;
+        }
+        else
+        {
+            item.count = 1;
+            itemList.Add(item);
+        }
 
         // if this is the first item added, equip it
-        if(itemList.Count == 1)
+        if(itemList.Count == 1 && item.count==1)
         {
             InventoryEquipManager manager = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<InventoryEquipManager>();
             manager.ChangeEquipIndex(0);
@@ -29,9 +37,14 @@ public class Inventory : MonoBehaviour
 
             if (FindIndexByItem(item) < manager.currentEquipIndex)
                 manager.currentEquipIndex -= 1;
-            itemList.Remove(item);
             SpawnItemInWorld(item);
 
+            if(item.count<=1)
+                itemList.Remove(item);
+            else
+            {
+                item.count--;
+            }
         }
     }
 
@@ -77,6 +90,16 @@ public class Inventory : MonoBehaviour
             Instantiate(item.PickupPrefab, spawnPoint.position, Quaternion.identity);
         }
     }
+
+    private Item findItemAlreadyInInventory(Item item)
+    {
+        foreach (Item invenItem in itemList)
+        {
+            if(invenItem.EquipPrefab == item.EquipPrefab)
+                return invenItem;
+        }
+        return null;
+    }
 }
 
 [System.Serializable]
@@ -86,4 +109,6 @@ public class Item
     public GameObject PickupPrefab;
     public GameObject EquipPrefab;
     public Sprite image;
+    public int maxInStack;
+    public int count;
 }

@@ -28,6 +28,7 @@ public class PickupItem : PlayerInteractable
             item.EquipPrefab = mapping.valuePrefab;
             item.itemName = mapping.valuePrefab.name;
             item.image = mapping.image;
+            item.maxInStack = mapping.maxInStack;
             playerInven.AddItem(item);
             Destroy(gameObject);
         }
