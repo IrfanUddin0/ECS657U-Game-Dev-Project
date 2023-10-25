@@ -12,19 +12,12 @@ public class InventoryPanelScript : MonoBehaviour
     {
         this.item = item;
         Image icon = transform.GetChild(1).gameObject.GetComponentInChildren<Image>();
-        TextMeshProUGUI name = gameObject.GetComponentInChildren<TextMeshProUGUI>();
+        TextMeshProUGUI[] texts = gameObject.GetComponentsInChildren<TextMeshProUGUI>();
         Button[] buttons = gameObject.GetComponentsInChildren<Button>();
 
         icon.sprite = item.image;
-        name.text = item.itemName;
-        //buttons[0].onClick.AddListener();
-        buttons[1].onClick.AddListener(
-            () =>
-            {
-                print("clicked");
-                Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
-                inventory.RemoveItem(item);
-            });
+        texts[0].text = item.itemName;
+        texts[1].text = ""+item.count;
     }
 
     public static void test()
