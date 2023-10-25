@@ -13,7 +13,6 @@ public class InventoryPanelScript : MonoBehaviour
         this.item = item;
         Image icon = transform.GetChild(1).gameObject.GetComponentInChildren<Image>();
         TextMeshProUGUI[] texts = gameObject.GetComponentsInChildren<TextMeshProUGUI>();
-        Button[] buttons = gameObject.GetComponentsInChildren<Button>();
 
         icon.sprite = item.image;
         texts[0].text = item.itemName;

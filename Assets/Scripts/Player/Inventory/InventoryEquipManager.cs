@@ -41,6 +41,7 @@ public class InventoryEquipManager : MonoBehaviour
         spawnedEquippable.transform.position = spawner.transform.position;
         spawnedEquippable.transform.rotation = spawner.transform.rotation;
         currentEquipIndex = index;
+        OnEquipChanged();
     }
 
     public void UnEquip()
@@ -56,5 +57,14 @@ public class InventoryEquipManager : MonoBehaviour
 
         MovementScript player = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<MovementScript>();
         player.stopADS();
+        OnEquipChanged();
+    }
+
+    public void OnEquipChanged()
+    {
+        foreach (InventoryUIElement UIElem in GameObject.FindGameObjectWithTag("Player").GetComponentsInChildren<InventoryUIElement>())
+        {
+            UIElem.OnInventoryUpdate();
+        }
     }
 }

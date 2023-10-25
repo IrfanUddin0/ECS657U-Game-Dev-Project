@@ -2,18 +2,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InventoryUIBottom : MonoBehaviour
+public class InventoryUIBottom : InventoryUIElement
 {
     public Sprite defaultImage;
     public GameObject InventoryBottomPrefab;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
-    void Update()
+    public override void OnInventoryUpdate()
     {
         Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
         int equipped = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<InventoryEquipManager>().currentEquipIndex;

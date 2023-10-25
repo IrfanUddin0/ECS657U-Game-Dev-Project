@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InventoryHUD : MonoBehaviour
+public class InventoryHUD : InventoryUIElement
 {
     public GameObject inventoryHUDPanel;
     // Start is called before the first frame update
@@ -12,14 +12,7 @@ public class InventoryHUD : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        UpdateInventoryView();
-
-    }
-
-    private void UpdateInventoryView()
+    public override void OnInventoryUpdate()
     {
         Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
         List<Item> items = inventory.getItems();
@@ -32,7 +25,7 @@ public class InventoryHUD : MonoBehaviour
         {
             GameObject panel = Instantiate(inventoryHUDPanel);
             panel.transform.SetParent(transform, false);
-            panel.transform.localPosition = new Vector3(0, i*-64, 0);
+            //panel.transform.localPosition = new Vector3(0, i*-64, 0);
 
             panel.transform.GetComponentInChildren<InventoryPanelScript>().SetItem(items[i]);
         }

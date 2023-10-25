@@ -24,6 +24,8 @@ public class Inventory : MonoBehaviour
             InventoryEquipManager manager = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<InventoryEquipManager>();
             manager.ChangeEquipIndex(0);
         }
+
+        OnInventoryUpdated();
     }
 
     // Method to remove an item from the inventory.
@@ -47,6 +49,8 @@ public class Inventory : MonoBehaviour
                 item.count--;
             }
         }
+
+        OnInventoryUpdated();
     }
 
     public void RemoveItemByIndex(int index)
@@ -101,6 +105,14 @@ public class Inventory : MonoBehaviour
                 outItem = invenItem;
         }
         return outItem;
+    }
+
+    private void OnInventoryUpdated()
+    {
+        foreach(InventoryUIElement UIElem in GameObject.FindGameObjectWithTag("Player").GetComponentsInChildren<InventoryUIElement>())
+        {
+            UIElem.OnInventoryUpdate();
+        }
     }
 }
 
