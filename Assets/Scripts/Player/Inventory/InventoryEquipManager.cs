@@ -13,6 +13,12 @@ public class InventoryEquipManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Inventory playerInven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
+            playerInven.RemoveItemByIndex(currentEquipIndex);
+        }
+
         for (int i = 0; i < inventorySlots; i++)
         {
             if(Input.GetButtonDown("Slot"+(i+1)))

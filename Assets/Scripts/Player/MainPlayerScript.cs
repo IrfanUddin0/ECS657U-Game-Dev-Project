@@ -16,13 +16,6 @@ public class MainPlayerScript : MonoBehaviour
         {
             onInteractClicked();
         }
-
-        if(Input.GetKeyDown(KeyCode.Q))
-        {
-            Inventory playerInven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
-            InventoryEquipManager inventoryEquipManager = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<InventoryEquipManager>();
-            playerInven.RemoveItemByIndex(inventoryEquipManager.currentEquipIndex);
-        }
     }
 
     // method will do a linecast and look for any objects that have PlayerInteractable component

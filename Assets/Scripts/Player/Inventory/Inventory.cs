@@ -41,7 +41,6 @@ public class Inventory : MonoBehaviour
                 manager.currentEquipIndex -= 1;
             SpawnItemInWorld(item);
 
-            print("REMOVING ITEM COUNT IS:" + item.count);
             if(item.count<=1)
                 itemList.Remove(item);
             else
