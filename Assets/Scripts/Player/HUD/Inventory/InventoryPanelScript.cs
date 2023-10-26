@@ -13,10 +13,23 @@ public class InventoryPanelScript : MonoBehaviour
         this.item = item;
         Image icon = transform.GetChild(1).gameObject.GetComponentInChildren<Image>();
         TextMeshProUGUI[] texts = gameObject.GetComponentsInChildren<TextMeshProUGUI>();
+        Button[] buttons = gameObject.GetComponentsInChildren<Button>();
 
         icon.sprite = item.image;
         texts[0].text = item.itemName;
         texts[1].text = ""+item.count;
+
+        // if equipped then hide equip button
+        Inventory inven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
+        InventoryEquipManager manager = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<InventoryEquipManager>();
+        if (inven.FindIndexByItem(item) < manager.getInventorySlots())
+        {
+            buttons[2].colors = new ColorBlock();
+            buttons[2].GetComponentInChildren<TextMeshProUGUI>().color = Color.clear;
+        }
+            
+        else
+            buttons[2].onClick.AddListener(EquipButtonPressed);
     }
 
     public static void test()
@@ -28,5 +41,31 @@ public class InventoryPanelScript : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void EquipButtonPressed()
+    {
+        print("called EquipButtonPressed");
+        InventoryEquipManager manager = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<InventoryEquipManager>();
+        Inventory inven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
+
+        // if already equipped then do nothing
+        if (inven.FindIndexByItem(item) < manager.getInventorySlots())
+            return;
+
+        // if currently not equipped anything then swap the first item
+        if(manager.currentEquipIndex == -1)
+        {
+            inven.SwapItemPositions(inven.getItemAtIndex(0), item);
+            manager.ChangeEquipIndex(0);
+        }
+        // else swap the currently eqipped item
+        else
+        {
+            int index = manager.currentEquipIndex;
+            inven.SwapItemPositions(inven.getItemAtIndex(index), item);
+            manager.ChangeEquipIndex(-1);
+            manager.ChangeEquipIndex(index);
+        }
     }
 }

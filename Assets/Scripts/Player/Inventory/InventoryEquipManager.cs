@@ -34,7 +34,7 @@ public class InventoryEquipManager : MonoBehaviour
         Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
 
         // if out of range OR double clicked then unequip
-        if (index >= inventory.getSize() || currentEquipIndex == index)
+        if (index >= inventory.getSize() || currentEquipIndex == index || index < 0)
         {
             UnEquip();
             return;
@@ -72,5 +72,10 @@ public class InventoryEquipManager : MonoBehaviour
         {
             UIElem.OnInventoryUpdate();
         }
+    }
+
+    public int getInventorySlots()
+    {
+        return inventorySlots;
     }
 }

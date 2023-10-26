@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -59,6 +60,14 @@ public class Inventory : MonoBehaviour
             Item item = itemList[index];
             RemoveItem(item);
         }
+    }
+
+    public void SwapItemPositions(Item item1,  Item item2)
+    {
+        int index1 = itemList.IndexOf(item1);
+        int index2 = itemList.IndexOf(item2);
+        itemList[index1] = item2;
+        itemList[index2] = item1;
     }
 
     public ref List<Item> getItems()
