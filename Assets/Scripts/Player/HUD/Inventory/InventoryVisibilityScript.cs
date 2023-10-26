@@ -26,6 +26,8 @@ public class InventoryVisibilityScript : MonoBehaviour
         GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        GameObject.FindGameObjectsWithTag("Player")[0].GetComponentInChildren<MainPlayerScript>().inputModeSetUI();
     }
 
     void hide()
@@ -33,5 +35,7 @@ public class InventoryVisibilityScript : MonoBehaviour
         GetComponent<RectTransform>().localScale = Vector3.zero;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        GameObject.FindGameObjectsWithTag("Player")[0].GetComponentInChildren<MainPlayerScript>().inputModeSetPlaying();
     }
 }

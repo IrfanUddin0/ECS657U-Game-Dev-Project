@@ -21,21 +21,6 @@ public class CameraScript : MonoBehaviour
     private float fov_transform_velocity;
     private List<CameraShake> activeCameraShakes = new List<CameraShake>();
 
-    void Update()
-    {
-        rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-        rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
-
-        rotationX += Input.GetAxis("Mouse X") * sensitivityX;
-
-        transform.localEulerAngles = new Vector3(0, rotationX, 0);
-        transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
-
-        GameObject.FindGameObjectsWithTag("CameraArm")[0].transform.localEulerAngles = new Vector3(-rotationY,0,0);
-
-        interpCameraFov();
-        PlayCameraShake();
-    }
 
     void Start()
     {
@@ -46,6 +31,26 @@ public class CameraScript : MonoBehaviour
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    void Update()
+    {
+        InputMode mode = GameObject.FindGameObjectsWithTag("Player")[0].GetComponentInChildren<MainPlayerScript>().inputMode;
+        if(mode==InputMode.Playing)
+        {
+            rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+            rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
+
+            rotationX += Input.GetAxis("Mouse X") * sensitivityX;
+
+            transform.localEulerAngles = new Vector3(0, rotationX, 0);
+            transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
+
+            GameObject.FindGameObjectsWithTag("CameraArm")[0].transform.localEulerAngles = new Vector3(-rotationY, 0, 0);
+        }
+
+        interpCameraFov();
+        PlayCameraShake();
     }
 
     void interpCameraFov()

@@ -19,13 +19,17 @@ public class MovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        handleDirectionInput();
-        handleJumpInput();
-        handleSprintInput();
-        handleCrouchInput();
+        InputMode mode = GameObject.FindGameObjectsWithTag("Player")[0].GetComponentInChildren<MainPlayerScript>().inputMode;
+        if (mode == InputMode.Playing)
+        {
+            handleDirectionInput();
+            handleJumpInput();
+            handleSprintInput();
+            handleCrouchInput();
 
-        handleFireInput();
-        handleAdsInput();
+            handleFireInput();
+            handleAdsInput();
+        }
 
         sprintTickCheck();
     }

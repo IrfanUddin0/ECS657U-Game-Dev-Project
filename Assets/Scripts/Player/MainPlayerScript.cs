@@ -1,8 +1,14 @@
 using UnityEngine;
+public enum InputMode
+{
+    Playing,
+    UI
+}
 
 public class MainPlayerScript : MonoBehaviour
 {
     GameObject FocusedInteractableObject = null;
+    public InputMode inputMode = InputMode.Playing;
 
     void Start()
     {
@@ -11,11 +17,24 @@ public class MainPlayerScript : MonoBehaviour
 
     void Update()
     {
-        checkForInteractable();
-        if(Input.GetButtonDown("Interact"))
+        if(inputMode == InputMode.Playing)
         {
-            onInteractClicked();
+            checkForInteractable();
+            if (Input.GetButtonDown("Interact"))
+            {
+                onInteractClicked();
+            }
         }
+    }
+
+    public void inputModeSetUI()
+    {
+        inputMode = InputMode.UI;
+    }
+
+    public void inputModeSetPlaying()
+    {
+        inputMode = InputMode.Playing;
     }
 
     // method will do a linecast and look for any objects that have PlayerInteractable component
