@@ -25,8 +25,8 @@ public class LineTraceWeapon : Weapon
         GameObject cam = GameObject.FindGameObjectsWithTag("CameraArm")[0];
 
         RaycastHit hit;
-        Physics.Linecast(cam.transform.position + 0.01f * cam.transform.forward, range * cam.transform.forward + cam.transform.position, out hit);
-        Debug.DrawLine(cam.transform.position + 0.01f * cam.transform.forward, range * cam.transform.forward + cam.transform.position,
+        Physics.Linecast(cam.transform.position + 0.2f * cam.transform.forward, range * cam.transform.forward + cam.transform.position, out hit);
+        Debug.DrawLine(cam.transform.position + 0.2f * cam.transform.forward, range * cam.transform.forward + cam.transform.position,
             debugDraw?Color.red : Color.clear,15);
 
         PlayCameraShake();
