@@ -30,6 +30,9 @@ public class InventoryPanelScript : MonoBehaviour
             
         else
             buttons[2].onClick.AddListener(EquipButtonPressed);
+
+        buttons[0].onClick.AddListener(DropAllPressed);
+        buttons[1].onClick.AddListener(DropOnePressed);
     }
 
     public static void test()
@@ -66,6 +69,22 @@ public class InventoryPanelScript : MonoBehaviour
             inven.SwapItemPositions(inven.getItemAtIndex(index), item);
             manager.ChangeEquipIndex(-1);
             manager.ChangeEquipIndex(index);
+        }
+    }
+
+    void DropOnePressed()
+    {
+        Inventory inven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
+        inven.RemoveItem(item);
+    }
+
+    void DropAllPressed()
+    {
+        Inventory inven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
+        int count = item.count;
+        for (int i = 0; i < count; i++)
+        {
+            inven.RemoveItem(item);
         }
     }
 }
