@@ -40,25 +40,4 @@ public class LineTraceWeapon : Weapon
             //TODO: take damage, bullethole, smoke, sound
         }
     }
-
-    private void PlayCameraShake()
-    {
-        Camera activecam = GameObject.FindGameObjectsWithTag("CameraArm")[0].GetComponentInChildren<Camera>();
-        CameraScript camscript = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<CameraScript>();
-        camscript.AddCameraShakeToPlay(
-            new CameraShakeRandom(
-                activecam.transform,
-                cameraShakeDuration,
-                cameraShakeAmmount,
-                cameraShakeDecreaseFactor,
-                cameraShakeSmoothness));
-        camscript.AddCameraShakeToPlay(
-            new CameraShake(
-                activecam.transform,
-                0.1f,
-                cameraShootJumpAmmount,
-                1f,
-                1f
-                ));
-    }
 }

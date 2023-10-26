@@ -28,3 +28,8 @@ MonoBehaviour:
     valuePrefab: {fileID: 5435844516253738363, guid: 6714d4bfa18ef4a41afe71c5dea3db6e, type: 3}
     image: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
     maxInStack: 1
+  - PrefabMappingName: Bow
+    keyPrefab: {fileID: 994200610082977035, guid: 6c32c05f3a9e09b43a67d39942b73f7a, type: 3}
+    valuePrefab: {fileID: 5435844516253738363, guid: 3608c614dcbb4b5459ed2da36700b5fd, type: 3}
+    image: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    maxInStack: 1
