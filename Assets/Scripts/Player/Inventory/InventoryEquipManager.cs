@@ -13,21 +13,17 @@ public class InventoryEquipManager : MonoBehaviour
 
     void Update()
     {
-        InputMode mode = GameObject.FindGameObjectsWithTag("Player")[0].GetComponentInChildren<MainPlayerScript>().inputMode;
-        if (mode == InputMode.Playing)
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                Inventory playerInven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
-                playerInven.RemoveItemByIndex(currentEquipIndex);
-            }
+            Inventory playerInven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
+            playerInven.RemoveItemByIndex(currentEquipIndex);
+        }
 
-            for (int i = 0; i < inventorySlots; i++)
+        for (int i = 0; i < inventorySlots; i++)
+        {
+            if (Input.GetButtonDown("Slot" + (i + 1)))
             {
-                if (Input.GetButtonDown("Slot" + (i + 1)))
-                {
-                    ChangeEquipIndex(i);
-                }
+                ChangeEquipIndex(i);
             }
         }
     }
