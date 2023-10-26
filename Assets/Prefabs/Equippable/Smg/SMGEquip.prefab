@@ -55,6 +55,7 @@ MonoBehaviour:
   cameraShakeDecreaseFactor: 3
   cameraShakeSmoothness: 1
   cameraShootJumpAmmount: 1
+  PlayAttackingAnim: 0
   range: 100
   debugDraw: 1
   minShootTime: 0.1
@@ -164,9 +165,45 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2924132729850171902}
     m_Modifications:
+    - target: {fileID: 1144507315264065524, guid: 9c1e8904af0fbd8428f496b6c232add8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200655838477608896, guid: 9c1e8904af0fbd8428f496b6c232add8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2440838129607772359, guid: 9c1e8904af0fbd8428f496b6c232add8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340540899971508008, guid: 9c1e8904af0fbd8428f496b6c232add8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3576343982055646900, guid: 9c1e8904af0fbd8428f496b6c232add8, type: 3}
       propertyPath: m_Name
       value: SMGPrototype
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803074448494594024, guid: 9c1e8904af0fbd8428f496b6c232add8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023207236509913147, guid: 9c1e8904af0fbd8428f496b6c232add8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519441888701073380, guid: 9c1e8904af0fbd8428f496b6c232add8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533623882519697931, guid: 9c1e8904af0fbd8428f496b6c232add8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661658445092970825, guid: 9c1e8904af0fbd8428f496b6c232add8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9070186007137056127, guid: 9c1e8904af0fbd8428f496b6c232add8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -206,6 +243,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9070186007137056127, guid: 9c1e8904af0fbd8428f496b6c232add8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119936466216328589, guid: 9c1e8904af0fbd8428f496b6c232add8, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -36,7 +36,9 @@ public class LineTraceWeapon : Weapon
             return;
         else
         {
-            //print("Hit");
+            if(hit.rigidbody != null)
+                hit.rigidbody.AddForceAtPosition(1000 * cam.transform.forward, hit.point);
+
             //TODO: take damage, bullethole, smoke, sound
         }
     }

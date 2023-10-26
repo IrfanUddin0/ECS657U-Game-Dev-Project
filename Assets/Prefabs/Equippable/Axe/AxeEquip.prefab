@@ -168,6 +168,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2924132729850171902}
     m_Modifications:
+    - target: {fileID: 126326420638848931, guid: 5ee38edb0913a4042a1f7601f80ecb1d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 383666278544624826, guid: 5ee38edb0913a4042a1f7601f80ecb1d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770773495814006967, guid: 5ee38edb0913a4042a1f7601f80ecb1d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2910914529770626528, guid: 5ee38edb0913a4042a1f7601f80ecb1d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -211,6 +223,14 @@ PrefabInstance:
     - target: {fileID: 3958357537099906690, guid: 5ee38edb0913a4042a1f7601f80ecb1d, type: 3}
       propertyPath: m_Name
       value: AxePrototype
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237348600207133257, guid: 5ee38edb0913a4042a1f7601f80ecb1d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586396530730805713, guid: 5ee38edb0913a4042a1f7601f80ecb1d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
