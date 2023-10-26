@@ -56,6 +56,10 @@ MonoBehaviour:
   cameraShakeSmoothness: 1
   cameraShootJumpAmmount: 1
   PlayAttackingAnim: 0
+  RecoilXAmmountMax: 0.5
+  RecoilXAmmountMin: -0.5
+  RecoilYAmmountMax: 2
+  RecoilYAmmountMin: 0.5
   range: 100
   debugDraw: 1
   minShootTime: 0.1

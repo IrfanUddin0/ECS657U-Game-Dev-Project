@@ -15,8 +15,8 @@ public class CameraScript : MonoBehaviour
     public float maximumY = 90F;
 
 
-    float rotationY = 0F;
-    float rotationX = 0F;
+    public float rotationY = 0F;
+    public float rotationX = 0F;
 
     private float fov_transform_velocity;
     private List<CameraShake> activeCameraShakes = new List<CameraShake>();

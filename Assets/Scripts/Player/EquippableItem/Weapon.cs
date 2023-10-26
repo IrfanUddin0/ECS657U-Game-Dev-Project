@@ -13,6 +13,12 @@ public class Weapon : EquippableItemEvents
     public float cameraShakeSmoothness=1f;
     public float cameraShootJumpAmmount=1f;
     public bool PlayAttackingAnim = false;
+
+    public float RecoilXAmmountMax = 0.0f;
+    public float RecoilXAmmountMin = 0.0f;
+
+    public float RecoilYAmmountMax = 0.0f;
+    public float RecoilYAmmountMin = 0.0f;
     // Start is called before the first frame update
     public override void Start()
     {
@@ -44,6 +50,13 @@ public class Weapon : EquippableItemEvents
                 1f,
                 1f
                 ));
+    }
+
+    protected void AddRecoil()
+    {
+        CameraScript cam = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<CameraScript>();
+        cam.rotationX += Random.Range(RecoilXAmmountMin, RecoilXAmmountMax);
+        cam.rotationY += Random.Range(RecoilYAmmountMin, RecoilYAmmountMax);
     }
 
     //todo: ammo management, reloading

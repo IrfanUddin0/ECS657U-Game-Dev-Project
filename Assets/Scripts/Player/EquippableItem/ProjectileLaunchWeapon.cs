@@ -26,6 +26,7 @@ public class ProjectileLaunchWeapon : Weapon
         projectileInstance.GetComponent<Projectile>().Launch(projectileLaunchScale, call);
 
         PlayCameraShake();
+        AddRecoil();
         PlayAttackingAnim = true;
     }
 
