@@ -13,7 +13,7 @@ public class InventoryEquipManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetButtonDown("Drop"))
         {
             Inventory playerInven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
             playerInven.RemoveItemByIndex(currentEquipIndex);
