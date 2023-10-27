@@ -4,5 +4,9 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Irfan/IrfanTestingScene.unity
+    guid: f29b0a6d0449c31478ad8c1adfb2f004
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
