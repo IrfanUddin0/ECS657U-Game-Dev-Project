@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.HID;
 
 public class ProjectileLaunchWeapon : Weapon
 {
@@ -32,5 +33,8 @@ public class ProjectileLaunchWeapon : Weapon
 
     protected void ProjectileReturnsHit(Vector3 hit_pos, Collider hit_col)
     {
+        PlayerHittable hittable = hit_col.transform.GetComponentInChildren<PlayerHittable>();
+        if (hittable != null)
+            DamageEntity(hittable);
     }
 }

@@ -59,5 +59,10 @@ public class Weapon : EquippableItemEvents
         cam.rotationY += Random.Range(RecoilYAmmountMin, RecoilYAmmountMax);
     }
 
+    protected void DamageEntity(PlayerHittable EntityHit)
+    {
+        EntityHit.OnPlayerHit(baseDamage);
+    }
+
     //todo: ammo management, reloading
 }

@@ -4,20 +4,11 @@ using UnityEngine;
 
 public class PlayerHittable : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float health;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public virtual void OnPlayerHit()
+    public virtual void OnPlayerHit(float dmg)
     {
         print("Player Hit");
+        health -= dmg;
     }
 }

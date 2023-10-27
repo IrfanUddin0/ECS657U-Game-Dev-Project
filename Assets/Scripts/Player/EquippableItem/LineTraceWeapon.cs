@@ -40,6 +40,9 @@ public class LineTraceWeapon : Weapon
             if(hit.rigidbody != null)
                 hit.rigidbody.AddForceAtPosition(1000 * cam.transform.forward, hit.point);
 
+            PlayerHittable hittable = hit.transform.GetComponentInChildren<PlayerHittable>();
+            if (hittable!=null)
+                DamageEntity(hittable);
             //TODO: take damage, bullethole, smoke, sound
         }
     }
