@@ -33,7 +33,10 @@ public class ProjectileLaunchWeapon : Weapon
 
     protected void ProjectileReturnsHit(Vector3 hit_pos, Collider hit_col)
     {
-        PlayerHittable hittable = hit_col.transform.GetComponentInChildren<PlayerHittable>();
+        PlayerHittable hittable = hit_col.GetComponentInParent<PlayerHittable>();
+        if (hittable == null)
+            hittable = hit_col.GetComponentInChildren<PlayerHittable>();
+
         if (hittable != null)
             DamageEntity(hittable);
     }

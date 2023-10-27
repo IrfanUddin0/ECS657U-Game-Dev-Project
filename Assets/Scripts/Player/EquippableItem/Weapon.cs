@@ -61,6 +61,7 @@ public class Weapon : EquippableItemEvents
 
     protected void DamageEntity(PlayerHittable EntityHit)
     {
+        print(EntityHit);
         EntityHit.OnPlayerHit(baseDamage);
     }
 
