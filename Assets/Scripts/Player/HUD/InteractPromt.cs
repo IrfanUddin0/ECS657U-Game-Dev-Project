@@ -18,8 +18,8 @@ public class InteractPromt : MonoBehaviour
         if(player.getFocusedInteractableObject()!=null )
         {
             gameObject.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
-            string interactName = player.getFocusedInteractableObject().name;
-            gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "Interact: "+interactName;
+            string interactName = player.getFocusedInteractableObject().GetComponentInChildren<PlayerInteractable>().interactPromt;
+            gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "[Interact] "+interactName;
         }
         else
         {

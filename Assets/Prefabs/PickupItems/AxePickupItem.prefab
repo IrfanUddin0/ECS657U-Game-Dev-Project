@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 935976e617b5acc47b05515f304407f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactPromt: Pickup Axe
   prefabCollection: {fileID: 11400000, guid: 8aac15c160556834aad8e8abf75c5b21, type: 2}
   MappingName: Axe
 --- !u!65 &8843734445128468810

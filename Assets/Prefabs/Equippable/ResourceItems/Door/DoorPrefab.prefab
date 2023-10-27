@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8cf81ccccc5f974ea7b64d553fbef1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactPromt: 
+  interactPromt: Open Door
 --- !u!65 &9075921595338273001
 BoxCollider:
   m_ObjectHideFlags: 0
