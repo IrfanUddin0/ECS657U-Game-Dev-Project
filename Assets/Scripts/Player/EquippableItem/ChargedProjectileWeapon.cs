@@ -47,7 +47,6 @@ public class ChargedProjectileWeapon : ProjectileLaunchWeapon
         if (!PlayAttackingAnim) return 0.0f;
         float chargeTime = Time.time - chargeStartTime;
         float scale = Mathf.Clamp(chargeTime / fullChargeTime, 0f, 1f);
-        print(scale);
         return scale;
     }
 }
