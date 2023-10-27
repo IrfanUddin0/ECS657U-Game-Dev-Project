@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TreeScript : MonoBehaviour
+[RequireComponent(typeof(PlayerHittable))]
+public class DestroyableObject : MonoBehaviour
 {
     PlayerHittable health;
-    public GameObject woodToSpawn;
+    public GameObject PickupableToSpawn;
     void Start()
     {
         health = GetComponent<PlayerHittable>();
@@ -16,7 +17,7 @@ public class TreeScript : MonoBehaviour
     {
         if (health.health <= 0)
         {
-            Instantiate(woodToSpawn, gameObject.transform.position, gameObject.transform.rotation);
+            Instantiate(PickupableToSpawn, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
     }

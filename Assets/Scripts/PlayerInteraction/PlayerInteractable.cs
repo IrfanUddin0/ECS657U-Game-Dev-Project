@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerInteractable : MonoBehaviour
 {
+    public string interactPromt;
     // Start is called before the first frame update
     void Start()
     {
