@@ -11,6 +11,13 @@ public class ProjectileLaunchWeapon : Weapon
     public Transform firePoint; // The point from which the projectile is fired
     protected float projectileLaunchScale = 1.0f;
 
+    private float max_damage;
+
+    public override void Start()
+    {
+        base.Start();
+        max_damage = baseDamage;
+    }
     protected void OnProjectileLaunch()
     {
         if (projectilePrefab == null || firePoint == null)
@@ -25,6 +32,7 @@ public class ProjectileLaunchWeapon : Weapon
 
         Action<Vector3, Collider> call = (hit_pos, hit_col) => ProjectileReturnsHit(hit_pos, hit_col);
         projectileInstance.GetComponent<Projectile>().Launch(projectileLaunchScale, call);
+        baseDamage = projectileLaunchScale * max_damage;
 
         PlayCameraShake();
         AddRecoil();
@@ -39,5 +47,7 @@ public class ProjectileLaunchWeapon : Weapon
 
         if (hittable != null)
             DamageEntity(hittable);
+
+        baseDamage = max_damage;
     }
 }
