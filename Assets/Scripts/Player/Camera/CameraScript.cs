@@ -6,8 +6,8 @@ public class CameraScript : MonoBehaviour
 {
     public enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
     public RotationAxes axes = RotationAxes.MouseXAndY;
-    public float sensitivityX = 1F;
-    public float sensitivityY = 1F;
+    public float sensitivityX = 0.5F;
+    public float sensitivityY = 0.5F;
 
     public float cameraFieldOfView = 77.0f;
 

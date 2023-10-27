@@ -86,7 +86,7 @@ public class MovementScript : MonoBehaviour
             wep.OnFireClicked();
         }
 
-        if(Input.GetButtonUp("Fire1"))
+        if(Input.GetButtonUp("Fire1") && canFire())
         {
             wep.OnFireReleased();
         }
