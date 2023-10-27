@@ -77,4 +77,6 @@ public class EquippableItemEvents : MonoBehaviour
             ref transform_velocity,
             ads_time);
     }
+
+    public bool getFireHeld() {  return fire_held; }
 }

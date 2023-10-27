@@ -125,7 +125,12 @@ public class MovementScript : MonoBehaviour
 
     private void onSprint()
     {
-        switch(movementState)
+        EquippableItemEvents wep = GetComponentInChildren<EquippableItemEvents>();
+        if (wep != null && wep.getFireHeld())
+        {
+            return;
+        }
+        switch (movementState)
         {
             case MovementState.NormalADS:
                 return;
