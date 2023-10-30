@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class PlayerHittable : MonoBehaviour
 {
+    public float maxHealth;
     public float health;
+    private void Start()
+    {
+        health = maxHealth;
+    }
 
     public virtual void OnPlayerHit(float dmg)
     {
