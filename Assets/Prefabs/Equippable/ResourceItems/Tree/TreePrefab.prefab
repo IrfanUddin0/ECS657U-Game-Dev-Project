@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 1559646324910036197}
   - component: {fileID: 3566247897278162530}
   - component: {fileID: 3510850700805966501}
+  - component: {fileID: 3757792437169056504}
   - component: {fileID: 1871533741040507079}
   m_Layer: 0
   m_Name: TreePrefab
@@ -280,6 +281,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PickupableToSpawn: {fileID: 2691039409535011996, guid: 149cdf200e796174ebfe8df3e020a242, type: 3}
+--- !u!114 &3757792437169056504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2816486115205184337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d0e2ec217ca754181fd47825a5e1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropItem: {fileID: 4397353416604507779, guid: 7f9d8a27bd00f8649861f3be74740e2f, type: 3}
+  chance: 0.5
+  spawn_up_distance: 5
 --- !u!64 &1871533741040507079
 MeshCollider:
   m_ObjectHideFlags: 0

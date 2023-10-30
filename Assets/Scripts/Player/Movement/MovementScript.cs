@@ -14,7 +14,6 @@ public class MovementScript : MonoBehaviour
     void Start()
     {
         ChangeMovementState(MovementState.Normal);
-        Time.timeScale = 2f;
     }
 
     // Update is called once per frame
