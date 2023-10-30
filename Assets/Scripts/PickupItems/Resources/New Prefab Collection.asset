@@ -38,3 +38,8 @@ MonoBehaviour:
     valuePrefab: {fileID: 2691039409535011996, guid: cbd69267b325f8644a5af6b1a802f2ce, type: 3}
     image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
     maxInStack: 64
+  - PrefabMappingName: Apple
+    keyPrefab: {fileID: 4397353416604507779, guid: 7f9d8a27bd00f8649861f3be74740e2f, type: 3}
+    valuePrefab: {fileID: 3574299389808435369, guid: d64d9bd668b14cd4d8b4e1334a696bb5, type: 3}
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    maxInStack: 64

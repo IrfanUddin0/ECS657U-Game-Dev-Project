@@ -30,7 +30,7 @@ public class Inventory : MonoBehaviour
     }
 
     // Method to remove an item from the inventory.
-    public void RemoveItem(Item item)
+    public void RemoveItem(Item item, bool spawnitem = true)
     {
         if (itemList.Contains(item))
         {
@@ -40,7 +40,9 @@ public class Inventory : MonoBehaviour
 
             if (FindIndexByItem(item) < manager.currentEquipIndex)
                 manager.currentEquipIndex -= 1;
-            SpawnItemInWorld(item);
+
+            if(spawnitem)
+                SpawnItemInWorld(item);
 
             if(item.count<=1)
                 itemList.Remove(item);

@@ -14,6 +14,7 @@ public class MovementScript : MonoBehaviour
     void Start()
     {
         ChangeMovementState(MovementState.Normal);
+        Time.timeScale = 2f;
     }
 
     // Update is called once per frame
@@ -144,6 +145,9 @@ public class MovementScript : MonoBehaviour
                 return;
         }
 
+        PlayerSurvival surv = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerSurvival>();
+        if (surv.getHunger() <= 0) { return; }
+
         ChangeMovementState(MovementState.Sprinting);
     }
 
@@ -263,7 +267,10 @@ public class MovementScript : MonoBehaviour
 
     private void sprintTickCheck()
     {
-        if (movementState==MovementState.Sprinting && Input.GetAxis("Vertical")<0.1f)
+        if (movementState==MovementState.Sprinting && Input.GetAxis("Vertical")<0.1f ||
+            
+            movementState == MovementState.Sprinting && 
+            GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerSurvival>().getHunger() <= 0)
         {
             onSprint();
         }
