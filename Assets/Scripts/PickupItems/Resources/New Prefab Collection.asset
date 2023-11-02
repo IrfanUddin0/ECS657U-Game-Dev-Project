@@ -43,3 +43,8 @@ MonoBehaviour:
     valuePrefab: {fileID: 3574299389808435369, guid: d64d9bd668b14cd4d8b4e1334a696bb5, type: 3}
     image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
     maxInStack: 64
+  - PrefabMappingName: Door
+    keyPrefab: {fileID: 749309338393534881, guid: ae2f9bf01c704714f91ef9b7086c9d25, type: 3}
+    valuePrefab: {fileID: 1883322863298995498, guid: 4b13409c98d8764439b0f0c3eab7248e, type: 3}
+    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    maxInStack: 64

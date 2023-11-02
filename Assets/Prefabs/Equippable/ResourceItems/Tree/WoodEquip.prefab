@@ -116,6 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7183048726380205806}
+  - component: {fileID: 2192156111189529199}
   m_Layer: 0
   m_Name: WoodEquip
   m_TagString: Untagged
@@ -140,6 +141,24 @@ Transform:
   - {fileID: 1186464818088430367}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2192156111189529199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2691039409535011996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 253c16e3e80e74a47ba719a9c0f31107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ads_time: 0.1
+  ads_fov_scale: 1
+  target_ads_transform_const: {x: 0, y: 0, z: 0}
+  ItemToPlace: {fileID: 1141923175744675908, guid: 10f3ece767d341a43be519aae4c43083, type: 3}
+  PlaceRange: 5
+  PlaceMaterial: {fileID: 2100000, guid: be1d80516aabecc4fa4defcd30f268bd, type: 2}
 --- !u!1001 &4097985919506040872
 PrefabInstance:
   m_ObjectHideFlags: 0

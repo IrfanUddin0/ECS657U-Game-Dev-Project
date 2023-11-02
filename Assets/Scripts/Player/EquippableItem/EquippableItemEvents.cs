@@ -14,6 +14,7 @@ public class EquippableItemEvents : MonoBehaviour
     private Vector3 transform_velocity;
 
     bool fire_held = false;
+    bool ads_held = false;
     // Start is called before the first frame update
     public virtual void Start()
     {
@@ -24,6 +25,7 @@ public class EquippableItemEvents : MonoBehaviour
     {
         adsAnimTick();
         if( fire_held ) { OnFireHeld(); }
+        if( ads_held ) { OnADSHeld(); }
     }
 
     public virtual void OnFireClicked()
@@ -43,11 +45,17 @@ public class EquippableItemEvents : MonoBehaviour
     public virtual void OnADSClicked()
     {
         setAdsAnimNew(false);
+        ads_held = true;
+    }
+
+    protected virtual void OnADSHeld()
+    {
     }
 
     public virtual void OnADSReleased()
     {
         setAdsAnimNew(true);
+        ads_held = false;
     }
 
     public virtual void OnReloadClicked()
