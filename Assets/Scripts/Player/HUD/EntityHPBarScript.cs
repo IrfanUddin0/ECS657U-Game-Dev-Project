@@ -23,7 +23,7 @@ public class EntityHPBarScript : MonoBehaviour
         {
             GetComponentInChildren<RectTransform>().sizeDelta = new Vector2(160.0f, 20.0f);
             GetComponentInChildren<Slider>().value = hittable.health / hittable.maxHealth;
-            Vector3 pos = cam.GetComponentInChildren<Camera>().WorldToScreenPoint(hittable.transform.position);
+            Vector3 pos = cam.GetComponentInChildren<Camera>().WorldToScreenPoint(hittable.GetComponentInChildren<Collider>().bounds.center);
             GetComponentInChildren<RectTransform>().position = pos;
         }
         else

@@ -41,7 +41,7 @@ public class MainPlayerScript : MonoBehaviour
     // if exists then it will overwrite the variable FocusedInteractableObject to a ref of it
     private void checkForInteractable()
     {
-        float range = 10.0f;
+        float range = 5.0f;
         float start = 0.1f;
         GameObject cam = GameObject.FindGameObjectsWithTag("CameraArm")[0];
 
