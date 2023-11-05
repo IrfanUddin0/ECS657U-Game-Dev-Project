@@ -18,9 +18,12 @@ public class PlayerSurvival : MonoBehaviour
 
     public bool dead = false;
 
+    public GameObject DeathScreenUIPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 15;
         health = maxHealth;
         hunger = 1.0f;
         thirst = 1.0f;
@@ -46,6 +49,8 @@ public class PlayerSurvival : MonoBehaviour
         {
             health -= healthDecreaseRate * Time.deltaTime;
         }
+        // keep health within its limited values
+        health = Mathf.Clamp(health, 0.0f, maxHealth);
 
         if (health <= 0)
         {
@@ -85,6 +90,19 @@ public class PlayerSurvival : MonoBehaviour
 
     public void OnDeath()
     {
+        // drop all items
+        Inventory inven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
+        inven.RemoveEveryItem();
 
+        // display death screen
+        Instantiate(DeathScreenUIPrefab, GetComponentInChildren<Canvas>().transform);
+    }
+
+    public void OnRespawn()
+    {
+        ReplenishHealth(maxHealth);
+        ReplenishHunger(1.0f);
+        ReplenishThirst(1.0f);
+        dead = false;
     }
 }
