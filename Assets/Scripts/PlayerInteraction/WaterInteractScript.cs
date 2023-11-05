@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaterInteractScript : PlayerInteractable
 {
-    public float thirstReplenishAmmount;
+    public float thirstReplenishAmmount = 1;
     public override void OnInteract()
     {
         PlayerSurvival ps = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerSurvival>();
