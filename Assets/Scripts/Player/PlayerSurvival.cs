@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerSurvival : MonoBehaviour
 {
-    private float health;
+    public float health;
     public float maxHealth;
 
     // percentages, max is 1.0f
