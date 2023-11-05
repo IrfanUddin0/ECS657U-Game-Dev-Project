@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
+public class Enemy : PlayerHittable
 {
     private bool isChasing = false;
     private bool reached = false;
     private NavMeshAgent agent;
     public Transform target;
+    public float damageAmount;
 
     private Vector3 roamPoint;
     private PlayerSurvival playerdamage;
@@ -27,21 +28,22 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
         float distanceToTarget = Vector3.Distance(target.position, transform.position);
         if (distanceToTarget <= 2f)
         {
-            playerdamage.healthDecreaseRate *= 4;
-            playerdamage.healthDecreaseRate = 0.02f;
+            playerdamage.health -= damageAmount;
         }
         else if (distanceToTarget <= 5f)
         {
-            playerdamage.healthDecreaseRate = 0.02f;
             isChasing = true;
             agent.SetDestination(target.position);
         }
         else
         {
-            playerdamage.healthDecreaseRate = 0.02f;
             patrol();
         }
 
