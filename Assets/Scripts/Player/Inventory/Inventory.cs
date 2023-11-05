@@ -64,6 +64,15 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void RemoveEveryItem()
+    {
+        int count = itemList.Count;
+        for (int i = 0; i < count; i++)
+        {
+            RemoveItem(itemList[i]);
+        }
+    }
+
     public void SwapItemPositions(Item item1,  Item item2)
     {
         int index1 = itemList.IndexOf(item1);

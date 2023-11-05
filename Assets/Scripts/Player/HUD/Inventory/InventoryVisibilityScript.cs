@@ -5,17 +5,18 @@ using UnityEngine.InputSystem;
 
 public class InventoryVisibilityScript : MonoBehaviour
 {
+    bool shown = false;
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<RectTransform>().localScale = new Vector2(0, 0);
+        transform.GetChild(0).gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("InventoryKey"))
-            if ((GetComponent<RectTransform>().localScale == Vector3.zero))
+            if (!shown)
                 show();
             else
                 hide();
@@ -23,7 +24,8 @@ public class InventoryVisibilityScript : MonoBehaviour
 
     void show()
     {
-        GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+        shown = true;
+        transform.GetChild(0).gameObject.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
@@ -32,7 +34,8 @@ public class InventoryVisibilityScript : MonoBehaviour
 
     void hide()
     {
-        GetComponent<RectTransform>().localScale = Vector3.zero;
+        shown = false;
+        transform.GetChild(0).gameObject.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 

@@ -1,8 +1,21 @@
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
+
 public enum InputMode
 {
     Playing,
     UI
+}
+
+public struct SpawnTransform
+{
+    public SpawnTransform(Vector3 pos, Quaternion rot)
+    {
+        this.pos = pos;
+        this.rot = rot;
+    }
+    public Vector3 pos;
+    public Quaternion rot;
 }
 
 public class MainPlayerScript : MonoBehaviour
@@ -10,8 +23,10 @@ public class MainPlayerScript : MonoBehaviour
     GameObject FocusedInteractableObject = null;
     public InputMode inputMode = InputMode.Playing;
 
+    public SpawnTransform spawnTransform;
     void Start()
     {
+        spawnTransform = new SpawnTransform(transform.position, transform.rotation);
     }
 
 
@@ -30,11 +45,15 @@ public class MainPlayerScript : MonoBehaviour
     public void inputModeSetUI()
     {
         inputMode = InputMode.UI;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void inputModeSetPlaying()
     {
         inputMode = InputMode.Playing;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // method will do a linecast and look for any objects that have PlayerInteractable component
@@ -63,5 +82,12 @@ public class MainPlayerScript : MonoBehaviour
     public GameObject getFocusedInteractableObject()
     {
         return FocusedInteractableObject;
+    }
+
+    public void Respawn()
+    {
+        inputModeSetPlaying();
+        transform.position = spawnTransform.pos;
+        transform.rotation = spawnTransform.rot;
     }
 }
