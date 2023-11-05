@@ -5,8 +5,6 @@ using UnityEngine.AI;
 
 public class Enemy : PlayerHittable
 {
-    private bool isChasing = false;
-    private bool reached = false;
     private NavMeshAgent agent;
     public Transform target;
     public float damageAmount;
@@ -21,8 +19,6 @@ public class Enemy : PlayerHittable
         target = GameObject.FindGameObjectWithTag("Player").transform;
         playerdamage = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerSurvival>();
         roamPoint = transform.position;
-
-
     }
 
     // Update is called once per frame
@@ -39,7 +35,6 @@ public class Enemy : PlayerHittable
         }
         else if (distanceToTarget <= 5f)
         {
-            isChasing = true;
             agent.SetDestination(target.position);
         }
         else
