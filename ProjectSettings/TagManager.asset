@@ -9,6 +9,7 @@ TagManager:
   - EquipSpawner
   - ActiveWeapon
   - InventoryHUDViewContent
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 
