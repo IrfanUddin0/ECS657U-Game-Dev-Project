@@ -5,4 +5,9 @@ using UnityEngine;
 public class InventoryUIElement : MonoBehaviour
 {
     public virtual void OnInventoryUpdate(){}
+
+    private void OnEnable()
+    {
+        OnInventoryUpdate();
+    }
 }

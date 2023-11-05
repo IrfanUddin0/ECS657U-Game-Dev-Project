@@ -133,6 +133,25 @@ public class Inventory : MonoBehaviour
             UIElem.OnInventoryUpdate();
         }
     }
+
+    public int GetTotalCountOfItem(GameObject item_looking)
+    {
+        int totalCount = 0;
+        foreach(Item item in itemList)
+        {
+            if(item.EquipPrefab == item_looking) totalCount+= item.count;
+        }
+        return totalCount;
+    }
+
+    public Item GetItemWithPrefab(GameObject prefab)
+    {
+        foreach (Item item in itemList)
+        {
+            if(item.EquipPrefab == prefab) return item;
+        }
+        return null;
+    }
 }
 
 [System.Serializable]
