@@ -23,7 +23,6 @@ public class PlayerSurvival : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 15;
         health = maxHealth;
         hunger = 1.0f;
         thirst = 1.0f;
