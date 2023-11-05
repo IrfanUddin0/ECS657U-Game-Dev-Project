@@ -132,6 +132,8 @@ GameObject:
   - component: {fileID: 296115339}
   - component: {fileID: 296115338}
   - component: {fileID: 296115341}
+  - component: {fileID: 296115342}
+  - component: {fileID: 296115343}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -235,6 +237,34 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &296115342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296115337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c64e5e6790d9c46ae0ba8d589047aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treeCount: 0
+  TreePrefab: {fileID: 0}
+--- !u!114 &296115343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296115337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c64e5e6790d9c46ae0ba8d589047aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treeCount: 1000
+  TreePrefab: {fileID: 2816486115205184337, guid: e375cc3cda24a76449583aefdbb21514, type: 3}
 --- !u!1001 &344696527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -397,7 +427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7158589022783991247, guid: 7c0b749d12bca4e4c9994f6ee9d782ce, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00021362305
+      value: 0.082377575
       objectReference: {fileID: 0}
     - target: {fileID: 7651506742816450104, guid: 7c0b749d12bca4e4c9994f6ee9d782ce, type: 3}
       propertyPath: m_AnchorMax.x
@@ -536,7 +566,7 @@ Transform:
   m_GameObject: {fileID: 429280874}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 370.03845, y: 24, z: 0}
+  m_LocalPosition: {x: 370.03845, y: 10.9, z: 0}
   m_LocalScale: {x: 5000, y: 5000, z: 5000}
   m_ConstrainProportionsScale: 0
   m_Children: []
