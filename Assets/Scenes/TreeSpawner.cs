@@ -37,7 +37,7 @@ public class TreeSpawner : MonoBehaviour
 
             // Instantiate your tree prefab at the calculated position
             // Replace "TreePrefab" with the actual tree prefab you want to spawn
-            Instantiate(TreePrefab, spawnPosition, Quaternion.identity);
+            Instantiate(TreePrefab, spawnPosition, Quaternion.Euler(0, Random.Range(0f, 360f),0));
         }
     }
 }
