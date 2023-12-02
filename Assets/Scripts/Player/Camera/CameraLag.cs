@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CameraLag : MonoBehaviour
 {
-    private float swayAmountX = 5;
-    private float swayAmountY = 5;
-    private float smooth = 8;
-    private float rotationAmmountDegH = 7;
-    private float rotationAmmountDegV = 3;
+    public float swayAmountX = 5;
+    public float swayAmountY = 5;
+    public float smooth = 8;
+    public float rotationAmmountDegH = 7;
+    public float rotationAmmountDegV = 3;
 
     private void Update()
     {
