@@ -185,6 +185,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2924132729850171902}
     m_Modifications:
+    - target: {fileID: 507853529006064148, guid: 9c1e8904af0fbd8428f496b6c232add8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1144507315264065524, guid: 9c1e8904af0fbd8428f496b6c232add8, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -205,7 +209,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: SMGPrototype
       objectReference: {fileID: 0}
+    - target: {fileID: 3895467727808104363, guid: 9c1e8904af0fbd8428f496b6c232add8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4803074448494594024, guid: 9c1e8904af0fbd8428f496b6c232add8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952318885139273143, guid: 9c1e8904af0fbd8428f496b6c232add8, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
