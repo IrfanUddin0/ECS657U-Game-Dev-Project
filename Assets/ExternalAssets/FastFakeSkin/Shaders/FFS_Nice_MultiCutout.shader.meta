@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 80714b0f4b4a251498f6e8cfbb966cee
+timeCreated: 1597238489
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 42535
+  packageName: Fast Fake Skin
+  packageVersion: 3.0.0
+  assetPath: Assets/FastFakeSkin/Shaders/FFS_Nice_MultiCutout.shader
+  uploadId: 385383

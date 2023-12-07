@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c963be05af543ca4383936eac3758049
+timeCreated: 1596746276
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 42535
+  packageName: Fast Fake Skin
+  packageVersion: 3.0.0
+  assetPath: Assets/FastFakeSkin/QuickTutorial.rtf
+  uploadId: 385383

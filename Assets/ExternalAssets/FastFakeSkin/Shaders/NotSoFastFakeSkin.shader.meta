@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 3176381ae25d3224cad58e8a53b9ab51
+labels:
+- shader
+timeCreated: 1433659709
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 42535
+  packageName: Fast Fake Skin
+  packageVersion: 3.0.0
+  assetPath: Assets/FastFakeSkin/Shaders/NotSoFastFakeSkin.shader
+  uploadId: 385383
