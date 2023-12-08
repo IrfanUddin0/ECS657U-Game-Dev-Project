@@ -20,8 +20,8 @@ public class TreeSpawner : MonoBehaviour
     private void SpawnTreesOnTerrain()
     {
         TerrainData terrainData = terrain.terrainData;
-
-        for (int i = 0; i < treeCount; i++)
+        int currentTreeCount = 0;
+        while(currentTreeCount < treeCount)
         {
             // Generate random positions on the terrain
             float randomX = Random.Range(0f, 1f);
@@ -41,7 +41,8 @@ public class TreeSpawner : MonoBehaviour
 
             // Instantiate your tree prefab at the calculated position
             // Replace "TreePrefab" with the actual tree prefab you want to spawn
-            Instantiate(TreePrefab, spawnPosition, Quaternion.Euler(0, Random.Range(0f, 360f),0));
+            Instantiate(TreePrefab, spawnPosition, Quaternion.Euler(0, Random.Range(0f, 360f), 0));
+            currentTreeCount++;
         }
     }
 }
