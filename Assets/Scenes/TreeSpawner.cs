@@ -5,6 +5,7 @@ using UnityEngine;
 public class TreeSpawner : MonoBehaviour
 {
     public int treeCount;
+    public float waterLevel;
 
     public GameObject TreePrefab;
 
@@ -31,6 +32,9 @@ public class TreeSpawner : MonoBehaviour
 
             // Use SampleHeight to get the terrain height at that position
             float terrainHeight = terrain.SampleHeight(spawnPosition);
+
+            if (terrainHeight <= waterLevel)
+                continue;
 
             // Adjust the Y position to place the tree on the terrain surface
             spawnPosition.y = terrainHeight;
