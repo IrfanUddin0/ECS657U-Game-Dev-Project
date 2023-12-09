@@ -28,11 +28,7 @@ public class PlayerSurvival : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = maxHealth;
-        hunger = 1.0f;
-        thirst = 1.0f;
-        giveDefaultWeapon();
-        timeSinceSpawn = Time.timeSinceLevelLoad;
+        OnRespawn();
     }
 
     // Update is called once per frame
@@ -119,12 +115,12 @@ public class PlayerSurvival : MonoBehaviour
 
     public void OnRespawn()
     {
-        ReplenishHealth(maxHealth);
-        ReplenishHunger(1.0f);
-        ReplenishThirst(1.0f);
-        dead = false;
+        health = maxHealth;
+        hunger = 1.0f;
+        thirst = 1.0f;
         giveDefaultWeapon();
         timeSinceSpawn = Time.timeSinceLevelLoad;
+        dead = false;
     }
 
     private void giveDefaultWeapon()
