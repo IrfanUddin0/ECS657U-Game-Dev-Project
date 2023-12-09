@@ -19,6 +19,7 @@ public class PlayerSurvival : MonoBehaviour
     public bool dead = false;
 
     public GameObject DeathScreenUIPrefab;
+    public GameObject defaultWeapon;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class PlayerSurvival : MonoBehaviour
         health = maxHealth;
         hunger = 1.0f;
         thirst = 1.0f;
+        giveDefaultWeapon();
     }
 
     // Update is called once per frame
@@ -103,5 +105,12 @@ public class PlayerSurvival : MonoBehaviour
         ReplenishHunger(1.0f);
         ReplenishThirst(1.0f);
         dead = false;
+        giveDefaultWeapon();
+    }
+
+    private void giveDefaultWeapon()
+    {
+        GameObject tempWepaon = Instantiate(defaultWeapon, transform);
+        tempWepaon.GetComponent<PickupItem>().OnInteract();
     }
 }
