@@ -31,7 +31,7 @@ public class Enemy : PlayerHittable
         float distanceToTarget = Vector3.Distance(target.position, transform.position);
         if (distanceToTarget <= 2f)
         {
-            playerdamage.health -= damageAmount;
+            playerdamage.decreasePlayerHealth(damageAmount);
         }
         else if (distanceToTarget <= 5f)
         {

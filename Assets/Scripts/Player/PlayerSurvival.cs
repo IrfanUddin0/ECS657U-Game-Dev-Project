@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +22,9 @@ public class PlayerSurvival : MonoBehaviour
     public GameObject DeathScreenUIPrefab;
     public GameObject defaultWeapon;
 
+    private float timeSinceSpawn;
+    public float invulnerableTime = 5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,11 +32,16 @@ public class PlayerSurvival : MonoBehaviour
         hunger = 1.0f;
         thirst = 1.0f;
         giveDefaultWeapon();
+        timeSinceSpawn = Time.timeSinceLevelLoad;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // if invul then return
+        if (Time.timeSinceLevelLoad - timeSinceSpawn < invulnerableTime)
+            return;
+
         // Decrease hunger and thirst over time
         hunger -= hungerDecreaseRate * Time.deltaTime;
         thirst -= thirstDecreaseRate * Time.deltaTime;
@@ -89,6 +98,15 @@ public class PlayerSurvival : MonoBehaviour
         return thirst;
     }
 
+    public void decreasePlayerHealth(float h)
+    {
+        // if invul then return
+        if (Time.timeSinceLevelLoad - timeSinceSpawn < invulnerableTime)
+            return;
+
+        health -= h;
+    }
+
     public void OnDeath()
     {
         // drop all items
@@ -106,6 +124,7 @@ public class PlayerSurvival : MonoBehaviour
         ReplenishThirst(1.0f);
         dead = false;
         giveDefaultWeapon();
+        timeSinceSpawn = Time.timeSinceLevelLoad;
     }
 
     private void giveDefaultWeapon()
