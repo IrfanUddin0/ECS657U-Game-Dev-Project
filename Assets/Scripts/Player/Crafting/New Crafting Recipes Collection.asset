@@ -23,11 +23,13 @@ MonoBehaviour:
     ItemResult: {fileID: 1883322863298995498, guid: 4b13409c98d8764439b0f0c3eab7248e, type: 3}
   - ItemsNeeded:
     - Item: {fileID: 2691039409535011996, guid: cbd69267b325f8644a5af6b1a802f2ce, type: 3}
-      count: 4
+      count: 1
+    - Item: {fileID: 2551231364484385431, guid: 902b991beb2c62a4d95d0b80a0ff0763, type: 3}
+      count: 1
     ItemResult: {fileID: 5435844516253738363, guid: 6714d4bfa18ef4a41afe71c5dea3db6e, type: 3}
   - ItemsNeeded:
     - Item: {fileID: 2691039409535011996, guid: cbd69267b325f8644a5af6b1a802f2ce, type: 3}
       count: 4
-    - Item: {fileID: 3574299389808435369, guid: d64d9bd668b14cd4d8b4e1334a696bb5, type: 3}
+    - Item: {fileID: 2551231364484385431, guid: 902b991beb2c62a4d95d0b80a0ff0763, type: 3}
       count: 2
     ItemResult: {fileID: 5435844516253738363, guid: 397e66916c023c947b630eaf9b8771ce, type: 3}
