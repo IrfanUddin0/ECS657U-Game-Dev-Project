@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using cakeslice;
 public class PickupItem : PlayerInteractable
 {
     public PrefabCollection prefabCollection;
@@ -8,6 +9,10 @@ public class PickupItem : PlayerInteractable
     public string MappingName;
     void Start()
     {
+        foreach(MeshRenderer child in GetComponentsInChildren<MeshRenderer>())
+        {
+            child.gameObject.AddComponent<cakeslice.Outline>();
+        }
     }
 
     // Update is called once per frame
