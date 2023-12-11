@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7879415430590193255}
   - component: {fileID: -1834017776946218762}
-  - component: {fileID: 3480116792390541955}
   - component: {fileID: 4032561207356943018}
+  - component: {fileID: 7915285750207022080}
   m_Layer: 0
   m_Name: ApplePickup
   m_TagString: Untagged
@@ -50,27 +50,6 @@ MonoBehaviour:
   interactPromt: Pickup Apple
   prefabCollection: {fileID: 11400000, guid: 8aac15c160556834aad8e8abf75c5b21, type: 2}
   MappingName: Apple
---- !u!65 &3480116792390541955
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4397353416604507779}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.2, y: 0.2, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &4032561207356943018
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -98,6 +77,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &7915285750207022080
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4397353416604507779}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &3465976539514641347
 PrefabInstance:
   m_ObjectHideFlags: 0
