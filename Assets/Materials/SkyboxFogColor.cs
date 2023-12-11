@@ -9,8 +9,6 @@ public class SkyboxFogColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Time.timeScale = 15.0f;
-            
         RenderSettings.fogColor = fogOverTime.Evaluate(transform.localEulerAngles.x / 360f);
     }
 }
