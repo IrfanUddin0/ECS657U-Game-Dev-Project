@@ -48,3 +48,8 @@ MonoBehaviour:
     valuePrefab: {fileID: 1883322863298995498, guid: 4b13409c98d8764439b0f0c3eab7248e, type: 3}
     image: {fileID: 21300000, guid: 9317af72d90b34a43b76c7d2fcb2e4a9, type: 3}
     maxInStack: 64
+  - PrefabMappingName: Rock
+    keyPrefab: {fileID: 5817720149587199215, guid: 30f5254ed7dc2b0409bf34ef1c06d093, type: 3}
+    valuePrefab: {fileID: 2551231364484385431, guid: 902b991beb2c62a4d95d0b80a0ff0763, type: 3}
+    image: {fileID: 21300000, guid: 7e8a6b543f11b004cb1fa6c0a553acfc, type: 3}
+    maxInStack: 64
