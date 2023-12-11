@@ -16,35 +16,35 @@ MonoBehaviour:
   - PrefabMappingName: Pistol
     keyPrefab: {fileID: 994200610082977035, guid: ae70dbd9ca316ec48826977ccefe8bee, type: 3}
     valuePrefab: {fileID: 5435844516253738363, guid: 397e66916c023c947b630eaf9b8771ce, type: 3}
-    image: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    image: {fileID: 21300000, guid: 150d149ba53bdbc458db81de34ce5c33, type: 3}
     maxInStack: 2
   - PrefabMappingName: SMG
     keyPrefab: {fileID: 994200610082977035, guid: 8dcfa32af0d826c4593c179d5bfc189f, type: 3}
     valuePrefab: {fileID: 5435844516253738363, guid: 6ec1ef7b82adf414e8c9862132f9dc85, type: 3}
-    image: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+    image: {fileID: 21300000, guid: 5556c8ae2755c0646b7b7b4e2851a18e, type: 3}
     maxInStack: 1
   - PrefabMappingName: Axe
     keyPrefab: {fileID: 994200610082977035, guid: 4e309fa82b90ba3478d5ba1d6c2dd2d4, type: 3}
     valuePrefab: {fileID: 5435844516253738363, guid: 6714d4bfa18ef4a41afe71c5dea3db6e, type: 3}
-    image: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+    image: {fileID: 21300000, guid: c2dcbe5ab053eab47a0530577f004507, type: 3}
     maxInStack: 1
   - PrefabMappingName: Bow
     keyPrefab: {fileID: 994200610082977035, guid: 6c32c05f3a9e09b43a67d39942b73f7a, type: 3}
     valuePrefab: {fileID: 5435844516253738363, guid: 3608c614dcbb4b5459ed2da36700b5fd, type: 3}
-    image: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    image: {fileID: 21300000, guid: f604473de4c5bae41b855081cbfff833, type: 3}
     maxInStack: 1
   - PrefabMappingName: Wood
     keyPrefab: {fileID: 2691039409535011996, guid: 149cdf200e796174ebfe8df3e020a242, type: 3}
     valuePrefab: {fileID: 2691039409535011996, guid: cbd69267b325f8644a5af6b1a802f2ce, type: 3}
-    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    image: {fileID: 21300000, guid: 989fb2207c66e9042925be3a6cb9cce7, type: 3}
     maxInStack: 64
   - PrefabMappingName: Apple
     keyPrefab: {fileID: 4397353416604507779, guid: 7f9d8a27bd00f8649861f3be74740e2f, type: 3}
     valuePrefab: {fileID: 3574299389808435369, guid: d64d9bd668b14cd4d8b4e1334a696bb5, type: 3}
-    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    image: {fileID: 21300000, guid: 027bcaa3fb245e74584b4a09d9afd619, type: 3}
     maxInStack: 64
   - PrefabMappingName: Door
     keyPrefab: {fileID: 749309338393534881, guid: ae2f9bf01c704714f91ef9b7086c9d25, type: 3}
     valuePrefab: {fileID: 1883322863298995498, guid: 4b13409c98d8764439b0f0c3eab7248e, type: 3}
-    image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    image: {fileID: 21300000, guid: 9317af72d90b34a43b76c7d2fcb2e4a9, type: 3}
     maxInStack: 64
