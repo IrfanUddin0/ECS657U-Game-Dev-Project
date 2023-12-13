@@ -22,5 +22,7 @@ public class CraftingMenu : InventoryUIElement
             panel.transform.SetParent(transform, false);
             panel.transform.GetComponentInChildren<CraftingPanelScript>().SetItem(i);
         }
+
+        GetComponent<RectTransform>().sizeDelta = new Vector2(0.0f, manager.Craftables.Count * 96f);
     }
 }

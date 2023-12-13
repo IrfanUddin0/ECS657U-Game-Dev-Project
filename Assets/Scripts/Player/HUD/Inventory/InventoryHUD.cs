@@ -29,5 +29,8 @@ public class InventoryHUD : InventoryUIElement
 
             panel.transform.GetComponentInChildren<InventoryPanelScript>().SetItem(items[i]);
         }
+
+        // resize scrollbox to fit all items
+        GetComponent<RectTransform>().sizeDelta = new Vector2 (635.8157f, items.Count * 64f);
     }
 }
