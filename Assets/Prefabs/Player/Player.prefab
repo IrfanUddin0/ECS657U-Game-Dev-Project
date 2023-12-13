@@ -1946,8 +1946,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 1
-  hungerDecreaseRate: 0.01
-  thirstDecreaseRate: 0.015
+  hungerDecreaseRate: 0.003
+  thirstDecreaseRate: 0.006
   healthDecreaseRate: 0.02
   dead: 0
   DeathScreenUIPrefab: {fileID: 1051291263528729964, guid: 7b256fa00411a564a8cb963615fd42f6, type: 3}

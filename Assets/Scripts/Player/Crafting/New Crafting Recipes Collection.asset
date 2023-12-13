@@ -33,3 +33,15 @@ MonoBehaviour:
     - Item: {fileID: 2551231364484385431, guid: 902b991beb2c62a4d95d0b80a0ff0763, type: 3}
       count: 2
     ItemResult: {fileID: 5435844516253738363, guid: 397e66916c023c947b630eaf9b8771ce, type: 3}
+  - ItemsNeeded:
+    - Item: {fileID: 2691039409535011996, guid: cbd69267b325f8644a5af6b1a802f2ce, type: 3}
+      count: 2
+    ItemResult: {fileID: 2551231364484385431, guid: 46eed18ac67754846b3724282e37278c, type: 3}
+  - ItemsNeeded:
+    - Item: {fileID: 2691039409535011996, guid: cbd69267b325f8644a5af6b1a802f2ce, type: 3}
+      count: 2
+    ItemResult: {fileID: 2551231364484385431, guid: db85461f91e54dd41a39ba8138b40be4, type: 3}
+  - ItemsNeeded:
+    - Item: {fileID: 2551231364484385431, guid: 902b991beb2c62a4d95d0b80a0ff0763, type: 3}
+      count: 2
+    ItemResult: {fileID: 2551231364484385431, guid: 404984efd752c454e8d1c0bc52470594, type: 3}
