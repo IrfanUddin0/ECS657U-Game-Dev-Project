@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 using UnityEngine.InputSystem.HID;
 
@@ -12,6 +14,7 @@ public class PlaceableEquipItem : EquippableItemEvents
 
     private GameObject PreviewItemPlace;
     private float y_rot = 0;
+    private bool side = false;
 
     public override void Start()
     {
@@ -40,13 +43,16 @@ public class PlaceableEquipItem : EquippableItemEvents
         if (Input.GetButtonDown("Rotate90"))
             y_rot += 90f;
 
+        if (Input.GetButtonDown("RotateSide"))
+            side = !side;
+
         GameObject cam = GameObject.FindGameObjectsWithTag("CameraArm")[0];
         RaycastHit hit;
         Physics.Linecast(cam.transform.position + 0.2f * cam.transform.forward, PlaceRange * cam.transform.forward + cam.transform.position, out hit);
 
 
         PreviewItemPlace.transform.position = hit.point;
-        PreviewItemPlace.transform.rotation = Quaternion.Euler(0f, y_rot, 0f);
+        PreviewItemPlace.transform.rotation = Quaternion.Euler(side ? 90f : 0f, y_rot, 0f);
     }
 
     public override void OnFireClicked()
@@ -76,7 +82,7 @@ public class PlaceableEquipItem : EquippableItemEvents
         {
             GameObject final_placed = Instantiate(ItemToPlace);
             final_placed.transform.position = hit.point;
-            final_placed.transform.rotation = Quaternion.Euler(0f, y_rot, 0f);
+            final_placed.transform.rotation = Quaternion.Euler(side ? 90f : 0f, y_rot, 0f);
 
             Inventory inven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
             InventoryEquipManager managerr = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<InventoryEquipManager>();
