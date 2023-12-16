@@ -43,4 +43,24 @@ public class ScoreManager : MonoBehaviour
             }
         }
     }
+
+    public void onPlayerDeath()
+    {
+        // new changes made by Sulaiman
+        // disable the main light animation
+        MainLight.GetComponent<Animator>().enabled = false;
+        // values rounded to compare with main light rotation value simpler
+        lastDeathXLightPosition = Mathf.Round(MainLight.eulerAngles.x);
+        lastDeathYLightPosition = Mathf.Round(MainLight.eulerAngles.y);
+    }
+
+    public void onPlayerRespawn()
+    {
+        // new changes made by Sulaiman
+        // enable the main light animation
+        MainLight.GetComponent<Animator>().enabled = true;
+        // set days survived score to 0
+        scoreCount = 0;
+        scoreText.text = "Day " + scoreCount.ToString();
+    }
 }
