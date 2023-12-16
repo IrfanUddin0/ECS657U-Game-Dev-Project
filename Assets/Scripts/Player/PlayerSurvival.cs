@@ -25,6 +25,12 @@ public class PlayerSurvival : MonoBehaviour
     private float timeSinceSpawn;
     public float invulnerableTime = 5f;
 
+    // new changes made by Sulaiman
+    // main light for disabling/enabling animation
+    public GameObject MainLight;
+
+    public ScoreManager ScoreManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -111,6 +117,13 @@ public class PlayerSurvival : MonoBehaviour
 
         // display death screen
         Instantiate(DeathScreenUIPrefab, GetComponentInChildren<Canvas>().transform);
+
+        // new changes made by Sulaiman
+        // disable the main light animation
+        MainLight.GetComponent<Animator>().enabled = false;
+        // values rounded to compare with main light rotation value simpler
+        ScoreManager.lastDeathXLightPosition = Mathf.Round(ScoreManager.MainLight.eulerAngles.x);
+        ScoreManager.lastDeathYLightPosition = Mathf.Round(ScoreManager.MainLight.eulerAngles.y);
     }
 
     public void OnRespawn()
@@ -121,6 +134,13 @@ public class PlayerSurvival : MonoBehaviour
         giveDefaultWeapon();
         timeSinceSpawn = Time.timeSinceLevelLoad;
         dead = false;
+
+        // new changes made by Sulaiman
+        // enable the main light animation
+        MainLight.GetComponent<Animator>().enabled = true;
+        // set days survived score to 0
+        ScoreManager.scoreCount = 0;
+        ScoreManager.scoreText.text = "Day " + ScoreManager.scoreCount.ToString();
     }
 
     private void giveDefaultWeapon()
