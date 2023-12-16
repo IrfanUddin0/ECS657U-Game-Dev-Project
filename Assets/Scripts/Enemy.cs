@@ -51,8 +51,8 @@ public class Enemy : PlayerHittable
             roamPoint = findRandomPoint();
 
         }
-
-        agent.SetDestination(roamPoint);
+        if(agent.isOnNavMesh)
+            agent.SetDestination(roamPoint);
 
     }
 
