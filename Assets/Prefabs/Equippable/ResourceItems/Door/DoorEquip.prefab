@@ -52,6 +52,9 @@ MonoBehaviour:
   ItemToPlace: {fileID: 288119615157868066, guid: 1b724c78fe2e14a479a6163e082664d0, type: 3}
   PlaceRange: 5
   PlaceMaterial: {fileID: 2100000, guid: be1d80516aabecc4fa4defcd30f268bd, type: 2}
+  Rotate90Y: {fileID: -818078309047226103, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
+  Rotate90Z: {fileID: 2608791369659022257, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
+  Mouse: {fileID: -3393964540960816287, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
 --- !u!1001 &4639167692198164970
 PrefabInstance:
   m_ObjectHideFlags: 0

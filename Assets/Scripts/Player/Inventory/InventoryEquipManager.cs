@@ -1,31 +1,46 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InventoryEquipManager : MonoBehaviour
 {
     public int currentEquipIndex = -1;
     private int inventorySlots = 5;
 
+    [SerializeField]
+    public InputActionReference Drop;
+    [SerializeField]
+    public List<InputActionReference> InventorySlots;
     void Start()
     {
     }
 
+    private void OnEnable()
+    {
+        Drop.action.performed += OnDrop;
+
+        InventorySlots[0].action.performed += lambda => ChangeEquipIndex(0);
+        InventorySlots[1].action.performed += lambda => ChangeEquipIndex(1);
+        InventorySlots[2].action.performed += lambda => ChangeEquipIndex(2);
+        InventorySlots[3].action.performed += lambda => ChangeEquipIndex(3);
+        InventorySlots[4].action.performed += lambda => ChangeEquipIndex(4);
+    }
+
+    private void OnDisable()
+    {
+        
+    }
+
+    private void OnDrop(InputAction.CallbackContext context)
+    {
+        Inventory playerInven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
+        playerInven.RemoveItemByIndex(currentEquipIndex);
+    }
+
     void Update()
     {
-        if (Input.GetButtonDown("Drop"))
-        {
-            Inventory playerInven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
-            playerInven.RemoveItemByIndex(currentEquipIndex);
-        }
-
-        for (int i = 0; i < inventorySlots; i++)
-        {
-            if (Input.GetButtonDown("Slot" + (i + 1)))
-            {
-                ChangeEquipIndex(i);
-            }
-        }
     }
 
     public void ChangeEquipIndex(int index)

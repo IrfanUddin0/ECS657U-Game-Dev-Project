@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using static UnityEngine.GraphicsBuffer;
 
 public class MovementScript : MonoBehaviour
@@ -10,6 +11,10 @@ public class MovementScript : MonoBehaviour
     public float jumpforce = 15F;
     public MovementState movementState=MovementState.Normal;
 
+    [SerializeField]
+    public InputActionReference Movement, Jump, Sprint, Crouch, Fire, ADS;
+
+    private bool firing = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +28,6 @@ public class MovementScript : MonoBehaviour
         if (mode == InputMode.Playing)
         {
             handleDirectionInput();
-            handleJumpInput();
-            handleSprintInput();
-            handleCrouchInput();
 
             handleFireInput();
             handleAdsInput();
@@ -36,39 +38,30 @@ public class MovementScript : MonoBehaviour
 
     // HANDLE INPUT FUNCTIONS
 
+    private void OnEnable()
+    {
+        Jump.action.performed += action => onJump();
+        Sprint.action.performed += action => onSprint();
+        Crouch.action.performed += action => onCrouch();
+    }
+
+    private void OnDisable()
+    {
+        Jump.action.performed -= action => onJump();
+        Sprint.action.performed -= action => onSprint();
+        Crouch.action.performed -= action => onCrouch();
+    }
+
     private void handleDirectionInput()
     {
-        float hAxis = Input.GetAxis("Horizontal");
-        float vAxis = Input.GetAxis("Vertical");
+        Vector2 movementVal = Movement.action.ReadValue<Vector2>();
+        float hAxis = movementVal.x;
+        float vAxis = movementVal.y;
 
         Vector3 new_pos = transform.position + (vAxis * (new Vector3(transform.forward.x, 0F, transform.forward.z) * walkspeed * Time.deltaTime));
         new_pos += (hAxis * (transform.right * walkspeed * Time.deltaTime));
 
         transform.position = new_pos;
-    }
-    
-    private void handleJumpInput()
-    {
-        if (Input.GetButtonDown("Jump"))
-        {
-            onJump();
-        }
-    }
-
-    private void handleSprintInput()
-    {
-        if (Input.GetButtonDown("Sprint"))
-        {
-            onSprint();
-        }
-    }
-
-    private void handleCrouchInput()
-    {
-        if (Input.GetButtonDown("Crouch"))
-        {
-            onCrouch();
-        }
     }
 
     private bool canFire()
@@ -81,30 +74,30 @@ public class MovementScript : MonoBehaviour
         EquippableItemEvents wep = GetComponentInChildren<EquippableItemEvents>();
         if (wep == null) { return; }
 
-        if(Input.GetButtonDown("Fire1") && canFire())
+        if(!firing && Fire.action.IsPressed() && canFire())
         {
+            firing = true;
             wep.OnFireClicked();
         }
 
-        if(Input.GetButtonUp("Fire1") && canFire())
+        if(firing && !Fire.action.IsPressed() && canFire())
         {
+            firing = false;
             wep.OnFireReleased();
         }
     }
 
     private void handleAdsInput()
     {
-        if (Input.GetButtonDown("ADS")){ onADS(); }
-
-        if (Input.GetButtonUp("ADS")){ stopADS(); }
+        if (ADS.action.IsPressed() && movementState != MovementState.NormalADS && movementState != MovementState.CrouchADS)
+        {
+            onADS();
+        }
+        else if (!ADS.action.IsPressed() && (movementState ==MovementState.NormalADS || movementState == MovementState.CrouchADS))
+        {
+            stopADS();
+        }
     }
-
-    private void handleReloadInput()
-    {
-        
-    }
-
-
 
     // ON MOVEMENT FUNCTIONS
 
@@ -236,7 +229,7 @@ public class MovementScript : MonoBehaviour
 
     public void ChangeMovementState(MovementState state)
     {
-        print("changed movement state to:"+state.ToString());
+        // print("changed movement state to:"+state.ToString());
         switch (state)
         {
             case MovementState.Normal:
@@ -266,7 +259,7 @@ public class MovementScript : MonoBehaviour
 
     private void sprintTickCheck()
     {
-        if (movementState==MovementState.Sprinting && Input.GetAxis("Vertical")<0.1f ||
+        if (movementState==MovementState.Sprinting && Movement.action.ReadValue<Vector2>().y<0.1f ||
             
             movementState == MovementState.Sprinting && 
             GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerSurvival>().getHunger() <= 0)

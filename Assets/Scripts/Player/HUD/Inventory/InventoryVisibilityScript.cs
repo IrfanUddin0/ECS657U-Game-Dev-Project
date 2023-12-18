@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,20 +7,31 @@ using UnityEngine.InputSystem;
 public class InventoryVisibilityScript : MonoBehaviour
 {
     bool shown = false;
+
+    [SerializeField]
+    public InputActionReference InventoryKey;
     // Start is called before the first frame update
     void Start()
     {
         transform.GetChild(0).gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        if (Input.GetButtonDown("InventoryKey"))
-            if (!shown)
-                show();
-            else
-                hide();
+        InventoryKey.action.performed += action => InventoryKeyPressed();
+    }
+
+    private void OnDisable()
+    {
+        InventoryKey.action.performed -= action => InventoryKeyPressed();
+    }
+
+    private void InventoryKeyPressed()
+    {
+        if (!shown)
+            show();
+        else
+            hide();
     }
 
     void show()

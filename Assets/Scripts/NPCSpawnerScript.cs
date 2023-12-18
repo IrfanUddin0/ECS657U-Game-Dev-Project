@@ -27,7 +27,6 @@ public class NPCSpawnerScript : MonoBehaviour
                 npcs.RemoveAt(i);
         }
         SpawnInRegion();
-        print(npcs.Count);
     }
 
     private void SpawnInRegion()

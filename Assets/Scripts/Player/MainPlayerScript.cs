@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public enum InputMode
 {
@@ -23,22 +24,28 @@ public class MainPlayerScript : MonoBehaviour
     public InputMode inputMode = InputMode.Playing;
 
     public SpawnTransform spawnTransform;
+
+    [SerializeField]
+    public InputActionReference Interact;
     void Start()
     {
         spawnTransform = new SpawnTransform(transform.position, transform.rotation);
     }
 
+    private void OnEnable()
+    {
+        Interact.action.performed += onInteractClicked;
+    }
+
+    private void OnDisable()
+    {
+        Interact.action.performed -= onInteractClicked;
+    }
+
 
     void Update()
     {
-        if(inputMode == InputMode.Playing)
-        {
-            checkForInteractable();
-            if (Input.GetButtonDown("Interact"))
-            {
-                onInteractClicked();
-            }
-        }
+        checkForInteractable();
     }
 
     public void inputModeSetUI()
@@ -72,10 +79,13 @@ public class MainPlayerScript : MonoBehaviour
             FocusedInteractableObject = hit.transform.gameObject;
     }
 
-    private void onInteractClicked()
+    private void onInteractClicked(InputAction.CallbackContext obj)
     {
-        if (FocusedInteractableObject != null)
-            FocusedInteractableObject.GetComponent<PlayerInteractable>().OnInteract();
+        if (inputMode == InputMode.Playing)
+        {
+            if (FocusedInteractableObject != null)
+                FocusedInteractableObject.GetComponent<PlayerInteractable>().OnInteract();
+        }
     }
 
     public GameObject getFocusedInteractableObject()

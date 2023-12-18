@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
-using UnityEngine.InputSystem.HID;
+using UnityEngine.InputSystem;
 
 public class PlaceableEquipItem : EquippableItemEvents
 {
@@ -16,6 +16,8 @@ public class PlaceableEquipItem : EquippableItemEvents
     private float y_rot = 0;
     private bool side = false;
 
+    [SerializeField]
+    public InputActionReference Rotate90Y, Rotate90Z, Mouse;
     public override void Start()
     {
         base.Start();
@@ -31,6 +33,28 @@ public class PlaceableEquipItem : EquippableItemEvents
         }
     }
 
+    private void OnEnable()
+    {
+        Rotate90Y.action.performed += OnRotate90y;
+        Rotate90Z.action.performed += OnRotate90z;
+    }
+
+    private void OnDisable()
+    {
+        Rotate90Y.action.performed -= OnRotate90y;
+        Rotate90Z.action.performed -= OnRotate90z;
+    }
+
+    private void OnRotate90y(InputAction.CallbackContext context)
+    {
+        y_rot += 90f;
+    }
+
+    private void OnRotate90z(InputAction.CallbackContext context)
+    {
+        side = !side;
+    }
+
     private void OnDestroy()
     {
         Destroy(PreviewItemPlace);
@@ -38,13 +62,7 @@ public class PlaceableEquipItem : EquippableItemEvents
 
     public override void Update()
     {
-        base.Update();
-
-        if (Input.GetButtonDown("Rotate90"))
-            y_rot += 90f;
-
-        if (Input.GetButtonDown("RotateSide"))
-            side = !side;
+        base.Update(); 
 
         GameObject cam = GameObject.FindGameObjectsWithTag("CameraArm")[0];
         RaycastHit hit;
@@ -67,7 +85,7 @@ public class PlaceableEquipItem : EquippableItemEvents
 
         float rotationSpeed = 1.0f;
 
-        float mouseX = Input.GetAxis("Mouse X"); // Get the mouse input on the X-axis
+        float mouseX = Mouse.action.ReadValue<Vector2>().x * 0.1f; // Get the mouse input on the X-axis
         y_rot += mouseX * rotationSpeed; // Update the rotation angle
     }
 

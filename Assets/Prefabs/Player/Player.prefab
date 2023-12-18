@@ -1762,7 +1762,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2719159317139668636}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.99998724
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1776,6 +1776,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4987479652845670728}
+  - component: {fileID: 6516890321028163915}
   - component: {fileID: 183610937043042641}
   - component: {fileID: 5156077803263477364}
   - component: {fileID: 5093322487426858403}
@@ -1809,6 +1810,36 @@ Transform:
   - {fileID: 3489605980318056212}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6516890321028163915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3882264334022184889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: PlayerInput
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!114 &183610937043042641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1822,13 +1853,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axes: 0
-  sensitivityX: 0.5
-  sensitivityY: 0.5
+  sensitivityX: 0.05
+  sensitivityY: 0.05
   cameraFieldOfView: 70
   minimumY: -90
   maximumY: 90
   rotationY: 0
   rotationX: 0
+  Mouse: {fileID: -3393964540960816287, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
 --- !u!114 &5156077803263477364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1844,6 +1876,12 @@ MonoBehaviour:
   base_walk_speed: 3
   jumpforce: 200
   movementState: 0
+  Movement: {fileID: -6946331205810484054, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
+  Jump: {fileID: 4378710870099568203, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
+  Sprint: {fileID: -8893478957599164881, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
+  Crouch: {fileID: 1298010945225545872, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
+  Fire: {fileID: 2942228196889357509, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
+  ADS: {fileID: 2212473649771577891, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
 --- !u!54 &5093322487426858403
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1907,6 +1945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputMode: 0
+  Interact: {fileID: 1692970930306199412, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
 --- !u!114 &6977569306313549548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1932,6 +1971,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentEquipIndex: -1
+  Drop: {fileID: -3654066884486588913, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
+  InventorySlots:
+  - {fileID: -8630979219669381336, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
+  - {fileID: -4657730314412390068, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
+  - {fileID: -8737219259747412805, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
+  - {fileID: 2942967894851129938, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
+  - {fileID: -7130776001058908632, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
 --- !u!114 &5850814788016474500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1953,6 +1999,7 @@ MonoBehaviour:
   DeathScreenUIPrefab: {fileID: 1051291263528729964, guid: 7b256fa00411a564a8cb963615fd42f6, type: 3}
   defaultWeapon: {fileID: 994200610082977035, guid: 4e309fa82b90ba3478d5ba1d6c2dd2d4, type: 3}
   invulnerableTime: 5
+  ScoreManager: {fileID: 0}
 --- !u!114 &4974864590857781788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2327,7 +2374,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000008128103}
+  m_AnchoredPosition: {x: 0, y: 0.00005561661}
   m_SizeDelta: {x: 635.8157, y: 200}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &3612074454687835205
@@ -2418,6 +2465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41846d3bb2d4de04cbaa5a8b1ff1461e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InventoryKey: {fileID: -4300470834159728512, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
 --- !u!1 &6194854660481141113
 GameObject:
   m_ObjectHideFlags: 0
@@ -3182,6 +3230,8 @@ MonoBehaviour:
   smooth: 8
   rotationAmmountDegH: 7
   rotationAmmountDegV: 3
+  Movement: {fileID: -6946331205810484054, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
+  Mouse: {fileID: -3393964540960816287, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
 --- !u!1 &8148200656600382130
 GameObject:
   m_ObjectHideFlags: 0
@@ -3366,6 +3416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bobbingSpeed: 5
   bobbingAmount: 0.01
+  Movement: {fileID: -6946331205810484054, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
 --- !u!114 &9049785913378464282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3538,7 +3589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5030629274159012488}
   - component: {fileID: 2668356449579541936}
-  - component: {fileID: 7011065344802021875}
+  - component: {fileID: 6880804992738251391}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -3576,7 +3627,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 59
---- !u!114 &7011065344802021875
+--- !u!114 &6880804992738251391
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3585,17 +3636,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 9040795225807807246}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!1 &9083202194874606093
 GameObject:
   m_ObjectHideFlags: 0
@@ -3777,7 +3838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6117426917849760368, guid: 22c47f9c05d67854ab06daf3ddc9442f, type: 3}
       propertyPath: m_Size
-      value: 1
+      value: 0.9999999
       objectReference: {fileID: 0}
     - target: {fileID: 6117426917849760368, guid: 22c47f9c05d67854ab06daf3ddc9442f, type: 3}
       propertyPath: m_Value
