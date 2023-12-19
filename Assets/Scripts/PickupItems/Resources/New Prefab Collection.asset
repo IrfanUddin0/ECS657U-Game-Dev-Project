@@ -68,3 +68,8 @@ MonoBehaviour:
     valuePrefab: {fileID: 2551231364484385431, guid: 404984efd752c454e8d1c0bc52470594, type: 3}
     image: {fileID: 21300000, guid: 4b6ef0ef9e50f7b40a147f3d00512851, type: 3}
     maxInStack: 64
+  - PrefabMappingName: Coal
+    keyPrefab: {fileID: 4397353416604507779, guid: 95dc7d1bb8c364c4986fba7319f8a70f, type: 3}
+    valuePrefab: {fileID: 3574299389808435369, guid: 85fac30185c455a4ba2eb4d813fce9a2, type: 3}
+    image: {fileID: 21300000, guid: 8fe246d83de9e604fa1bdf58f7dc944f, type: 3}
+    maxInStack: 64
