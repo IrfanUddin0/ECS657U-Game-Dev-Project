@@ -36,6 +36,13 @@ public class MovementScript : MonoBehaviour
         sprintTickCheck();
     }
 
+    private void FixedUpdate()
+    {
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (isGrounded())
+            rb.velocity = Vector3.zero;
+    }
+
     // HANDLE INPUT FUNCTIONS
 
     private void OnEnable()
@@ -209,13 +216,10 @@ public class MovementScript : MonoBehaviour
 
     public bool isGrounded()
     {
-        float height = transform.GetComponent<Collider>().bounds.size.z + .1f;
-        Debug.DrawLine(transform.position, transform.position + (transform.up * -height), Color.red, 10,true);
-        if (Physics.Linecast(transform.position, transform.position + (transform.up * -height)))
-        {
-            return true;
-        }
-        return false;
+        float height = transform.GetComponent<CapsuleCollider>().height / 2f + .1f;
+        bool cast = Physics.Linecast(transform.position, transform.position + (transform.up * -height));
+        Debug.DrawLine(transform.position, transform.position + (transform.up * -height), cast? Color.red : Color.green, 10,true);
+        return cast;
     }
 
     public void jump()

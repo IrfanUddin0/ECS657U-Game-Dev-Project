@@ -125,7 +125,8 @@ public class PlayerSurvival : MonoBehaviour
         giveDefaultWeapon();
         timeSinceSpawn = Time.timeSinceLevelLoad;
         dead = false;
-        ScoreManager.onPlayerRespawn();
+        if(ScoreManager!=null)
+            ScoreManager.onPlayerRespawn();
     }
 
     private void giveDefaultWeapon()
