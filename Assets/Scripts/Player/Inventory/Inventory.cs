@@ -66,10 +66,10 @@ public class Inventory : MonoBehaviour
 
     public void RemoveEveryItem()
     {
-        int count = itemList.Count;
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < itemList.Count; i++)
         {
             RemoveItem(itemList[i]);
+            i--;
         }
     }
 
