@@ -237,11 +237,10 @@ GameObject:
   - component: {fileID: 296115339}
   - component: {fileID: 296115338}
   - component: {fileID: 296115341}
-  - component: {fileID: 296115342}
   - component: {fileID: 296115343}
   - component: {fileID: 296115345}
-  - component: {fileID: 296115344}
   - component: {fileID: 296115346}
+  - component: {fileID: 296115344}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -345,21 +344,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &296115342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 296115337}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2c64e5e6790d9c46ae0ba8d589047aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  treeCount: 500
-  waterLevel: 0
-  TreePrefab: {fileID: 9089349214736428549, guid: fa79654bfd32fd8489dae22d182c9fef, type: 3}
 --- !u!114 &296115343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,6 +359,8 @@ MonoBehaviour:
   treeCount: 2000
   waterLevel: 13
   TreePrefab: {fileID: 2816486115205184337, guid: e375cc3cda24a76449583aefdbb21514, type: 3}
+  regen: 1
+  regenTime: 30
 --- !u!95 &296115344
 Animator:
   serializedVersion: 7
@@ -412,6 +398,8 @@ MonoBehaviour:
   treeCount: 2000
   waterLevel: 13
   TreePrefab: {fileID: 7377417115897789480, guid: 1e9d3fb52d12e864392c72c76cde8b08, type: 3}
+  regen: 0
+  regenTime: 0
 --- !u!114 &296115346
 MonoBehaviour:
   m_ObjectHideFlags: 0
