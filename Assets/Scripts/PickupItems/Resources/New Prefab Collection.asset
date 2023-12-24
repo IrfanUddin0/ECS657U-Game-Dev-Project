@@ -78,3 +78,13 @@ MonoBehaviour:
     valuePrefab: {fileID: 2551231364484385431, guid: 9ee8ca7b8db45ae44bbe26c7ac884ddc, type: 3}
     image: {fileID: 21300000, guid: 9ab867cd35247764ebc27a6c2b607079, type: 3}
     maxInStack: 64
+  - PrefabMappingName: RawMeat
+    keyPrefab: {fileID: 4397353416604507779, guid: 906f827eb5ed5e24e821e70d794205ba, type: 3}
+    valuePrefab: {fileID: 3574299389808435369, guid: 72fda9df77bb09d4a9a7a822f2ff1a14, type: 3}
+    image: {fileID: 21300000, guid: 9ab867cd35247764ebc27a6c2b607079, type: 3}
+    maxInStack: 64
+  - PrefabMappingName: CookedMeat
+    keyPrefab: {fileID: 4397353416604507779, guid: a46382fbf2b2a3a4da920ac730c0e95d, type: 3}
+    valuePrefab: {fileID: 3574299389808435369, guid: 55505a6206ef0254490c3af2afcf90cb, type: 3}
+    image: {fileID: 21300000, guid: 9ab867cd35247764ebc27a6c2b607079, type: 3}
+    maxInStack: 64

@@ -28,5 +28,16 @@ public class CampfireScript : MonoBehaviour
         }
 
         // if food is close, replace it with cooked version
+        RaycastHit hit;
+        Physics.SphereCast(transform.position, effectDistance, transform.forward, out hit);
+        CookFoodScript[] foods = GameObject.FindObjectsByType<CookFoodScript>(FindObjectsSortMode.None);
+
+        foreach (var food in foods)
+        {
+            if(Vector3.Distance(food.transform.position, transform.position) <= effectDistance)
+            {
+                food.OnCook();
+            }
+        }
     }
 }
