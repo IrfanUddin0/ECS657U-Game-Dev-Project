@@ -22,6 +22,7 @@ public class PickupItem : PlayerInteractable
 
     public override void OnInteract()
     {
+        base.OnInteract();
         print("Player Pickup");
         Inventory playerInven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
         if(playerInven != null)

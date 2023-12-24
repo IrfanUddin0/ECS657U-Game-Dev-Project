@@ -256,9 +256,19 @@ public class MovementScript : MonoBehaviour
         movementState = state;
     }
 
+    public float GetWalkSpeed()
+    {
+        return walkspeed;
+    }
+
     public MovementState getMovementState()
     {
         return movementState;
+    }
+
+    public float GetInputVelocity()
+    {
+        return Vector2.Distance(Vector2.zero, Movement.action.ReadValue<Vector2>());
     }
 
     private void sprintTickCheck()

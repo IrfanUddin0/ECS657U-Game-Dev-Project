@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerInteractable : MonoBehaviour
 {
     public string interactPromt;
+    public AudioClip onInteractSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class PlayerInteractable : MonoBehaviour
 
     public virtual void OnInteract()
     {
+        Util.PlayClipAtPoint(onInteractSound, transform.position, 1f);
         print("Playing interacting");
     }
 }

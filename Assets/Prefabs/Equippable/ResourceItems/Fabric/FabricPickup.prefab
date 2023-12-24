@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactPromt: Pickup Fabric
+  onInteractSound: {fileID: 8300000, guid: 61b5c22eddbbd4c4da222f2319203b3d, type: 3}
   prefabCollection: {fileID: 11400000, guid: 8aac15c160556834aad8e8abf75c5b21, type: 2}
   MappingName: Fabric
 --- !u!54 &4032561207356943018

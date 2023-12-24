@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactPromt: Sleep
+  onInteractSound: {fileID: 0}
 --- !u!114 &-9112049321523230225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,6 +85,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 100
+  onHitSound: {fileID: 8300000, guid: 7cdb0321be41bb9409b52f5eec263f7a, type: 3}
 --- !u!114 &3880984467866929616
 MonoBehaviour:
   m_ObjectHideFlags: 0

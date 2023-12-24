@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 100
+  onHitSound: {fileID: 8300000, guid: 7cdb0321be41bb9409b52f5eec263f7a, type: 3}
 --- !u!114 &5230528001365399398
 MonoBehaviour:
   m_ObjectHideFlags: 0
