@@ -2005,8 +2005,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e2a3f30caaa16a4dbe42264d2a54015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 1
+  health: 30
+  maxHealth: 30
   hungerDecreaseRate: 0.003
   thirstDecreaseRate: 0.006
   healthDecreaseRate: 0.02
