@@ -522,6 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0603a5462f16a344292f8857ddbacd48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  craftSound: {fileID: 8300000, guid: 2e8d2d6a8ec00b64a88262fcf8c31aef, type: 3}
 --- !u!1 &5695676423980076693
 GameObject:
   m_ObjectHideFlags: 0

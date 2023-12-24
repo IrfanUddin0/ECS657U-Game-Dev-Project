@@ -61,6 +61,8 @@ MonoBehaviour:
   RecoilXAmmountMin: 0
   RecoilYAmmountMax: 0
   RecoilYAmmountMin: 0
+  FireSound: {fileID: 8300000, guid: 6aaa06b0e56bd6c42a25eacbbdd7fe22, type: 3}
+  FireVolume: 0.5
   range: 3
   debugDraw: 1
   minShootTime: 0.5

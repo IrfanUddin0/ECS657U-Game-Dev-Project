@@ -3,7 +3,9 @@ guid: 24d0e2ec217ca754181fd47825a5e1e9
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - dropItem: {instanceID: 0}
+  - playOnSpawn: {fileID: 8300000, guid: ebafd40587be3da4880e5bab9ec5e1ec, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

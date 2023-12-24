@@ -55,6 +55,8 @@ MonoBehaviour:
   Rotate90Y: {fileID: -818078309047226103, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
   Rotate90Z: {fileID: 2608791369659022257, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
   Mouse: {fileID: -3393964540960816287, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
+  placeClip: {fileID: 8300000, guid: 984c9213da9f1dd43ac813022aff12d9, type: 3}
+  placeClipVolume: 1
 --- !u!1001 &4097985919506040872
 PrefabInstance:
   m_ObjectHideFlags: 0

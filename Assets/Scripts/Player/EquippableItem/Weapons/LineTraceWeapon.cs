@@ -29,6 +29,7 @@ public class LineTraceWeapon : Weapon
         Debug.DrawLine(cam.transform.position + 0.2f * cam.transform.forward, range * cam.transform.forward + cam.transform.position,
             debugDraw?Color.red : Color.clear,15);
 
+        PlayShootSound();
         PlayCameraShake();
         AddRecoil();
         PlayAttackingAnim = true;

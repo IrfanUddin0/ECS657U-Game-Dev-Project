@@ -18,6 +18,9 @@ public class PlaceableEquipItem : EquippableItemEvents
 
     [SerializeField]
     public InputActionReference Rotate90Y, Rotate90Z, Mouse;
+
+    public AudioClip placeClip;
+    public float placeClipVolume;
     public override void Start()
     {
         base.Start();
@@ -91,13 +94,13 @@ public class PlaceableEquipItem : EquippableItemEvents
 
     protected void OnPlace()
     {
-
         GameObject cam = GameObject.FindGameObjectsWithTag("CameraArm")[0];
         RaycastHit hit;
         Physics.Linecast(cam.transform.position + 0.2f * cam.transform.forward, PlaceRange * cam.transform.forward + cam.transform.position, out hit);
 
         if(hit.collider != null)
         {
+            Util.PlayClipAtPoint(placeClip, transform.position, placeClipVolume);
             GameObject final_placed = Instantiate(ItemToPlace);
             final_placed.transform.position = hit.point;
             final_placed.transform.rotation = Quaternion.Euler(side ? 90f : 0f, y_rot, 0f);

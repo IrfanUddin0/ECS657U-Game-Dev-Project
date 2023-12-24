@@ -34,6 +34,7 @@ public class ProjectileLaunchWeapon : Weapon
         projectileInstance.GetComponent<Projectile>().Launch(projectileLaunchScale, call);
         baseDamage = projectileLaunchScale * max_damage;
 
+        PlayShootSound();
         PlayCameraShake();
         AddRecoil();
         PlayAttackingAnim = true;

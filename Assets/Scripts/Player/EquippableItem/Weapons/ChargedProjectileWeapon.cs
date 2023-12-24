@@ -8,6 +8,9 @@ public class ChargedProjectileWeapon : ProjectileLaunchWeapon
     [Header("Weapon Details")]
     public float fullChargeTime;
     private float chargeStartTime;
+
+    public AudioClip chargeClip;
+    public float chargeClipVolume;
     // Start is called before the first frame update
     public override void Start()
     {
@@ -23,6 +26,8 @@ public class ChargedProjectileWeapon : ProjectileLaunchWeapon
     public override void OnFireClicked()
     {
         base.OnFireClicked();
+
+        Util.PlayClipAtPoint(chargeClip, transform.position, chargeClipVolume);
         chargeStartTime = Time.time;
         PlayAttackingAnim = true;
     }

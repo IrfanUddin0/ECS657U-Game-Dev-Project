@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class CraftingPanelScript : MonoBehaviour
 {
     CraftingRecipe Recipe;
-
+    public AudioClip craftSound;
     public void SetItem(CraftingRecipe item)
     {
         CraftingManager manager = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<CraftingManager>();
@@ -40,6 +40,7 @@ public class CraftingPanelScript : MonoBehaviour
 
     void OnCraftClicked()
     {
+        Util.PlayClipAtPoint(craftSound, GameObject.FindGameObjectWithTag("Player").transform.position, 1f);
         CraftingManager manager = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<CraftingManager>();
         manager.CraftRecipe(Recipe);
     }

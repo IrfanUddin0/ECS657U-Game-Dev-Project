@@ -194,3 +194,4 @@ MonoBehaviour:
   dropItem: {fileID: 994200610082977035, guid: 6c32c05f3a9e09b43a67d39942b73f7a, type: 3}
   chance: 0.5
   spawn_up_distance: 1
+  playOnDrop: {fileID: 8300000, guid: ebafd40587be3da4880e5bab9ec5e1ec, type: 3}

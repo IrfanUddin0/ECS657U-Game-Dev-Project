@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   health: 50
-  onHitSound: {fileID: 8300000, guid: 7cdb0321be41bb9409b52f5eec263f7a, type: 3}
+  onHitSound: {fileID: 8300000, guid: fc09fc5b64329a641b0fdd7b27b45bb4, type: 3}
 --- !u!114 &3510850700805966501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,6 +79,7 @@ MonoBehaviour:
   dropItem: {fileID: 4397353416604507779, guid: 7f9d8a27bd00f8649861f3be74740e2f, type: 3}
   chance: 0.5
   spawn_up_distance: 5
+  playOnDrop: {fileID: 8300000, guid: ebafd40587be3da4880e5bab9ec5e1ec, type: 3}
 --- !u!65 &3931479839767115885
 BoxCollider:
   m_ObjectHideFlags: 0

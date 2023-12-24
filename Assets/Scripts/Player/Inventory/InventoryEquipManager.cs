@@ -13,6 +13,8 @@ public class InventoryEquipManager : MonoBehaviour
     public InputActionReference Drop;
     [SerializeField]
     public List<InputActionReference> InventorySlots;
+
+    public AudioClip dropSoundClip;
     void Start()
     {
     }
@@ -41,6 +43,7 @@ public class InventoryEquipManager : MonoBehaviour
 
     private void OnDrop()
     {
+        Util.PlayClipAtPoint(dropSoundClip, transform.position, 1f);
         Inventory playerInven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
         playerInven.RemoveItemByIndex(currentEquipIndex);
     }

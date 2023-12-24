@@ -1994,6 +1994,7 @@ MonoBehaviour:
   - {fileID: -8737219259747412805, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
   - {fileID: 2942967894851129938, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
   - {fileID: -7130776001058908632, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
+  dropSoundClip: {fileID: 8300000, guid: ecb51680f1c76f249869a33d270dd6bd, type: 3}
 --- !u!114 &5850814788016474500
 MonoBehaviour:
   m_ObjectHideFlags: 0

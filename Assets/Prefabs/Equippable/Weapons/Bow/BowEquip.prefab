@@ -50,7 +50,7 @@ MonoBehaviour:
   ads_time: 0.1
   ads_fov_scale: 0.8
   target_ads_transform_const: {x: -0.1, y: 0, z: 0}
-  baseDamage: 50
+  baseDamage: 100
   cameraShakeDuration: 0.1
   cameraShakeAmmount: 50
   cameraShakeDecreaseFactor: 3
@@ -61,9 +61,13 @@ MonoBehaviour:
   RecoilXAmmountMin: 0
   RecoilYAmmountMax: 0
   RecoilYAmmountMin: 0
+  FireSound: {fileID: 8300000, guid: 66552a084d5aac846b47f375e9841349, type: 3}
+  FireVolume: 0.5
   projectilePrefab: {fileID: 4820509224401277567, guid: ce15d827f4101524899e72008927045f, type: 3}
   firePoint: {fileID: 5819195380961385954}
   fullChargeTime: 1
+  chargeClip: {fileID: 8300000, guid: f697be09c0442fe48a3852b7aaa19b4a, type: 3}
+  chargeClipVolume: 1
 --- !u!95 &7445571613642171692
 Animator:
   serializedVersion: 7

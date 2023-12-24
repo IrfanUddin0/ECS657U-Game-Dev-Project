@@ -19,6 +19,9 @@ public class Weapon : EquippableItemEvents
 
     public float RecoilYAmmountMax = 0.0f;
     public float RecoilYAmmountMin = 0.0f;
+
+    public AudioClip FireSound;
+    public float FireVolume = 0.5f;
     // Start is called before the first frame update
     public override void Start()
     {
@@ -57,6 +60,11 @@ public class Weapon : EquippableItemEvents
         CameraScript cam = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<CameraScript>();
         cam.rotationX += Random.Range(RecoilXAmmountMin, RecoilXAmmountMax);
         cam.rotationY += Random.Range(RecoilYAmmountMin, RecoilYAmmountMax);
+    }
+
+    protected void PlayShootSound()
+    {
+        Util.PlayClipAtPoint(FireSound, transform.position, FireVolume);
     }
 
     protected void DamageEntity(PlayerHittable EntityHit)
