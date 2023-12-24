@@ -30,7 +30,13 @@ public class InventoryEquipManager : MonoBehaviour
 
     private void OnDisable()
     {
-        
+        Drop.action.performed -= OnDrop;
+
+        InventorySlots[1].action.performed -= lambda => ChangeEquipIndex(1);
+        InventorySlots[2].action.performed -= lambda => ChangeEquipIndex(2);
+        InventorySlots[0].action.performed -= lambda => ChangeEquipIndex(0);
+        InventorySlots[3].action.performed -= lambda => ChangeEquipIndex(3);
+        InventorySlots[4].action.performed -= lambda => ChangeEquipIndex(4);
     }
 
     private void OnDrop(InputAction.CallbackContext context)
