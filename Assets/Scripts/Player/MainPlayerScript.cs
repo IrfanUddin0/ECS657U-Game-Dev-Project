@@ -93,6 +93,11 @@ public class MainPlayerScript : MonoBehaviour
         return FocusedInteractableObject;
     }
 
+    public void SetNewSpawnTransform(SpawnTransform transform)
+    {
+        spawnTransform = transform;
+    }
+
     public void Respawn()
     {
         inputModeSetPlaying();

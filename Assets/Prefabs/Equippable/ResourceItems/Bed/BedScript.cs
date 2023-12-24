@@ -14,10 +14,16 @@ public class BedScript : PlayerInteractable
     public override void OnInteract()
     {
         base.OnInteract();
-        if(isNight())
+
+        // set spawn point 
+        var player = FindAnyObjectByType<MainPlayerScript>();
+        player.spawnTransform = new SpawnTransform(player.transform.position, player.transform.rotation);
+
+        // if night and light anim is real, reset sun anim position
+        if (isNight()
+            && mainLightRef.GetComponent<Animator>() != null)
         {
-            if(mainLightRef.GetComponent<Animator>() != null)
-                mainLightRef.GetComponent<Animator>().SetFloat("AnimPos", 0.0f);
+            mainLightRef.GetComponent<Animator>().SetFloat("AnimPos", 0.0f);
         }
     }
 
