@@ -51,3 +51,9 @@ MonoBehaviour:
     - Item: {fileID: 2691039409535011996, guid: cbd69267b325f8644a5af6b1a802f2ce, type: 3}
       count: 8
     ItemResult: {fileID: 5435844516253738363, guid: 6ec1ef7b82adf414e8c9862132f9dc85, type: 3}
+  - ItemsNeeded:
+    - Item: {fileID: 2691039409535011996, guid: cbd69267b325f8644a5af6b1a802f2ce, type: 3}
+      count: 2
+    - Item: {fileID: 3574299389808435369, guid: 85fac30185c455a4ba2eb4d813fce9a2, type: 3}
+      count: 1
+    ItemResult: {fileID: 2551231364484385431, guid: 9ee8ca7b8db45ae44bbe26c7ac884ddc, type: 3}

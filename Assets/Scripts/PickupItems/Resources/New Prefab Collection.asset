@@ -76,5 +76,5 @@ MonoBehaviour:
   - PrefabMappingName: Campfire
     keyPrefab: {fileID: 5817720149587199215, guid: e07472264721dac4fa816b201ecf3ba7, type: 3}
     valuePrefab: {fileID: 2551231364484385431, guid: 9ee8ca7b8db45ae44bbe26c7ac884ddc, type: 3}
-    image: {fileID: 21300000, guid: 8fe246d83de9e604fa1bdf58f7dc944f, type: 3}
+    image: {fileID: 21300000, guid: 9ab867cd35247764ebc27a6c2b607079, type: 3}
     maxInStack: 64
