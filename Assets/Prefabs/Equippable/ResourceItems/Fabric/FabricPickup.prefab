@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4032561207356943018}
   - component: {fileID: 7915285750207022080}
   m_Layer: 0
-  m_Name: CoalPickup
+  m_Name: FabricPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,9 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 935976e617b5acc47b05515f304407f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactPromt: Pickup Coal
+  interactPromt: Pickup Fabric
   prefabCollection: {fileID: 11400000, guid: 8aac15c160556834aad8e8abf75c5b21, type: 2}
-  MappingName: Coal
+  MappingName: Fabric
 --- !u!54 &4032561207356943018
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -106,69 +106,57 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7879415430590193255}
     m_Modifications:
-    - target: {fileID: 3538703346198683381, guid: d539e5628b1b21449996ea17d37330f9, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3538703346198683381, guid: d539e5628b1b21449996ea17d37330f9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3538703346198683381, guid: d539e5628b1b21449996ea17d37330f9, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3538703346198683381, guid: d539e5628b1b21449996ea17d37330f9, type: 3}
+    - target: {fileID: 3538703346198683381, guid: 8f8027a0e7ae15e409adf66262b341a4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3538703346198683381, guid: d539e5628b1b21449996ea17d37330f9, type: 3}
+    - target: {fileID: 3538703346198683381, guid: 8f8027a0e7ae15e409adf66262b341a4, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3538703346198683381, guid: d539e5628b1b21449996ea17d37330f9, type: 3}
+    - target: {fileID: 3538703346198683381, guid: 8f8027a0e7ae15e409adf66262b341a4, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3538703346198683381, guid: d539e5628b1b21449996ea17d37330f9, type: 3}
+    - target: {fileID: 3538703346198683381, guid: 8f8027a0e7ae15e409adf66262b341a4, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3538703346198683381, guid: d539e5628b1b21449996ea17d37330f9, type: 3}
+    - target: {fileID: 3538703346198683381, guid: 8f8027a0e7ae15e409adf66262b341a4, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 3538703346198683381, guid: d539e5628b1b21449996ea17d37330f9, type: 3}
+    - target: {fileID: 3538703346198683381, guid: 8f8027a0e7ae15e409adf66262b341a4, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 3538703346198683381, guid: d539e5628b1b21449996ea17d37330f9, type: 3}
+    - target: {fileID: 3538703346198683381, guid: 8f8027a0e7ae15e409adf66262b341a4, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 3538703346198683381, guid: d539e5628b1b21449996ea17d37330f9, type: 3}
+    - target: {fileID: 3538703346198683381, guid: 8f8027a0e7ae15e409adf66262b341a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3538703346198683381, guid: d539e5628b1b21449996ea17d37330f9, type: 3}
+    - target: {fileID: 3538703346198683381, guid: 8f8027a0e7ae15e409adf66262b341a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3538703346198683381, guid: d539e5628b1b21449996ea17d37330f9, type: 3}
+    - target: {fileID: 3538703346198683381, guid: 8f8027a0e7ae15e409adf66262b341a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3982362253051320182, guid: d539e5628b1b21449996ea17d37330f9, type: 3}
+    - target: {fileID: 3982362253051320182, guid: 8f8027a0e7ae15e409adf66262b341a4, type: 3}
       propertyPath: m_Name
-      value: CoalModel
+      value: FabricModel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d539e5628b1b21449996ea17d37330f9, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 8f8027a0e7ae15e409adf66262b341a4, type: 3}
 --- !u!4 &72726910436836662 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3538703346198683381, guid: d539e5628b1b21449996ea17d37330f9, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3538703346198683381, guid: 8f8027a0e7ae15e409adf66262b341a4, type: 3}
   m_PrefabInstance: {fileID: 3465976539514641347}
   m_PrefabAsset: {fileID: 0}

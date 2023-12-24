@@ -88,3 +88,8 @@ MonoBehaviour:
     valuePrefab: {fileID: 3574299389808435369, guid: 55505a6206ef0254490c3af2afcf90cb, type: 3}
     image: {fileID: 21300000, guid: 9ab867cd35247764ebc27a6c2b607079, type: 3}
     maxInStack: 64
+  - PrefabMappingName: Fabric
+    keyPrefab: {fileID: 4397353416604507779, guid: 6933bf1b305def641ae2f8d912f909c4, type: 3}
+    valuePrefab: {fileID: 3574299389808435369, guid: 38934335ab6772d40a6e33125e90415f, type: 3}
+    image: {fileID: 21300000, guid: 9ab867cd35247764ebc27a6c2b607079, type: 3}
+    maxInStack: 64
