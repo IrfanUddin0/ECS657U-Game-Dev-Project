@@ -19,7 +19,7 @@ public class InventoryEquipManager : MonoBehaviour
 
     private void OnEnable()
     {
-        Drop.action.performed += OnDrop;
+        Drop.action.performed += lambda => OnDrop();
 
         InventorySlots[0].action.performed += lambda => ChangeEquipIndex(0);
         InventorySlots[1].action.performed += lambda => ChangeEquipIndex(1);
@@ -30,7 +30,7 @@ public class InventoryEquipManager : MonoBehaviour
 
     private void OnDisable()
     {
-        Drop.action.performed -= OnDrop;
+        Drop.action.performed -= lambda => OnDrop();
 
         InventorySlots[1].action.performed -= lambda => ChangeEquipIndex(1);
         InventorySlots[2].action.performed -= lambda => ChangeEquipIndex(2);
@@ -39,7 +39,7 @@ public class InventoryEquipManager : MonoBehaviour
         InventorySlots[4].action.performed -= lambda => ChangeEquipIndex(4);
     }
 
-    private void OnDrop(InputAction.CallbackContext context)
+    private void OnDrop()
     {
         Inventory playerInven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
         playerInven.RemoveItemByIndex(currentEquipIndex);
