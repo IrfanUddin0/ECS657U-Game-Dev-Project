@@ -44,6 +44,11 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    public void IncreaseScore()
+    {
+        scoreCount++;
+    }
+
     public void onPlayerDeath()
     {
         // new changes made by Sulaiman
