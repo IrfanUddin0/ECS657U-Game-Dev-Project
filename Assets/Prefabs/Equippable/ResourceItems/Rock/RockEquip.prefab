@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ads_time: 0.1
-  ads_fov_scale: 0.8
+  ads_fov_scale: 1
   target_ads_transform_const: {x: 0, y: 0, z: 0}
   ItemToPlace: {fileID: 7377417115897789480, guid: 1e9d3fb52d12e864392c72c76cde8b08, type: 3}
   PlaceRange: 5
