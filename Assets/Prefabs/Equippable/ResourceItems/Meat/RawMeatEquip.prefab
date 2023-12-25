@@ -51,6 +51,8 @@ MonoBehaviour:
   target_ads_transform_const: {x: 0, y: 0, z: 0}
   healthReplenishAmmount: 10
   hungerReplenishAmmount: 0.1
+  healSound: {fileID: 8300000, guid: 2d2480c257eec5d46a49dca32012cfc2, type: 3}
+  healSoundVolume: 1
 --- !u!1001 &6615090890976534561
 PrefabInstance:
   m_ObjectHideFlags: 0
