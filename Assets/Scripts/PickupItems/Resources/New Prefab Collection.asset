@@ -81,20 +81,20 @@ MonoBehaviour:
   - PrefabMappingName: RawMeat
     keyPrefab: {fileID: 4397353416604507779, guid: 906f827eb5ed5e24e821e70d794205ba, type: 3}
     valuePrefab: {fileID: 3574299389808435369, guid: 72fda9df77bb09d4a9a7a822f2ff1a14, type: 3}
-    image: {fileID: 21300000, guid: 9ab867cd35247764ebc27a6c2b607079, type: 3}
+    image: {fileID: 21300000, guid: 2b4994478675a954d99d4ba283823906, type: 3}
     maxInStack: 64
   - PrefabMappingName: CookedMeat
     keyPrefab: {fileID: 4397353416604507779, guid: a46382fbf2b2a3a4da920ac730c0e95d, type: 3}
     valuePrefab: {fileID: 3574299389808435369, guid: 55505a6206ef0254490c3af2afcf90cb, type: 3}
-    image: {fileID: 21300000, guid: 9ab867cd35247764ebc27a6c2b607079, type: 3}
+    image: {fileID: 21300000, guid: dfcf47016e2c0bb45b6ceba558abdd5a, type: 3}
     maxInStack: 64
   - PrefabMappingName: Fabric
     keyPrefab: {fileID: 4397353416604507779, guid: 6933bf1b305def641ae2f8d912f909c4, type: 3}
     valuePrefab: {fileID: 3574299389808435369, guid: 38934335ab6772d40a6e33125e90415f, type: 3}
-    image: {fileID: 21300000, guid: 9ab867cd35247764ebc27a6c2b607079, type: 3}
+    image: {fileID: 21300000, guid: 00adb84c902893a4893aa2e2939fe266, type: 3}
     maxInStack: 64
   - PrefabMappingName: Bed
     keyPrefab: {fileID: 749309338393534881, guid: 50478e21c2349de489f314b718815266, type: 3}
     valuePrefab: {fileID: 1883322863298995498, guid: 000091fce615852438fcc962e7b3a3e0, type: 3}
-    image: {fileID: 21300000, guid: 9ab867cd35247764ebc27a6c2b607079, type: 3}
+    image: {fileID: 21300000, guid: f55d25fa7abd65e4e9a146fa7d1ba0e9, type: 3}
     maxInStack: 1
