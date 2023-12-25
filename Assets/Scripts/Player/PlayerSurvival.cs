@@ -25,6 +25,9 @@ public class PlayerSurvival : MonoBehaviour
     private float timeSinceSpawn;
     public float invulnerableTime = 5f;
 
+    public AudioClip onHitSound;
+    public float onHitSoundVolume = 1f;
+
     // new changes made by Sulaiman
     public ScoreManager ScoreManager;
 
@@ -104,6 +107,9 @@ public class PlayerSurvival : MonoBehaviour
             return;
 
         health -= h;
+
+        // do effects
+        Util.PlayClipAtPoint(onHitSound, transform.position, onHitSoundVolume);
     }
 
     public void OnDeath()
