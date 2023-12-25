@@ -9,8 +9,8 @@ public class PlayerSurvival : MonoBehaviour
     public float maxHealth;
 
     // percentages, max is 1.0f
-    private float hunger;
-    private float thirst;
+    public float hunger;
+    public float thirst;
 
     public float hungerDecreaseRate = 0.01f;
     public float thirstDecreaseRate = 0.015f;
