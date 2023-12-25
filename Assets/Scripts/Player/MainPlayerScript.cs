@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,6 +8,7 @@ public enum InputMode
     UI
 }
 
+[Serializable]
 public struct SpawnTransform
 {
     public SpawnTransform(Vector3 pos, Quaternion rot)
@@ -14,7 +16,9 @@ public struct SpawnTransform
         this.pos = pos;
         this.rot = rot;
     }
+    [SerializeField]
     public Vector3 pos;
+    [SerializeField]
     public Quaternion rot;
 }
 
