@@ -49,7 +49,7 @@ MonoBehaviour:
   ads_time: 0.1
   ads_fov_scale: 1
   target_ads_transform_const: {x: 0, y: 0, z: 0}
-  healthReplenishAmmount: 50
+  healthReplenishAmmount: 5
   hungerReplenishAmmount: 0.3
   healSound: {fileID: 8300000, guid: 2d2480c257eec5d46a49dca32012cfc2, type: 3}
   healSoundVolume: 1
