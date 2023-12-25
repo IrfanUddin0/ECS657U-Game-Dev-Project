@@ -23,7 +23,6 @@ public class FootstepSounds : MonoBehaviour
             && movementRef.GetInputVelocity() >= 0.1f
             && movementRef.isGrounded())
         {
-            print("Playing sound");
             lastPlayed = Time.timeSinceLevelLoad;
 
             Util.PlayClipAtPoint(sounds[Random.Range(0, sounds.Count)], transform.position, 1f);
