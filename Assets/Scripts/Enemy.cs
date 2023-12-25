@@ -8,6 +8,9 @@ public class Enemy : PlayerHittable
     public float attackDamage;
     public float attackTime;
 
+    public AudioClip deathSound;
+    public float deathSoundVolume = 1f;
+
     private float lastAttackTime;
 
     private NavMeshAgent agent;
@@ -32,6 +35,7 @@ public class Enemy : PlayerHittable
     {
         if (health <= 0)
         {
+            Util.PlayClipAtPoint(deathSound, transform.position, deathSoundVolume);
             Destroy(gameObject);
         }
         float distanceToTarget = Vector3.Distance(target.position, transform.position);
