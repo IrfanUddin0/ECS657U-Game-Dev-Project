@@ -8,7 +8,7 @@ public class PlayerHittable : MonoBehaviour
     public float health;
 
     public AudioClip onHitSound;
-    protected virtual void Start()
+    public virtual void Start()
     {
         health = maxHealth;
     }

@@ -6,7 +6,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshObstacle))]
 public class PlacedItem : PlayerHittable
 {
-    protected override void Start()
+    public override void Start()
     {
         base.Start();
     }
