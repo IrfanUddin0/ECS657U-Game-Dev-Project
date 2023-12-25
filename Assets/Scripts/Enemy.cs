@@ -41,7 +41,8 @@ public class Enemy : PlayerHittable
             lastAttackTime = Time.timeSinceLevelLoad;
             playerdamage.decreasePlayerHealth(attackDamage);
         }
-        else if (distanceToTarget <= 5f)
+        else if (distanceToTarget <= 5f
+            && agent.isOnNavMesh)
         {
             agent.SetDestination(target.position);
         }
