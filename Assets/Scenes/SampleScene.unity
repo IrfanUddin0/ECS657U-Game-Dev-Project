@@ -398,8 +398,8 @@ MonoBehaviour:
   treeCount: 2000
   waterLevel: 13
   TreePrefab: {fileID: 7377417115897789480, guid: 1e9d3fb52d12e864392c72c76cde8b08, type: 3}
-  regen: 0
-  regenTime: 0
+  regen: 1
+  regenTime: 50
 --- !u!114 &296115346
 MonoBehaviour:
   m_ObjectHideFlags: 0
