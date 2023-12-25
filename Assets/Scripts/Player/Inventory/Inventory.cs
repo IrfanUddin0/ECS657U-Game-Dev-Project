@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    [SerializeField]
     private List<Item> itemList = new List<Item>();
 
     // Method to add an item to the inventory.
@@ -126,7 +127,7 @@ public class Inventory : MonoBehaviour
         return outItem;
     }
 
-    private void OnInventoryUpdated()
+    public void OnInventoryUpdated()
     {
         foreach(InventoryUIElement UIElem in GameObject.FindGameObjectWithTag("Player").GetComponentsInChildren<InventoryUIElement>())
         {
