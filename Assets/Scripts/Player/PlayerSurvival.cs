@@ -28,6 +28,9 @@ public class PlayerSurvival : MonoBehaviour
     public AudioClip onHitSound;
     public float onHitSoundVolume = 1f;
 
+    public AudioClip deathSound;
+    public float deathSoundVolume = 1f;
+
     // new changes made by Sulaiman
     public ScoreManager ScoreManager;
 
@@ -121,6 +124,9 @@ public class PlayerSurvival : MonoBehaviour
         // display death screen
         Instantiate(DeathScreenUIPrefab, GetComponentInChildren<Canvas>().transform);
         ScoreManager.onPlayerDeath();
+
+        // play sound
+        Util.PlayClipAtPoint(deathSound, transform.position, deathSoundVolume);
     }
 
     public void OnRespawn()

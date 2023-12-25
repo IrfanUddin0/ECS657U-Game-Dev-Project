@@ -1777,7 +1777,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2719159317139668636}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9999825
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2018,6 +2018,8 @@ MonoBehaviour:
   invulnerableTime: 5
   onHitSound: {fileID: 8300000, guid: 5ded99a24d78965429c762155b12afc8, type: 3}
   onHitSoundVolume: 0.7
+  deathSound: {fileID: 8300000, guid: 7dae5c04af395d64c971d8a36cd0038c, type: 3}
+  deathSoundVolume: 1
   ScoreManager: {fileID: 0}
 --- !u!114 &4974864590857781788
 MonoBehaviour:
@@ -2410,7 +2412,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000013533747}
+  m_AnchoredPosition: {x: 0, y: 0.00015280665}
   m_SizeDelta: {x: 635.8157, y: 200}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &3612074454687835205
