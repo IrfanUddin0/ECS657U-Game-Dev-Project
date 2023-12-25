@@ -155,8 +155,8 @@ MonoBehaviour:
   maxHealth: 200
   health: 200
   onHitSound: {fileID: 8300000, guid: 594f0333237e10545801bf9fd48f7069, type: 3}
-  target: {fileID: 0}
-  damageAmount: 0.3
+  attackDamage: 10
+  attackTime: 1
 --- !u!195 &6927340585173762666
 NavMeshAgent:
   m_ObjectHideFlags: 0
