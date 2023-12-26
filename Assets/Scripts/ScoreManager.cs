@@ -68,4 +68,13 @@ public class ScoreManager : MonoBehaviour
         scoreCount = 0;
         scoreText.text = "Day " + scoreCount.ToString();
     }
+
+    public void setScoreFromSave(ScoreManagerSave save)
+    {
+        scoreCount = save.scoreCount;
+        countNext = save.countNext;
+        lastDeathXLightPosition = save.lastDeathXLightPosition;
+        lastDeathYLightPosition = save.lastDeathYLightPosition;
+        scoreText.text = "Day " + scoreCount.ToString();
+    }
 }

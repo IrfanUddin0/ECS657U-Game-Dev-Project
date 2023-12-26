@@ -1777,7 +1777,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2719159317139668636}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999825
+  m_Size: 0.68749976
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1802,6 +1802,7 @@ GameObject:
   - component: {fileID: 5850814788016474500}
   - component: {fileID: 4974864590857781788}
   - component: {fileID: 2936733568379522679}
+  - component: {fileID: 1696043515410667251}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1961,6 +1962,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputMode: 0
+  spawnTransform:
+    pos: {x: 0, y: 0, z: 0}
+    rot: {x: 0, y: 0, z: 0, w: 0}
   Interact: {fileID: 1692970930306199412, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
 --- !u!114 &6977569306313549548
 MonoBehaviour:
@@ -1974,6 +1978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f5266095d6e86342ac9704164e69da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemList: []
 --- !u!114 &3345368566331333048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2009,6 +2014,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 30
   maxHealth: 30
+  hunger: 0
+  thirst: 0
   hungerDecreaseRate: 0.003
   thirstDecreaseRate: 0.006
   healthDecreaseRate: 0.02
@@ -2053,6 +2060,19 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d122a97925e69df4f93c48c4310e129c, type: 3}
   - {fileID: 8300000, guid: b35d290af2cea7c4ea4a0431cd41dc96, type: 3}
   - {fileID: 8300000, guid: e8144694da5956341afae00889845788, type: 3}
+--- !u!114 &1696043515410667251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3882264334022184889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f485c094f3d06f14d97eeaf5c6f2e838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateRate: 5
 --- !u!1 &4567585029988839122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2412,7 +2432,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00015280665}
+  m_AnchoredPosition: {x: 0, y: 0.0003155879}
   m_SizeDelta: {x: 635.8157, y: 200}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &3612074454687835205
