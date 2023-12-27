@@ -166,5 +166,7 @@ public class SaverLoader : MonoBehaviour
         PlayerPrefs.DeleteKey("CameraRot");
         PlayerPrefs.DeleteKey("SunPos");
         PlayerPrefs.DeleteKey("Score");
+
+        PlayerPrefs.Save();
     }
 }
