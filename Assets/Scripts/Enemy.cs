@@ -19,6 +19,8 @@ public class Enemy : PlayerHittable
     private Vector3 roamPoint;
     private PlayerSurvival playerdamage;
 
+    private Animator animator;
+
     // Start is called before the first frame update
     public override void Start()
     {
@@ -26,6 +28,7 @@ public class Enemy : PlayerHittable
         agent = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         playerdamage = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerSurvival>();
+        animator = GetComponent<Animator>();
         roamPoint = transform.position;
 
         lastAttackTime = Time.timeSinceLevelLoad;
@@ -44,16 +47,23 @@ public class Enemy : PlayerHittable
             && Time.timeSinceLevelLoad - lastAttackTime >= attackTime)
         {
             lastAttackTime = Time.timeSinceLevelLoad;
+            animator.SetBool("isAttacking", true);
+
             playerdamage.decreasePlayerHealth(attackDamage);
         }
         else if (distanceToTarget <= 5f
             && agent.isOnNavMesh)
         {
             agent.SetDestination(target.position);
+            animator.SetBool("isChasing", true);
+            animator.SetBool("isAttacking", false);
+            print(animator.GetBool("isChasing"));
         }
         else
         {
             patrol();
+            animator.SetBool("isChasing", false);
+            animator.SetBool("isAttacking", false);
         }
 
     }
@@ -65,7 +75,7 @@ public class Enemy : PlayerHittable
             roamPoint = findRandomPoint();
 
         }
-        if(agent.isOnNavMesh)
+        if (agent.isOnNavMesh)
             agent.SetDestination(roamPoint);
 
     }
