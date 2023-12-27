@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8263755069357606127}
   - component: {fileID: 247534825363613557}
+  - component: {fileID: 1077381786919251701}
   m_Layer: 0
   m_Name: PT_Male_Armor_beard_01
   m_TagString: Untagged
@@ -163,6 +164,31 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.5412589, y: 0.079631746, z: -0.00000012665987}
     m_Extent: {x: 0.100507304, y: 0.08308807, z: 0.09179905}
   m_DirtyAABB: 0
+--- !u!205 &1077381786919251701
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44568827959067972}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 247534825363613557}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &46743533491080041
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,6 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3188649534810683425}
   - component: {fileID: 6929068077273885409}
+  - component: {fileID: 5272308613501851656}
   m_Layer: 0
   m_Name: PT_Male_Armor_01_A_helmet
   m_TagString: Untagged
@@ -326,6 +353,31 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.6349157, y: -0.055817485, z: -0.005494818}
     m_Extent: {x: 0.32337454, y: 0.28684354, z: 0.15947092}
   m_DirtyAABB: 0
+--- !u!205 &5272308613501851656
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46743533491080041}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 6929068077273885409}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &96849822110596039
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,6 +549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8617245189619144950}
   - component: {fileID: 5807584493254716791}
+  - component: {fileID: 5237954272867803300}
   m_Layer: 0
   m_Name: PT_Male_Armor_05_C_gauntlets
   m_TagString: Untagged
@@ -650,6 +703,31 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.31740978, y: -0.024746343, z: 0.00000011920929}
     m_Extent: {x: 0.10593128, y: 0.13744749, z: 0.9216517}
   m_DirtyAABB: 0
+--- !u!205 &5237954272867803300
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619922279711685416}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 5807584493254716791}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &716711530583117593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,6 +1142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4885495713154640373}
   - component: {fileID: 2955761540498858469}
+  - component: {fileID: 127579223119294967}
   m_Layer: 0
   m_Name: PT_Male_Armor_naked_00_boots
   m_TagString: Untagged
@@ -1217,6 +1296,31 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.9882299, y: -0.054311104, z: 0.00014118105}
     m_Extent: {x: 0.18108737, y: 0.19088185, z: 0.19779286}
   m_DirtyAABB: 0
+--- !u!205 &127579223119294967
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970036895473550959}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 2955761540498858469}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &1998425077410716577
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,6 +1521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6216382914130162931}
   - component: {fileID: 6142526757415923151}
+  - component: {fileID: 1916144542630130769}
   m_Layer: 0
   m_Name: PT_Male_Armor_naked_00_body
   m_TagString: Untagged
@@ -1570,6 +1675,31 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.3101736, y: -0.014742881, z: 0.0000004172325}
     m_Extent: {x: 0.35091284, y: 0.22551464, z: 0.73754436}
   m_DirtyAABB: 0
+--- !u!205 &1916144542630130769
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2398805499090985725}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 6142526757415923151}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &2448820469293676266
 GameObject:
   m_ObjectHideFlags: 0
@@ -2159,6 +2289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6582420289022419661}
   - component: {fileID: 7620796127559829622}
+  - component: {fileID: 6014047176711878538}
   m_Layer: 0
   m_Name: PT_Male_Armor_01_A_cape
   m_TagString: Untagged
@@ -2312,6 +2443,31 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.020588487, y: -0.1853579, z: 0.00039801002}
     m_Extent: {x: 0.4795991, y: 0.17171714, z: 0.25302777}
   m_DirtyAABB: 0
+--- !u!205 &6014047176711878538
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3884997961160488252}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7620796127559829622}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &3941087827404558714
 GameObject:
   m_ObjectHideFlags: 0
@@ -2455,6 +2611,7 @@ GameObject:
   m_Component:
   - component: {fileID: 725593846402317342}
   - component: {fileID: 7204302166906404003}
+  - component: {fileID: 2884123438770749704}
   m_Layer: 0
   m_Name: PT_Male_Armor_cloth_00_legs
   m_TagString: Untagged
@@ -2608,6 +2765,31 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.45979363, y: -0.05562678, z: 0.0013982952}
     m_Extent: {x: 0.4527089, y: 0.23364472, z: 0.23900002}
   m_DirtyAABB: 0
+--- !u!205 &2884123438770749704
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4302776315119980948}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7204302166906404003}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &4469910040283892111
 GameObject:
   m_ObjectHideFlags: 0
@@ -2650,6 +2832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5492393951633353141}
   - component: {fileID: 4620788752282749012}
+  - component: {fileID: 8046319853306008163}
   m_Layer: 0
   m_Name: PT_Male_Armor_05_C_body
   m_TagString: Untagged
@@ -2803,6 +2986,31 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.023439765, y: -0.017442606, z: 0.0000005066395}
     m_Extent: {x: 0.6704143, y: 0.24395242, z: 0.73754454}
   m_DirtyAABB: 0
+--- !u!205 &8046319853306008163
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4501517447212791064}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4620788752282749012}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &4528612834030799290
 GameObject:
   m_ObjectHideFlags: 0
@@ -2845,6 +3053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8636786657705521475}
   - component: {fileID: 5691836805168229714}
+  - component: {fileID: 4784867703885489900}
   m_Layer: 0
   m_Name: PT_Male_Armor_cloth_00_body
   m_TagString: Untagged
@@ -2998,6 +3207,31 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.16925982, y: -0.021328703, z: 0.0000004172325}
     m_Extent: {x: 0.48118123, y: 0.22711623, z: 0.7375445}
   m_DirtyAABB: 0
+--- !u!205 &4784867703885489900
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4563422318729429052}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 5691836805168229714}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &4586679835751359613
 GameObject:
   m_ObjectHideFlags: 0
@@ -3039,6 +3273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6193394411705402798}
   - component: {fileID: 7773425549563945208}
+  - component: {fileID: 6154240542962037621}
   m_Layer: 0
   m_Name: PT_Male_Armor_beard_20
   m_TagString: Untagged
@@ -3192,6 +3427,31 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.50999856, y: 0.13239777, z: -0.00000020302832}
     m_Extent: {x: 0.028628394, y: 0.016405597, z: 0.01564644}
   m_DirtyAABB: 0
+--- !u!205 &6154240542962037621
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4633732505056538621}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7773425549563945208}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &4830053602435217429
 GameObject:
   m_ObjectHideFlags: 0
@@ -3329,6 +3589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3029473814872342317}
   - component: {fileID: 5772755105596204786}
+  - component: {fileID: 5206082000387090609}
   m_Layer: 0
   m_Name: PT_Male_Armor_hair_20
   m_TagString: Untagged
@@ -3482,6 +3743,31 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.7395732, y: 0.011073362, z: 0.010551192}
     m_Extent: {x: 0.10234219, y: 0.11778025, z: 0.07931896}
   m_DirtyAABB: 0
+--- !u!205 &5206082000387090609
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5296551698677687537}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 5772755105596204786}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &5303631105703562676
 GameObject:
   m_ObjectHideFlags: 0
@@ -3492,6 +3778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 523628154958510576}
   - component: {fileID: 1548510688538111303}
+  - component: {fileID: 6139229839616580790}
   m_Layer: 0
   m_Name: PT_Male_Armor_05_C_boots
   m_TagString: Untagged
@@ -3645,6 +3932,31 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.85948026, y: -0.020428628, z: 0.000020302832}
     m_Extent: {x: 0.29463568, y: 0.28071353, z: 0.19683972}
   m_DirtyAABB: 0
+--- !u!205 &6139229839616580790
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5303631105703562676}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1548510688538111303}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &5313172304037636371
 GameObject:
   m_ObjectHideFlags: 0
@@ -3687,6 +3999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 870509713312422448}
   - component: {fileID: 2700548119580517043}
+  - component: {fileID: 2532328972240811965}
   m_Layer: 0
   m_Name: PT_Male_Armor_01_A_boots
   m_TagString: Untagged
@@ -3840,6 +4153,31 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.86069715, y: -0.064711675, z: 0.00009059906}
     m_Extent: {x: 0.3091682, y: 0.195787, z: 0.21366726}
   m_DirtyAABB: 0
+--- !u!205 &2532328972240811965
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5332937247305649891}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 2700548119580517043}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &5474798095867234473
 GameObject:
   m_ObjectHideFlags: 0
@@ -3977,6 +4315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6729319534786911876}
   - component: {fileID: 2980180483453861653}
+  - component: {fileID: 873178589097116197}
   m_Layer: 0
   m_Name: PT_Male_Armor_cloth_00_gauntlets
   m_TagString: Untagged
@@ -4130,6 +4469,31 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.30099034, y: -0.018095206, z: 0.00000008940697}
     m_Extent: {x: 0.08655341, y: 0.11405492, z: 0.92808163}
   m_DirtyAABB: 0
+--- !u!205 &873178589097116197
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5860964277987012027}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 2980180483453861653}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &6065682415809633679
 GameObject:
   m_ObjectHideFlags: 0
@@ -4140,6 +4504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8910946625248923472}
   - component: {fileID: 2814675666052295336}
+  - component: {fileID: 809109185307702403}
   m_Layer: 0
   m_Name: PT_Male_Armor_01_A_body
   m_TagString: Untagged
@@ -4293,6 +4658,31 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.15652332, y: -0.010628521, z: 0.00000044703484}
     m_Extent: {x: 0.53885376, y: 0.26249403, z: 0.7375444}
   m_DirtyAABB: 0
+--- !u!205 &809109185307702403
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6065682415809633679}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 2814675666052295336}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &6076743796325283615
 GameObject:
   m_ObjectHideFlags: 0
@@ -4494,6 +4884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9198310049376608448}
   - component: {fileID: 294450020368078351}
+  - component: {fileID: 6743707278749571831}
   m_Layer: 0
   m_Name: PT_Male_Armor_hair_01
   m_TagString: Untagged
@@ -4647,6 +5038,31 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.6207768, y: 0.0009107739, z: -0.0024357438}
     m_Extent: {x: 0.1985126, y: 0.16418122, z: 0.14679776}
   m_DirtyAABB: 0
+--- !u!205 &6743707278749571831
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6588722904177181345}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 294450020368078351}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &6591417321044539048
 GameObject:
   m_ObjectHideFlags: 0
@@ -4784,6 +5200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3726864841802061631}
   - component: {fileID: 4433449195538187962}
+  - component: {fileID: 2963412672681768772}
   m_Layer: 0
   m_Name: PT_Male_Armor_01_A_legs
   m_TagString: Untagged
@@ -4937,6 +5354,31 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.460261, y: -0.05113569, z: 0.00078076124}
     m_Extent: {x: 0.45222783, y: 0.20028523, z: 0.23901093}
   m_DirtyAABB: 0
+--- !u!205 &2963412672681768772
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6691791647677267536}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4433449195538187962}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &6731754639527054280
 GameObject:
   m_ObjectHideFlags: 0
@@ -5134,6 +5576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7811336612077047848}
   - component: {fileID: 4284754057270929663}
+  - component: {fileID: 2090800170298790889}
   m_Layer: 0
   m_Name: PT_Male_Armor_05_C_legs
   m_TagString: Untagged
@@ -5287,6 +5730,31 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.45931348, y: -0.04534538, z: 0.00034476817}
     m_Extent: {x: 0.45317528, y: 0.19294243, z: 0.22353628}
   m_DirtyAABB: 0
+--- !u!205 &2090800170298790889
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7396658077818819135}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4284754057270929663}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &7399735392573770607
 GameObject:
   m_ObjectHideFlags: 0
@@ -5297,6 +5765,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4773510149866714716}
   - component: {fileID: 7412755618335680706}
+  - component: {fileID: 1904548930350651370}
   m_Layer: 0
   m_Name: PT_Male_Armor_05_C_helmet
   m_TagString: Untagged
@@ -5450,6 +5919,31 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.5847955, y: 0.044210114, z: -0.009570971}
     m_Extent: {x: 0.2699453, y: 0.21510148, z: 0.1986573}
   m_DirtyAABB: 0
+--- !u!205 &1904548930350651370
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7399735392573770607}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7412755618335680706}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &7576180920495315060
 GameObject:
   m_ObjectHideFlags: 0
@@ -5625,6 +6119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7100285371547717179}
   - component: {fileID: 8993563298037745524}
+  - component: {fileID: 3810214657345476870}
   m_Layer: 0
   m_Name: PT_Male_Armor_head_10
   m_TagString: Untagged
@@ -5778,6 +6273,31 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.5932878, y: 0.011829697, z: -0.00000010803342}
     m_Extent: {x: 0.20710585, y: 0.17574799, z: 0.10385999}
   m_DirtyAABB: 0
+--- !u!205 &3810214657345476870
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7809993489550470552}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 8993563298037745524}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &7886948781396283190
 GameObject:
   m_ObjectHideFlags: 0
@@ -5851,6 +6371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6266632820130584143}
   - component: {fileID: 4195459905906803214}
+  - component: {fileID: 1758353744782662596}
   m_Layer: 0
   m_Name: PT_Male_Armor_01_A_gauntlets
   m_TagString: Untagged
@@ -6004,6 +6525,31 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.34205592, y: -0.0068506747, z: -0.0000002682209}
     m_Extent: {x: 0.108344436, y: 0.13482717, z: 0.93420887}
   m_DirtyAABB: 0
+--- !u!205 &1758353744782662596
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8118352294663406843}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4195459905906803214}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &8223915646202759659
 GameObject:
   m_ObjectHideFlags: 0
@@ -6014,6 +6560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5605080717694345259}
   - component: {fileID: 7534779728950751400}
+  - component: {fileID: 294303067328665851}
   m_Layer: 0
   m_Name: PT_Male_Armor_naked_00_gauntlets
   m_TagString: Untagged
@@ -6167,6 +6714,31 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.31711882, y: -0.008821823, z: 0.00000017881393}
     m_Extent: {x: 0.073457584, y: 0.11124686, z: 0.9280816}
   m_DirtyAABB: 0
+--- !u!205 &294303067328665851
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8223915646202759659}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7534779728950751400}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &8300177308861775648
 GameObject:
   m_ObjectHideFlags: 0
@@ -6209,6 +6781,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5081312326614297402}
   - component: {fileID: 4901645251154205239}
+  - component: {fileID: 6639185176387623895}
   m_Layer: 0
   m_Name: PT_Male_Armor_cloth_00_boots
   m_TagString: Untagged
@@ -6362,6 +6935,31 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.95521635, y: -0.06792094, z: 0.000033952296}
     m_Extent: {x: 0.2088502, y: 0.18321441, z: 0.177843}
   m_DirtyAABB: 0
+--- !u!205 &6639185176387623895
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8355749450815532313}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4901645251154205239}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &8443750815508674407
 GameObject:
   m_ObjectHideFlags: 0
@@ -6404,6 +7002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1392900735781725095}
   - component: {fileID: 2870977850274606599}
+  - component: {fileID: 3712456029571720664}
   m_Layer: 0
   m_Name: PT_Male_Armor_naked_00_legs
   m_TagString: Untagged
@@ -6557,6 +7156,31 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.4605713, y: -0.05252713, z: 0.0009787977}
     m_Extent: {x: 0.45062387, y: 0.23273912, z: 0.23576096}
   m_DirtyAABB: 0
+--- !u!205 &3712456029571720664
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8574768077274551673}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 2870977850274606599}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &8651187117666609658
 GameObject:
   m_ObjectHideFlags: 0
@@ -6757,6 +7381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6401640758410167543}
   - component: {fileID: 1386809696128744623}
+  - component: {fileID: 2697351197780102427}
   m_Layer: 0
   m_Name: PT_Male_Armor_05_C_cape
   m_TagString: Untagged
@@ -6910,6 +7535,31 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.19014378, y: -0.23637745, z: 0.00000035762787}
     m_Extent: {x: 0.63956064, y: 0.16577008, z: 0.24586996}
   m_DirtyAABB: 0
+--- !u!205 &2697351197780102427
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9082024723627631925}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1386809696128744623}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &9176549810562524892
 GameObject:
   m_ObjectHideFlags: 0
@@ -6983,6 +7633,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3241055372185111220}
   - component: {fileID: 6995492757540826617}
+  - component: {fileID: 9108717751766439313}
   m_Layer: 0
   m_Name: PT_Male_Armor_head_01
   m_TagString: Untagged
@@ -7136,6 +7787,31 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.59294116, y: 0.012507096, z: 0.00077516213}
     m_Extent: {x: 0.20745245, y: 0.17642544, z: 0.104635224}
   m_DirtyAABB: 0
+--- !u!205 &9108717751766439313
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9185053889561898378}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 6995492757540826617}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1001 &467780054346288670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7192,11 +7868,49 @@ PrefabInstance:
     - {fileID: 789998495325418185, guid: 39ec6af3eb8c70848b3da75dbf39628f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4489677676252728369, guid: 39ec6af3eb8c70848b3da75dbf39628f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4412642618936329482}
   m_SourcePrefab: {fileID: 100100000, guid: 39ec6af3eb8c70848b3da75dbf39628f, type: 3}
+--- !u!1 &4049696437097284143 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4489677676252728369, guid: 39ec6af3eb8c70848b3da75dbf39628f, type: 3}
+  m_PrefabInstance: {fileID: 467780054346288670}
+  m_PrefabAsset: {fileID: 0}
+--- !u!205 &4412642618936329482
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4049696437097284143}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.1
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4049696437099551983}
+  - screenRelativeHeight: 0.1
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.1
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!4 &4049696437097651727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4489677676252762129, guid: 39ec6af3eb8c70848b3da75dbf39628f, type: 3}
+  m_PrefabInstance: {fileID: 467780054346288670}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4049696437099551983 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4489677676254663409, guid: 39ec6af3eb8c70848b3da75dbf39628f, type: 3}
   m_PrefabInstance: {fileID: 467780054346288670}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1633413578562984236
@@ -7255,10 +7969,48 @@ PrefabInstance:
     - {fileID: 789998495325418185, guid: 39ec6af3eb8c70848b3da75dbf39628f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4489677676252728369, guid: 39ec6af3eb8c70848b3da75dbf39628f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5948582317831965706}
   m_SourcePrefab: {fileID: 100100000, guid: 39ec6af3eb8c70848b3da75dbf39628f, type: 3}
+--- !u!1 &2946909904864040221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4489677676252728369, guid: 39ec6af3eb8c70848b3da75dbf39628f, type: 3}
+  m_PrefabInstance: {fileID: 1633413578562984236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!205 &5948582317831965706
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2946909904864040221}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.1
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 2946909904866298845}
+  - screenRelativeHeight: 0.1
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.1
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!4 &2946909904864528701 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4489677676252762129, guid: 39ec6af3eb8c70848b3da75dbf39628f, type: 3}
+  m_PrefabInstance: {fileID: 1633413578562984236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2946909904866298845 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4489677676254663409, guid: 39ec6af3eb8c70848b3da75dbf39628f, type: 3}
   m_PrefabInstance: {fileID: 1633413578562984236}
   m_PrefabAsset: {fileID: 0}

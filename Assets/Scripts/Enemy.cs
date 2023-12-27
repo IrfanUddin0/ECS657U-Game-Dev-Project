@@ -57,7 +57,6 @@ public class Enemy : PlayerHittable
             agent.SetDestination(target.position);
             animator.SetBool("isChasing", true);
             animator.SetBool("isAttacking", false);
-            print(animator.GetBool("isChasing"));
         }
         else
         {
@@ -65,7 +64,6 @@ public class Enemy : PlayerHittable
             animator.SetBool("isChasing", false);
             animator.SetBool("isAttacking", false);
         }
-
     }
     void patrol()
     {
@@ -82,7 +80,6 @@ public class Enemy : PlayerHittable
 
     Vector3 findRandomPoint()
     {
-
         Vector3 randomPoint = Random.insideUnitSphere * 50;
 
         randomPoint += transform.position;
@@ -97,8 +94,6 @@ public class Enemy : PlayerHittable
         {
             return transform.position;
         }
-
-
     }
 
 }

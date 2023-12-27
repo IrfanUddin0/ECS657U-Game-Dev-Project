@@ -123,7 +123,8 @@ public class PlayerSurvival : MonoBehaviour
 
         // display death screen
         Instantiate(DeathScreenUIPrefab, GetComponentInChildren<Canvas>().transform);
-        ScoreManager.onPlayerDeath();
+        if(ScoreManager != null)
+            ScoreManager.onPlayerDeath();
 
         // play sound
         Util.PlayClipAtPoint(deathSound, transform.position, deathSoundVolume);
