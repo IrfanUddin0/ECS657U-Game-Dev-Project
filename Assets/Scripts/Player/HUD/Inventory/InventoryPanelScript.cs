@@ -18,6 +18,7 @@ public class InventoryPanelScript : MonoBehaviour
         icon.sprite = item.image;
         texts[0].text = item.itemName;
         texts[1].text = ""+item.count;
+        texts[2].text = item.description;
 
         // if equipped then hide equip button
         Inventory inven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();

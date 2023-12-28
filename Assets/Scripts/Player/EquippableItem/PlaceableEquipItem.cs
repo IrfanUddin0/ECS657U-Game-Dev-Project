@@ -10,6 +10,8 @@ public class PlaceableEquipItem : EquippableItemEvents
     public GameObject ItemToPlace;
     public float PlaceRange = 5f;
 
+    private float GridRoundValue = 1f;
+
     public Material PlaceMaterial;
 
     private GameObject PreviewItemPlace;
@@ -72,7 +74,18 @@ public class PlaceableEquipItem : EquippableItemEvents
         Physics.Linecast(cam.transform.position + 0.2f * cam.transform.forward, PlaceRange * cam.transform.forward + cam.transform.position, out hit);
 
 
-        PreviewItemPlace.transform.position = hit.point;
+
+        /*PreviewItemPlace.transform.position = new Vector3(
+            (int)GridRoundValue * (int)Math.Round(hit.point.x / GridRoundValue),
+            (int)GridRoundValue * (int)Math.Round(hit.point.y / GridRoundValue),
+            (int)GridRoundValue * (int)Math.Round(hit.point.z / GridRoundValue));*/
+
+
+        PreviewItemPlace.transform.position = new Vector3(
+            ((float)(Math.Round(hit.point.x * 2, MidpointRounding.AwayFromZero) / 2)),
+            ((float)(Math.Round(hit.point.y * 2, MidpointRounding.AwayFromZero) / 2)),
+            ((float)(Math.Round(hit.point.z * 2, MidpointRounding.AwayFromZero) / 2)));
+
         PreviewItemPlace.transform.rotation = Quaternion.Euler(side ? 90f : 0f, y_rot, 0f);
     }
 
@@ -102,7 +115,10 @@ public class PlaceableEquipItem : EquippableItemEvents
         {
             Util.PlayClipAtPoint(placeClip, transform.position, placeClipVolume);
             GameObject final_placed = Instantiate(ItemToPlace);
-            final_placed.transform.position = hit.point;
+            final_placed.transform.position = new Vector3(
+            ((float)(Math.Round(hit.point.x * 2, MidpointRounding.AwayFromZero) / 2)),
+            ((float)(Math.Round(hit.point.y * 2, MidpointRounding.AwayFromZero) / 2)),
+            ((float)(Math.Round(hit.point.z * 2, MidpointRounding.AwayFromZero) / 2)));
             final_placed.transform.rotation = Quaternion.Euler(side ? 90f : 0f, y_rot, 0f);
 
             Inventory inven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();

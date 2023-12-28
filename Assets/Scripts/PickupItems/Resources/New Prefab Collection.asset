@@ -14,86 +14,103 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabMappings:
   - PrefabMappingName: Pistol
+    ItemDescription: A powerful ranged weapon.
     keyPrefab: {fileID: 994200610082977035, guid: ae70dbd9ca316ec48826977ccefe8bee, type: 3}
     valuePrefab: {fileID: 5435844516253738363, guid: 397e66916c023c947b630eaf9b8771ce, type: 3}
     image: {fileID: 21300000, guid: 150d149ba53bdbc458db81de34ce5c33, type: 3}
     maxInStack: 2
   - PrefabMappingName: SMG
+    ItemDescription: low damage, high firerate weapon
     keyPrefab: {fileID: 994200610082977035, guid: 8dcfa32af0d826c4593c179d5bfc189f, type: 3}
     valuePrefab: {fileID: 5435844516253738363, guid: 6ec1ef7b82adf414e8c9862132f9dc85, type: 3}
     image: {fileID: 21300000, guid: 5556c8ae2755c0646b7b7b4e2851a18e, type: 3}
     maxInStack: 1
   - PrefabMappingName: Axe
+    ItemDescription: Weapon for close quaters
     keyPrefab: {fileID: 994200610082977035, guid: 4e309fa82b90ba3478d5ba1d6c2dd2d4, type: 3}
     valuePrefab: {fileID: 5435844516253738363, guid: 6714d4bfa18ef4a41afe71c5dea3db6e, type: 3}
     image: {fileID: 21300000, guid: c2dcbe5ab053eab47a0530577f004507, type: 3}
     maxInStack: 1
   - PrefabMappingName: Bow
+    ItemDescription: A ranged weapon, hard to master.
     keyPrefab: {fileID: 994200610082977035, guid: 6c32c05f3a9e09b43a67d39942b73f7a, type: 3}
     valuePrefab: {fileID: 5435844516253738363, guid: 3608c614dcbb4b5459ed2da36700b5fd, type: 3}
     image: {fileID: 21300000, guid: f604473de4c5bae41b855081cbfff833, type: 3}
     maxInStack: 1
   - PrefabMappingName: Wood
+    ItemDescription: A Log of wood, can be placed.
     keyPrefab: {fileID: 2691039409535011996, guid: 149cdf200e796174ebfe8df3e020a242, type: 3}
     valuePrefab: {fileID: 2691039409535011996, guid: cbd69267b325f8644a5af6b1a802f2ce, type: 3}
     image: {fileID: 21300000, guid: 989fb2207c66e9042925be3a6cb9cce7, type: 3}
     maxInStack: 64
   - PrefabMappingName: Apple
+    ItemDescription: An apple from a tree. Restores 5HP
     keyPrefab: {fileID: 4397353416604507779, guid: 7f9d8a27bd00f8649861f3be74740e2f, type: 3}
     valuePrefab: {fileID: 3574299389808435369, guid: d64d9bd668b14cd4d8b4e1334a696bb5, type: 3}
     image: {fileID: 21300000, guid: 027bcaa3fb245e74584b4a09d9afd619, type: 3}
     maxInStack: 64
   - PrefabMappingName: Door
+    ItemDescription: A door. Can be placed and interacted.
     keyPrefab: {fileID: 749309338393534881, guid: ae2f9bf01c704714f91ef9b7086c9d25, type: 3}
     valuePrefab: {fileID: 1883322863298995498, guid: 4b13409c98d8764439b0f0c3eab7248e, type: 3}
     image: {fileID: 21300000, guid: 9317af72d90b34a43b76c7d2fcb2e4a9, type: 3}
     maxInStack: 64
   - PrefabMappingName: Rock
+    ItemDescription: A rock.
     keyPrefab: {fileID: 5817720149587199215, guid: 30f5254ed7dc2b0409bf34ef1c06d093, type: 3}
     valuePrefab: {fileID: 2551231364484385431, guid: 902b991beb2c62a4d95d0b80a0ff0763, type: 3}
     image: {fileID: 21300000, guid: 7e8a6b543f11b004cb1fa6c0a553acfc, type: 3}
     maxInStack: 64
   - PrefabMappingName: WoodTile
+    ItemDescription: A tile made from wood. Can be placed.
     keyPrefab: {fileID: 5817720149587199215, guid: ccdd7fc2384b1074b9151072bc16ff78, type: 3}
     valuePrefab: {fileID: 2551231364484385431, guid: 46eed18ac67754846b3724282e37278c, type: 3}
     image: {fileID: 21300000, guid: 6b3b7acef3571674d869d3f83f452286, type: 3}
     maxInStack: 64
   - PrefabMappingName: WoodTileDark
+    ItemDescription: A tile made from wood. Can be placed.
     keyPrefab: {fileID: 5817720149587199215, guid: 71d62924fd2e6c24b8e011ee172ce165, type: 3}
     valuePrefab: {fileID: 2551231364484385431, guid: db85461f91e54dd41a39ba8138b40be4, type: 3}
     image: {fileID: 21300000, guid: 3895865a0ab315149a3f0b86a591466c, type: 3}
     maxInStack: 64
   - PrefabMappingName: RockTile
+    ItemDescription: A tile made from rock. Can be placed.
     keyPrefab: {fileID: 5817720149587199215, guid: aa74aa977f884774693c40ae2d5f299f, type: 3}
     valuePrefab: {fileID: 2551231364484385431, guid: 404984efd752c454e8d1c0bc52470594, type: 3}
     image: {fileID: 21300000, guid: 4b6ef0ef9e50f7b40a147f3d00512851, type: 3}
     maxInStack: 64
   - PrefabMappingName: Coal
+    ItemDescription: Coal, used as fuel.
     keyPrefab: {fileID: 4397353416604507779, guid: 95dc7d1bb8c364c4986fba7319f8a70f, type: 3}
     valuePrefab: {fileID: 3574299389808435369, guid: 85fac30185c455a4ba2eb4d813fce9a2, type: 3}
     image: {fileID: 21300000, guid: 8fe246d83de9e604fa1bdf58f7dc944f, type: 3}
     maxInStack: 64
   - PrefabMappingName: Campfire
+    ItemDescription: Provides light, cooks food and healing when nearby.
     keyPrefab: {fileID: 5817720149587199215, guid: e07472264721dac4fa816b201ecf3ba7, type: 3}
     valuePrefab: {fileID: 2551231364484385431, guid: 9ee8ca7b8db45ae44bbe26c7ac884ddc, type: 3}
     image: {fileID: 21300000, guid: 9ab867cd35247764ebc27a6c2b607079, type: 3}
     maxInStack: 64
   - PrefabMappingName: RawMeat
+    ItemDescription: Raw meat from an animal you killed.
     keyPrefab: {fileID: 4397353416604507779, guid: 906f827eb5ed5e24e821e70d794205ba, type: 3}
     valuePrefab: {fileID: 3574299389808435369, guid: 72fda9df77bb09d4a9a7a822f2ff1a14, type: 3}
     image: {fileID: 21300000, guid: 2b4994478675a954d99d4ba283823906, type: 3}
     maxInStack: 64
   - PrefabMappingName: CookedMeat
+    ItemDescription: A nice steak, restores 100HP when consumed
     keyPrefab: {fileID: 4397353416604507779, guid: a46382fbf2b2a3a4da920ac730c0e95d, type: 3}
     valuePrefab: {fileID: 3574299389808435369, guid: 55505a6206ef0254490c3af2afcf90cb, type: 3}
     image: {fileID: 21300000, guid: dfcf47016e2c0bb45b6ceba558abdd5a, type: 3}
     maxInStack: 64
   - PrefabMappingName: Fabric
+    ItemDescription: The skin from an animal you killed.
     keyPrefab: {fileID: 4397353416604507779, guid: 6933bf1b305def641ae2f8d912f909c4, type: 3}
     valuePrefab: {fileID: 3574299389808435369, guid: 38934335ab6772d40a6e33125e90415f, type: 3}
     image: {fileID: 21300000, guid: 00adb84c902893a4893aa2e2939fe266, type: 3}
     maxInStack: 64
   - PrefabMappingName: Bed
+    ItemDescription: When used, sets spawn point, skips to next morning.
     keyPrefab: {fileID: 749309338393534881, guid: 50478e21c2349de489f314b718815266, type: 3}
     valuePrefab: {fileID: 1883322863298995498, guid: 000091fce615852438fcc962e7b3a3e0, type: 3}
     image: {fileID: 21300000, guid: f55d25fa7abd65e4e9a146fa7d1ba0e9, type: 3}
