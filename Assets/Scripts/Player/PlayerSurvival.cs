@@ -44,7 +44,7 @@ public class PlayerSurvival : MonoBehaviour
     void Update()
     {
         // if invul then return
-        if (Time.timeSinceLevelLoad - timeSinceSpawn < invulnerableTime)
+        if (Time.timeSinceLevelLoad - timeSinceSpawn < invulnerableTime && health!=0)
             return;
 
         // Decrease hunger and thirst over time
