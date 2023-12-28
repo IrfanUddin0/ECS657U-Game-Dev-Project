@@ -16,8 +16,12 @@ public class TreeSpawner : MonoBehaviour
     void Start()
     {
         terrain = GetComponent<Terrain>();
-        SpawnTreesOnTerrain();
         lastSpawn = Time.timeSinceLevelLoad;
+
+        // if using saver loader and save exists, then dont spawn anything in
+        if(!SaverLoader.SaveExists()
+            && FindAnyObjectByType<SaverLoader>()!= null)
+            SpawnTreesOnTerrain();
     }
 
     private void Update()

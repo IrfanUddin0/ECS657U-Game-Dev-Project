@@ -74,14 +74,7 @@ public class SaverLoader : MonoBehaviour
     void Start()
     {
         // if a key is missing then dont load
-        if(!PlayerPrefs.HasKey("Inventory")
-            || !PlayerPrefs.HasKey("PlayerSurvival")
-            || !PlayerPrefs.HasKey("Spawn")
-            || !PlayerPrefs.HasKey("PlayerTransform")
-            || !PlayerPrefs.HasKey("CameraRot")
-            || !PlayerPrefs.HasKey("SunPos")
-            || !PlayerPrefs.HasKey("Score")
-            || !PlayerPrefs.HasKey("WorldObjects"))
+        if(!SaveExists())
         { 
             DeleteSave();
             return;
@@ -228,5 +221,18 @@ public class SaverLoader : MonoBehaviour
         PlayerPrefs.DeleteKey("WorldObjects");
 
         PlayerPrefs.Save();
+    }
+
+    public static bool SaveExists()
+    {
+        return 
+            PlayerPrefs.HasKey("Inventory")
+            && PlayerPrefs.HasKey("PlayerSurvival")
+            && PlayerPrefs.HasKey("Spawn")
+            && PlayerPrefs.HasKey("PlayerTransform")
+            && PlayerPrefs.HasKey("CameraRot")
+            && PlayerPrefs.HasKey("SunPos")
+            && PlayerPrefs.HasKey("Score")
+            && PlayerPrefs.HasKey("WorldObjects");
     }
 }
