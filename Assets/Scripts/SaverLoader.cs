@@ -69,12 +69,13 @@ public class SaverLoader : MonoBehaviour
 {
     public PlacedItemCollection placedItemCollection;
     public float updateRate = 5f;
+    public bool DEBUGResetsave = false;
     private float lastUpdateTime;
     // load everything from json
     void Start()
     {
         // if a key is missing then dont load
-        if(!SaveExists())
+        if(!SaveExists() || DEBUGResetsave)
         { 
             DeleteSave();
             return;
