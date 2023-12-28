@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4780126251619073761}
+  - component: {fileID: 6916684075703814846}
   m_Layer: 0
   m_Name: RawMeatModel
   m_TagString: Untagged
@@ -32,6 +33,22 @@ Transform:
   - {fileID: 948033708953587780}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6916684075703814846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305143982404274259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 935976e617b5acc47b05515f304407f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactPromt: pick up meat
+  onInteractSound: {fileID: 8300000, guid: 61b5c22eddbbd4c4da222f2319203b3d, type: 3}
+  prefabCollection: {fileID: 0}
+  MappingName: 
 --- !u!1001 &948033708953193156
 PrefabInstance:
   m_ObjectHideFlags: 0
