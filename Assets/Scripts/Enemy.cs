@@ -28,7 +28,7 @@ public class Enemy : PlayerHittable
         agent = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         playerdamage = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerSurvival>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         roamPoint = transform.position;
 
         lastAttackTime = Time.timeSinceLevelLoad;
