@@ -60,6 +60,7 @@ public class CraftingManager : InventoryUIElement
                 add.PickupPrefab = i.keyPrefab;
                 add.EquipPrefab = i.valuePrefab;
                 add.itemName = i.PrefabMappingName;
+                add.description = i.ItemDescription;
                 add.image = i.image;
                 add.maxInStack = i.maxInStack;
             }

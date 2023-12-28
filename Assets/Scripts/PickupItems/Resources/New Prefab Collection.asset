@@ -20,19 +20,19 @@ MonoBehaviour:
     image: {fileID: 21300000, guid: 150d149ba53bdbc458db81de34ce5c33, type: 3}
     maxInStack: 2
   - PrefabMappingName: SMG
-    ItemDescription: A lethal, low damage, high firerate, ranged weapon
+    ItemDescription: low damage, high firerate weapon
     keyPrefab: {fileID: 994200610082977035, guid: 8dcfa32af0d826c4593c179d5bfc189f, type: 3}
     valuePrefab: {fileID: 5435844516253738363, guid: 6ec1ef7b82adf414e8c9862132f9dc85, type: 3}
     image: {fileID: 21300000, guid: 5556c8ae2755c0646b7b7b4e2851a18e, type: 3}
     maxInStack: 1
   - PrefabMappingName: Axe
-    ItemDescription: Used for close quarters combat, or destroying things.
+    ItemDescription: Weapon for close quaters
     keyPrefab: {fileID: 994200610082977035, guid: 4e309fa82b90ba3478d5ba1d6c2dd2d4, type: 3}
     valuePrefab: {fileID: 5435844516253738363, guid: 6714d4bfa18ef4a41afe71c5dea3db6e, type: 3}
     image: {fileID: 21300000, guid: c2dcbe5ab053eab47a0530577f004507, type: 3}
     maxInStack: 1
   - PrefabMappingName: Bow
-    ItemDescription: A ranged weapon, easy to craft, hard to master.
+    ItemDescription: A ranged weapon, hard to master.
     keyPrefab: {fileID: 994200610082977035, guid: 6c32c05f3a9e09b43a67d39942b73f7a, type: 3}
     valuePrefab: {fileID: 5435844516253738363, guid: 3608c614dcbb4b5459ed2da36700b5fd, type: 3}
     image: {fileID: 21300000, guid: f604473de4c5bae41b855081cbfff833, type: 3}
@@ -44,14 +44,13 @@ MonoBehaviour:
     image: {fileID: 21300000, guid: 989fb2207c66e9042925be3a6cb9cce7, type: 3}
     maxInStack: 64
   - PrefabMappingName: Apple
-    ItemDescription: An apple from a tree. When eaten, restores 5HP
+    ItemDescription: An apple from a tree. Restores 5HP
     keyPrefab: {fileID: 4397353416604507779, guid: 7f9d8a27bd00f8649861f3be74740e2f, type: 3}
     valuePrefab: {fileID: 3574299389808435369, guid: d64d9bd668b14cd4d8b4e1334a696bb5, type: 3}
     image: {fileID: 21300000, guid: 027bcaa3fb245e74584b4a09d9afd619, type: 3}
     maxInStack: 64
   - PrefabMappingName: Door
-    ItemDescription: A door so you can get in and out of places. Can be placed and
-      interacted with.
+    ItemDescription: A door. Can be placed and interacted.
     keyPrefab: {fileID: 749309338393534881, guid: ae2f9bf01c704714f91ef9b7086c9d25, type: 3}
     valuePrefab: {fileID: 1883322863298995498, guid: 4b13409c98d8764439b0f0c3eab7248e, type: 3}
     image: {fileID: 21300000, guid: 9317af72d90b34a43b76c7d2fcb2e4a9, type: 3}
@@ -111,8 +110,7 @@ MonoBehaviour:
     image: {fileID: 21300000, guid: 00adb84c902893a4893aa2e2939fe266, type: 3}
     maxInStack: 64
   - PrefabMappingName: Bed
-    ItemDescription: A bed for sleeping. When used, sets spawn point, if night then
-      skips to the next morning.
+    ItemDescription: When used, sets spawn point, skips to next morning.
     keyPrefab: {fileID: 749309338393534881, guid: 50478e21c2349de489f314b718815266, type: 3}
     valuePrefab: {fileID: 1883322863298995498, guid: 000091fce615852438fcc962e7b3a3e0, type: 3}
     image: {fileID: 21300000, guid: f55d25fa7abd65e4e9a146fa7d1ba0e9, type: 3}

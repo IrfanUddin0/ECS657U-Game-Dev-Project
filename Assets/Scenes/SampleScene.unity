@@ -628,6 +628,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.0006878532
       objectReference: {fileID: 0}
+    - target: {fileID: 6977569306313549548, guid: 7c0b749d12bca4e4c9994f6ee9d782ce, type: 3}
+      propertyPath: dropSoundVolume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7158589022783991247, guid: 7c0b749d12bca4e4c9994f6ee9d782ce, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.00033359317
@@ -1562,9 +1566,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 828880302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 300}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -103}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1927245709
@@ -1594,7 +1598,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 50
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0

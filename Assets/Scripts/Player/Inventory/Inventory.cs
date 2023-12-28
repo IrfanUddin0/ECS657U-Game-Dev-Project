@@ -6,7 +6,8 @@ public class Inventory : MonoBehaviour
 {
     [SerializeField]
     private List<Item> itemList = new List<Item>();
-
+    public AudioClip dropSoundClip;
+    public float dropSoundVolume = 1f;
     // Method to add an item to the inventory.
     public void AddItem(Item item)
     {
@@ -33,6 +34,7 @@ public class Inventory : MonoBehaviour
     // Method to remove an item from the inventory.
     public void RemoveItem(Item item, bool spawnitem = true)
     {
+        Util.PlayClipAtPoint(dropSoundClip, transform.position, dropSoundVolume);
         if (itemList.Contains(item))
         {
             InventoryEquipManager manager = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<InventoryEquipManager>();
@@ -159,6 +161,7 @@ public class Inventory : MonoBehaviour
 public class Item
 {
     public string itemName;
+    public string description;
     public GameObject PickupPrefab;
     public GameObject EquipPrefab;
     public Sprite image;
