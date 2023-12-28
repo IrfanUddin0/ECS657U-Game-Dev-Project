@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c085d034970e604f8305c24d3828009, type: 3}
+  m_Name: PlacedItemCollection
+  m_EditorClassIdentifier: 
+  prefabMappings:
+  - PrefabMappingName: Bed
+    Prefab: {fileID: 288119615157868066, guid: 9819528ddf3040e4ba597fa7200827bd, type: 3}
+  - PrefabMappingName: Campfire
+    Prefab: {fileID: 7377417115897789480, guid: 150523ec73500ce48991032b753607d1, type: 3}
+  - PrefabMappingName: Door
+    Prefab: {fileID: 288119615157868066, guid: 1b724c78fe2e14a479a6163e082664d0, type: 3}
+  - PrefabMappingName: Rock
+    Prefab: {fileID: 7377417115897789480, guid: 1e9d3fb52d12e864392c72c76cde8b08, type: 3}
+  - PrefabMappingName: RockTile
+    Prefab: {fileID: 7377417115897789480, guid: 72687c32581530246b12e6535bb8afe6, type: 3}
+  - PrefabMappingName: Tree
+    Prefab: {fileID: 2816486115205184337, guid: e375cc3cda24a76449583aefdbb21514, type: 3}
+  - PrefabMappingName: Wood
+    Prefab: {fileID: 1141923175744675908, guid: 10f3ece767d341a43be519aae4c43083, type: 3}
+  - PrefabMappingName: WoodTile
+    Prefab: {fileID: 7377417115897789480, guid: 2c9772397ac42cb4db9183a4b0f83fae, type: 3}
+  - PrefabMappingName: WoodTileDark
+    Prefab: {fileID: 7377417115897789480, guid: 2e1de4c3bb5914b4885ddd354912f9bd, type: 3}

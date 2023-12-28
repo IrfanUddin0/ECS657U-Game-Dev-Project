@@ -51,6 +51,7 @@ MonoBehaviour:
   maxHealth: 200
   health: 200
   onHitSound: {fileID: 8300000, guid: fc09fc5b64329a641b0fdd7b27b45bb4, type: 3}
+  SaveName: Campfire
 --- !u!114 &6054054704912752182
 MonoBehaviour:
   m_ObjectHideFlags: 0

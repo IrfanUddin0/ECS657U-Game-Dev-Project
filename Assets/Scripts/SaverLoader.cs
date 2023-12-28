@@ -47,8 +47,27 @@ public class ScoreManagerSave
     public float lastDeathYLightPosition;
 }
 
+[Serializable]
+public class SavedObjectDetails
+{
+    [SerializeField]
+    public String mappingName;
+    [SerializeField]
+    public Vector3 pos;
+    [SerializeField]
+    public Quaternion rot;
+}
+
+[Serializable]
+public class PlacedObjectsSave
+{
+    [SerializeField]
+    public List<SavedObjectDetails> objects = new List<SavedObjectDetails>();
+}
+
 public class SaverLoader : MonoBehaviour
 {
+    public PlacedItemCollection placedItemCollection;
     public float updateRate = 5f;
     private float lastUpdateTime;
     // load everything from json
@@ -61,8 +80,12 @@ public class SaverLoader : MonoBehaviour
             || !PlayerPrefs.HasKey("PlayerTransform")
             || !PlayerPrefs.HasKey("CameraRot")
             || !PlayerPrefs.HasKey("SunPos")
-            || !PlayerPrefs.HasKey("Score"))
-        { return; }
+            || !PlayerPrefs.HasKey("Score")
+            || !PlayerPrefs.HasKey("WorldObjects"))
+        { 
+            DeleteSave();
+            return;
+        }
 
         // load player inventory
         JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("Inventory"), FindAnyObjectByType<Inventory>());
@@ -97,6 +120,27 @@ public class SaverLoader : MonoBehaviour
 
         // load score
         FindAnyObjectByType<ScoreManager>().setScoreFromSave(JsonUtility.FromJson<ScoreManagerSave>(PlayerPrefs.GetString("Score")));
+
+        // spawn all saved objects
+
+        // first remove current placed and pickupable objects
+        PlacedItem[] placedobjs = FindObjectsByType<PlacedItem>(FindObjectsSortMode.None);
+        foreach (PlacedItem obj in placedobjs)
+        {
+            Destroy(obj.gameObject);
+        }
+        PickupItem[] pickupobjs = FindObjectsByType<PickupItem>(FindObjectsSortMode.None);
+        foreach (PickupItem obj in pickupobjs)
+        {
+            Destroy(obj.gameObject);
+        }
+
+        PlacedObjectsSave objssave = JsonUtility.FromJson<PlacedObjectsSave>(PlayerPrefs.GetString("WorldObjects"));
+        foreach (var obj in objssave.objects)
+        {
+            var map = placedItemCollection.findWithName(obj.mappingName);
+            Instantiate(map.Prefab, obj.pos, obj.rot);
+        }
 
         lastUpdateTime = Time.timeSinceLevelLoad;
     }
@@ -153,6 +197,21 @@ public class SaverLoader : MonoBehaviour
         sms.lastDeathYLightPosition = sm.lastDeathYLightPosition;
         PlayerPrefs.SetString("Score", JsonUtility.ToJson(sms));
 
+        // save all placed items
+        PlacedItem[] objs = FindObjectsByType<PlacedItem>(FindObjectsSortMode.None);
+        PlacedObjectsSave newobjsSave = new PlacedObjectsSave();
+
+        foreach (PlacedItem obj in objs)
+        {
+            SavedObjectDetails newdetail = new SavedObjectDetails();
+            newdetail.mappingName = obj.SaveName;
+            newdetail.pos = obj.transform.position;
+            newdetail.rot = obj.transform.rotation;
+            newobjsSave.objects.Add(newdetail);
+        }
+
+        PlayerPrefs.SetString("WorldObjects", JsonUtility.ToJson(newobjsSave));
+
 
         PlayerPrefs.Save();
     }
@@ -166,6 +225,7 @@ public class SaverLoader : MonoBehaviour
         PlayerPrefs.DeleteKey("CameraRot");
         PlayerPrefs.DeleteKey("SunPos");
         PlayerPrefs.DeleteKey("Score");
+        PlayerPrefs.DeleteKey("WorldObjects");
 
         PlayerPrefs.Save();
     }

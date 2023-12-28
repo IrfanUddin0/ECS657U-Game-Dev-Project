@@ -17,7 +17,7 @@ public class DestroyableObject : MonoBehaviour
     {
         if (health.health <= 0)
         {
-            Instantiate(PickupableToSpawn, gameObject.transform.position, gameObject.transform.rotation);
+            //Instantiate(PickupableToSpawn, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
     }

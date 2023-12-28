@@ -87,6 +87,7 @@ MonoBehaviour:
   maxHealth: 100
   health: 100
   onHitSound: {fileID: 8300000, guid: fc09fc5b64329a641b0fdd7b27b45bb4, type: 3}
+  SaveName: Bed
 --- !u!114 &3880984467866929616
 MonoBehaviour:
   m_ObjectHideFlags: 0

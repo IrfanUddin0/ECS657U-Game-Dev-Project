@@ -9,11 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1559646324910036197}
-  - component: {fileID: 3566247897278162530}
+  - component: {fileID: 20437394791903985}
   - component: {fileID: 3510850700805966501}
   - component: {fileID: 3757792437169056504}
   - component: {fileID: 3931479839767115885}
   - component: {fileID: 5009482709659820172}
+  - component: {fileID: 8463731277891576244}
   m_Layer: 0
   m_Name: TreePrefab
   m_TagString: Untagged
@@ -36,7 +37,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3566247897278162530
+--- !u!114 &20437394791903985
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,12 +46,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2816486115205184337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9801def95d09ee42a6f1a23642de0b2, type: 3}
+  m_Script: {fileID: 11500000, guid: b2e1487f3e23b1a40a961bc0e9e85b2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 50
   health: 50
   onHitSound: {fileID: 8300000, guid: fc09fc5b64329a641b0fdd7b27b45bb4, type: 3}
+  SaveName: Tree
 --- !u!114 &3510850700805966501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,3 +120,19 @@ MonoBehaviour:
   - {fileID: 114418, guid: 8b2d47fdc2e25ac4f9721480a68bbefa, type: 3}
   - {fileID: 114418, guid: 956bd2acf7aae244dac8fc20cf57858d, type: 3}
   - {fileID: 114418, guid: 9b8fc966f95ea9c4194dc091fc40b478, type: 3}
+--- !u!208 &8463731277891576244
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2816486115205184337}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.25, y: 3.5, z: 0.25}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3, z: 0}
+  m_TimeToStationary: 0.5

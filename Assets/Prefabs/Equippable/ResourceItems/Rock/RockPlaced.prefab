@@ -51,6 +51,7 @@ MonoBehaviour:
   maxHealth: 450
   health: 450
   onHitSound: {fileID: 8300000, guid: 7cdb0321be41bb9409b52f5eec263f7a, type: 3}
+  SaveName: Rock
 --- !u!114 &6054054704912752182
 MonoBehaviour:
   m_ObjectHideFlags: 0
