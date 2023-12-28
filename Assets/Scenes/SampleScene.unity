@@ -360,7 +360,7 @@ MonoBehaviour:
   waterLevel: 13
   TreePrefab: {fileID: 2816486115205184337, guid: e375cc3cda24a76449583aefdbb21514, type: 3}
   regen: 1
-  regenTime: 30
+  regenTime: 10
 --- !u!95 &296115344
 Animator:
   serializedVersion: 7
@@ -399,7 +399,7 @@ MonoBehaviour:
   waterLevel: 13
   TreePrefab: {fileID: 7377417115897789480, guid: 1e9d3fb52d12e864392c72c76cde8b08, type: 3}
   regen: 1
-  regenTime: 50
+  regenTime: 30
 --- !u!114 &296115346
 MonoBehaviour:
   m_ObjectHideFlags: 0
