@@ -2023,7 +2023,7 @@ MonoBehaviour:
   DeathScreenUIPrefab: {fileID: 1051291263528729964, guid: 7b256fa00411a564a8cb963615fd42f6, type: 3}
   defaultWeapon: {fileID: 994200610082977035, guid: 4e309fa82b90ba3478d5ba1d6c2dd2d4, type: 3}
   invulnerableTime: 5
-  onHitSound: {fileID: 8300000, guid: 80151380c0f818243b66a78ef69c9fcd, type: 3}
+  onHitSound: {fileID: 8300000, guid: 5ded99a24d78965429c762155b12afc8, type: 3}
   onHitSoundVolume: 0.7
   deathSound: {fileID: 8300000, guid: 7dae5c04af395d64c971d8a36cd0038c, type: 3}
   deathSoundVolume: 1
@@ -2433,7 +2433,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00044946477}
+  m_AnchoredPosition: {x: 0, y: 0.000038560273}
   m_SizeDelta: {x: 635.8157, y: 200}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &3612074454687835205

@@ -11,6 +11,9 @@ public class Enemy : PlayerHittable
     public AudioClip deathSound;
     public float deathSoundVolume = 1f;
 
+    public AudioClip AttackSound;
+    public float AttackSoundVolume = 1f;
+
     private float lastAttackTime;
 
     private NavMeshAgent agent;
@@ -50,6 +53,7 @@ public class Enemy : PlayerHittable
             animator.SetBool("isAttacking", true);
 
             playerdamage.decreasePlayerHealth(attackDamage);
+            Util.PlayClipAtPoint(AttackSound, transform.position, AttackSoundVolume);
         }
         else if (distanceToTarget <= 5f
             && agent.isOnNavMesh)
