@@ -31,7 +31,7 @@ public class PickupItem : PlayerInteractable
             PrefabMapping mapping = prefabCollection.prefabMappings.Find(x => x.PrefabMappingName == MappingName);
             item.PickupPrefab = mapping.keyPrefab;
             item.EquipPrefab = mapping.valuePrefab;
-            item.itemName = mapping.valuePrefab.name;
+            item.itemName = mapping.PrefabMappingName;
             item.image = mapping.image;
             item.maxInStack = mapping.maxInStack;
             playerInven.AddItem(item);
