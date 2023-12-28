@@ -11,6 +11,7 @@ public class PrefabCollection : ScriptableObject
 public class PrefabMapping
 {
     public string PrefabMappingName;
+    public string ItemDescription;
     public GameObject keyPrefab;
     public GameObject valuePrefab;
     public Sprite image;
