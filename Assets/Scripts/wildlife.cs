@@ -18,7 +18,7 @@ public class wildlife : PlayerHittable
     private Animator animator;
     private UnityEngine.AI.NavMeshAgent agent;
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
         base.Start();
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
