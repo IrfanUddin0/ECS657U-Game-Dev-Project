@@ -240,6 +240,7 @@ GameObject:
   - component: {fileID: 296115343}
   - component: {fileID: 296115345}
   - component: {fileID: 296115346}
+  - component: {fileID: 296115347}
   - component: {fileID: 296115344}
   m_Layer: 0
   m_Name: Terrain
@@ -416,6 +417,22 @@ MonoBehaviour:
   maxInstances: 50
   minY: 13
   npcPrefab: {fileID: 9089349214736428549, guid: fa79654bfd32fd8489dae22d182c9fef, type: 3}
+--- !u!114 &296115347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296115337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e3091addbf3ee478e3283580ea9807, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDiameter: 100
+  maxInstances: 30
+  minY: 13
+  npcPrefab: {fileID: 6659502110971468479, guid: 472ae16840fb44c4db8bc7942e285ffa, type: 3}
 --- !u!1001 &344696527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -503,6 +520,10 @@ PrefabInstance:
     - target: {fileID: 1696043515410667251, guid: 7c0b749d12bca4e4c9994f6ee9d782ce, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1696043515410667251, guid: 7c0b749d12bca4e4c9994f6ee9d782ce, type: 3}
+      propertyPath: DEBUGResetsave
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1773302079567683535, guid: 7c0b749d12bca4e4c9994f6ee9d782ce, type: 3}
       propertyPath: m_AnchorMax.x
