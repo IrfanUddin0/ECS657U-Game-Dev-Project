@@ -23,6 +23,7 @@ public class Enemy : PlayerHittable
     private PlayerSurvival playerdamage;
 
     private Animator animator;
+    private bool isDead = false;
 
     // Start is called before the first frame update
     public override void Start()
@@ -40,14 +41,17 @@ public class Enemy : PlayerHittable
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
+        if (health <= 0 && !isDead)
         {
             Util.PlayClipAtPoint(deathSound, transform.position, deathSoundVolume);
-            Destroy(gameObject);
+            isDead = true;
+            StartCoroutine(Die());
+
         }
         float distanceToTarget = Vector3.Distance(target.position, transform.position);
         if (distanceToTarget <= 2f
-            && Time.timeSinceLevelLoad - lastAttackTime >= attackTime)
+            && (Time.timeSinceLevelLoad - lastAttackTime >= attackTime)
+            && !isDead)
         {
             agent.speed = 3.5f;
             lastAttackTime = Time.timeSinceLevelLoad;
@@ -71,6 +75,20 @@ public class Enemy : PlayerHittable
             animator.SetBool("isChasing", false);
             animator.SetBool("isAttacking", false);
         }
+    }
+    private IEnumerator Die()
+    {
+
+        if (agent != null)
+        {
+            agent.isStopped = true;
+            agent.enabled = false;
+        }
+        animator.SetBool("isChasing", false);
+        animator.SetBool("isAttacking", false);
+        animator.SetBool("isDead", true);
+        yield return new WaitForSeconds(5f);
+        Destroy(gameObject);
     }
     void patrol()
     {
