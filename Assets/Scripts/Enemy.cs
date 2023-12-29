@@ -49,6 +49,7 @@ public class Enemy : PlayerHittable
         if (distanceToTarget <= 2f
             && Time.timeSinceLevelLoad - lastAttackTime >= attackTime)
         {
+            agent.speed = 3.5f;
             lastAttackTime = Time.timeSinceLevelLoad;
             animator.SetBool("isAttacking", true);
 
@@ -58,12 +59,14 @@ public class Enemy : PlayerHittable
         else if (distanceToTarget <= 5f
             && agent.isOnNavMesh)
         {
+            agent.speed = 3.5f;
             agent.SetDestination(target.position);
             animator.SetBool("isChasing", true);
             animator.SetBool("isAttacking", false);
         }
         else
         {
+            agent.speed = 1.7f;
             patrol();
             animator.SetBool("isChasing", false);
             animator.SetBool("isAttacking", false);
