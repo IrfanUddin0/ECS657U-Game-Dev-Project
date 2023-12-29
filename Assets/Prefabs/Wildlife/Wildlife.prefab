@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6118532359526614792}
   - component: {fileID: 2740958679153900199}
   - component: {fileID: 7366919486620207823}
+  - component: {fileID: -4174681339489473386}
   m_Layer: 0
   m_Name: Wildlife
   m_TagString: Untagged
@@ -112,8 +113,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropItem: {fileID: 4397353416604507779, guid: 906f827eb5ed5e24e821e70d794205ba, type: 3}
   chance: 1
-  spawn_up_distance: 0
+  spawn_up_distance: 1
   playOnDrop: {fileID: 0}
+--- !u!114 &-4174681339489473386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6659502110971468479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d0e2ec217ca754181fd47825a5e1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropItem: {fileID: 4397353416604507779, guid: 6933bf1b305def641ae2f8d912f909c4, type: 3}
+  chance: 0.5
+  spawn_up_distance: 1
+  playOnDrop: {fileID: 8300000, guid: ebafd40587be3da4880e5bab9ec5e1ec, type: 3}
 --- !u!1001 &5960679865030491959
 PrefabInstance:
   m_ObjectHideFlags: 0

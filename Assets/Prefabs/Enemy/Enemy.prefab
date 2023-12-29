@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3572790659390032992}
   - component: {fileID: 6927340585173762666}
   - component: {fileID: 6131765596737414647}
+  - component: {fileID: -8799105265539961577}
   - component: {fileID: 7103387113286904849}
   m_Layer: 0
   m_Name: Enemy
@@ -91,8 +92,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24d0e2ec217ca754181fd47825a5e1e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropItem: {fileID: 994200610082977035, guid: 6c32c05f3a9e09b43a67d39942b73f7a, type: 3}
-  chance: 0.5
+  dropItem: {fileID: 994200610082977035, guid: 4e309fa82b90ba3478d5ba1d6c2dd2d4, type: 3}
+  chance: 0.1
+  spawn_up_distance: 1
+  playOnDrop: {fileID: 8300000, guid: ebafd40587be3da4880e5bab9ec5e1ec, type: 3}
+--- !u!114 &-8799105265539961577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9089349214736428549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d0e2ec217ca754181fd47825a5e1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropItem: {fileID: 994200610082977035, guid: ae70dbd9ca316ec48826977ccefe8bee, type: 3}
+  chance: 0.01
   spawn_up_distance: 1
   playOnDrop: {fileID: 8300000, guid: ebafd40587be3da4880e5bab9ec5e1ec, type: 3}
 --- !u!65 &7103387113286904849
