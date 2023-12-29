@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c64e5e6790d9c46ae0ba8d589047aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treeCount: 2000
+  treeCount: 3000
   waterLevel: 13
   TreePrefab: {fileID: 2816486115205184337, guid: e375cc3cda24a76449583aefdbb21514, type: 3}
   regen: 1
