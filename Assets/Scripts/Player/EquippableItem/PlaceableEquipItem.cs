@@ -10,7 +10,7 @@ public class PlaceableEquipItem : EquippableItemEvents
     public GameObject ItemToPlace;
     public float PlaceRange = 5f;
 
-    private float GridRoundValue = 1f;
+    // private float GridRoundValue = 1f;
 
     public Material PlaceMaterial;
 
