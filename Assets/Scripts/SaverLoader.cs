@@ -75,8 +75,8 @@ public class SaverLoader : MonoBehaviour
     void Start()
     {
         // if a key is missing then dont load
-        if(!SaveExists() || DEBUGResetsave)
-        { 
+        if (!SaveExists() || DEBUGResetsave)
+        {
             DeleteSave();
             return;
         }
@@ -226,7 +226,7 @@ public class SaverLoader : MonoBehaviour
 
     public static bool SaveExists()
     {
-        return 
+        return
             PlayerPrefs.HasKey("Inventory")
             && PlayerPrefs.HasKey("PlayerSurvival")
             && PlayerPrefs.HasKey("Spawn")
