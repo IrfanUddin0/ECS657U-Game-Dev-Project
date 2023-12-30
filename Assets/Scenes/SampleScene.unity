@@ -688,10 +688,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e3091addbf3ee478e3283580ea9807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnDiameter: 50
+  spawnDiameter: 100
   maxInstances: 20
   minY: 13
-  replaceDistance: 100
+  replaceDistance: 150
   npcPrefab: {fileID: 9089349214736428549, guid: fa79654bfd32fd8489dae22d182c9fef, type: 3}
 --- !u!114 &296115347
 MonoBehaviour:
@@ -705,10 +705,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e3091addbf3ee478e3283580ea9807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnDiameter: 50
+  spawnDiameter: 100
   maxInstances: 20
   minY: 13
-  replaceDistance: 100
+  replaceDistance: 150
   npcPrefab: {fileID: 6659502110971468479, guid: 472ae16840fb44c4db8bc7942e285ffa, type: 3}
 --- !u!1001 &344696527
 PrefabInstance:

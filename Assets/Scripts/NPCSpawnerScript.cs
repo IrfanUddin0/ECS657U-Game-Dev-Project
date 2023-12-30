@@ -34,7 +34,7 @@ public class NPCSpawnerScript : MonoBehaviour
             }
 
             // if enemy is far from player replace
-            if(Vector3.Distance(player.transform.position, npcs[i].transform.position) >= replaceDistance)
+            if(Vector3.SqrMagnitude(player.transform.position - npcs[i].transform.position) >= replaceDistance * replaceDistance)
             {
                 npcs[i].transform.position = samplePosition();
                 print("replaced enemy pos:" + npcs[i].transform.position);

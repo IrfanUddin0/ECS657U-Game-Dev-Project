@@ -11,13 +11,22 @@ public class BuildingControlsVisibility : MonoBehaviour
         player = GameObject.FindGameObjectsWithTag("Player")[0];
         canvas = GetComponentInChildren<Canvas>();
     }
-    // Update is called once per frame
-    void Update()
+
+    private void FixedUpdate()
     {
-        var equip = player.GetComponentInChildren<PlaceableEquipItem>();
-        if (equip != null)
-            canvas.enabled = true;
+        if (player.GetComponent<PlaceableEquipItem>() != null)
+            show();
         else
-            canvas.enabled = false;
+            hide();
+    }
+
+    void show()
+    {
+        canvas.enabled = false;
+    }
+
+    void hide()
+    {
+        canvas.enabled = true;
     }
 }
