@@ -15,7 +15,9 @@ public class PlayerHittable : MonoBehaviour
 
     public virtual void OnPlayerHit(float dmg)
     {
-        Util.PlayClipAtPoint(onHitSound, transform.position, 1f);
+        if(health > 0)
+            Util.PlayClipAtPoint(onHitSound, transform.position, 1f);
+
         print("Player Hit");
         health -= dmg;
 
