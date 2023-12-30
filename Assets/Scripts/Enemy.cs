@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public enum EnemyMode
 {
+    None,
     Normal,
     Chasing,
     Attacking,
@@ -35,7 +36,7 @@ public class Enemy : PlayerHittable
 
     private float chaseDistance = 5f;
     private float attackDistance = 2f;
-    private EnemyMode currentMode;
+    private EnemyMode currentMode = EnemyMode.None;
 
     // Start is called before the first frame update
     public override void Start()
@@ -48,6 +49,7 @@ public class Enemy : PlayerHittable
         roamPoint = transform.position;
 
         lastAttackTime = Time.timeSinceLevelLoad;
+        setMode(EnemyMode.Normal);
     }
 
     // Update is called once per frame
@@ -142,7 +144,7 @@ public class Enemy : PlayerHittable
         switch (mode)
         {
             case EnemyMode.Normal:
-                agent.speed = 1.7f;
+                agent.speed = 1.5f;
                 animator.SetBool("isChasing", false);
                 animator.SetBool("isAttacking", false); 
                 break;
