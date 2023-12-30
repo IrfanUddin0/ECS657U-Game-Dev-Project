@@ -80,13 +80,13 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.70148605, b: 0, a: 1}
   m_Intensity: 3
-  m_Range: 20
+  m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
-    m_Resolution: -1
+    m_Resolution: 0
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
