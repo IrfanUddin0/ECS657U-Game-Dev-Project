@@ -18,7 +18,7 @@ MonoBehaviour:
     keyPrefab: {fileID: 994200610082977035, guid: ae70dbd9ca316ec48826977ccefe8bee, type: 3}
     valuePrefab: {fileID: 5435844516253738363, guid: 397e66916c023c947b630eaf9b8771ce, type: 3}
     image: {fileID: 21300000, guid: 150d149ba53bdbc458db81de34ce5c33, type: 3}
-    maxInStack: 2
+    maxInStack: 1
   - PrefabMappingName: SMG
     ItemDescription: low damage, high firerate weapon
     keyPrefab: {fileID: 994200610082977035, guid: 8dcfa32af0d826c4593c179d5bfc189f, type: 3}
@@ -114,4 +114,10 @@ MonoBehaviour:
     keyPrefab: {fileID: 749309338393534881, guid: 50478e21c2349de489f314b718815266, type: 3}
     valuePrefab: {fileID: 1883322863298995498, guid: 000091fce615852438fcc962e7b3a3e0, type: 3}
     image: {fileID: 21300000, guid: f55d25fa7abd65e4e9a146fa7d1ba0e9, type: 3}
-    maxInStack: 1
+    maxInStack: 64
+  - PrefabMappingName: Torch
+    ItemDescription: Lights up dark places
+    keyPrefab: {fileID: 4397353416604507779, guid: 70fc6a3b299a244469190e71f8c2c095, type: 3}
+    valuePrefab: {fileID: 3574299389808435369, guid: 75e3a664fea57a64b85a84c925f3b18b, type: 3}
+    image: {fileID: 21300000, guid: 6cfe80af9b42f5a45b62d8658e0becd7, type: 3}
+    maxInStack: 64

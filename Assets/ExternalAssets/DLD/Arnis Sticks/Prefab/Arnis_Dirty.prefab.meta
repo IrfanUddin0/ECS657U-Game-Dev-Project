@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6089e584875fad54895f77333ad8940d
+timeCreated: 1486118054
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 85423
+  packageName: Arnis Sticks
+  packageVersion: 1.0
+  assetPath: Assets/DLD/Arnis Sticks/Prefab/Arnis_Dirty.prefab
+  uploadId: 177751
