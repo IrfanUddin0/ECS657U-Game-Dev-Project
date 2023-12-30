@@ -50,7 +50,7 @@ MonoBehaviour:
   ads_time: 0.1
   ads_fov_scale: 0.8
   target_ads_transform_const: {x: -0.1, y: 0, z: 0}
-  baseDamage: 100
+  baseDamage: 200
   cameraShakeDuration: 0.1
   cameraShakeAmmount: 50
   cameraShakeDecreaseFactor: 3
