@@ -59,7 +59,7 @@ public class wildlife : PlayerHittable
         animator.SetBool("Sit", false);
         animator.SetBool("Sleep", false);
         animator.SetBool("Death", true);
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3f);
         Destroy(gameObject);
     }
 

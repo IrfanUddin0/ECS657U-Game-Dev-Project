@@ -102,7 +102,7 @@ public class Enemy : PlayerHittable
         animator.SetBool("isChasing", false);
         animator.SetBool("isAttacking", false);
         animator.SetBool("isDead", true);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(1.25f);
         Destroy(gameObject);
     }
     void patrol()
