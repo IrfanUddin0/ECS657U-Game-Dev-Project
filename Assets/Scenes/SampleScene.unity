@@ -706,7 +706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnDiameter: 100
-  maxInstances: 20
+  maxInstances: 10
   minY: 13
   replaceDistance: 150
   npcPrefab: {fileID: 6659502110971468479, guid: 472ae16840fb44c4db8bc7942e285ffa, type: 3}

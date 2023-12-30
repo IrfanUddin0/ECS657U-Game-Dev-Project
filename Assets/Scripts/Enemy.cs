@@ -66,17 +66,18 @@ public class Enemy : PlayerHittable
             return;
 
         // redordered these for optimization
-        float distanceToTarget = Vector3.Distance(target.position, transform.position);
+        // use square for optimization
+        float distanceToTargetSqr = Vector3.SqrMagnitude(target.position - transform.position);
 
         // check this first as this is the case for most enemies
-        if(distanceToTarget > chaseDistance)
+        if(distanceToTargetSqr > chaseDistance * chaseDistance)
         {
             setMode(EnemyMode.Normal);
             patrol();
             return;
         }
 
-        else if (distanceToTarget <= attackDistance
+        else if (distanceToTargetSqr <= attackDistance * attackDistance
             && (Time.timeSinceLevelLoad - lastAttackTime >= attackTime))
         {
             setMode(EnemyMode.Attacking);
@@ -106,7 +107,8 @@ public class Enemy : PlayerHittable
     }
     void patrol()
     {
-        if (Vector3.Distance(roamPoint, transform.position) < 3f)
+        // use square magnitude instead of distance for performance
+        if (Vector3.SqrMagnitude(roamPoint - transform.position) < 9f)
         {
 
             roamPoint = findRandomPoint();

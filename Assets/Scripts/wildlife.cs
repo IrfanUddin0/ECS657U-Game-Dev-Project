@@ -66,7 +66,8 @@ public class wildlife : PlayerHittable
 
     void patrol()
     {
-        if ((Vector3.Distance(roamPoint, transform.position) < 3f) && !isSitting)
+        // use square magnitude instead of distance for performance
+        if ((Vector3.SqrMagnitude(roamPoint - transform.position) < 9f) && !isSitting)
         {
 
             StartCoroutine(Sit());
