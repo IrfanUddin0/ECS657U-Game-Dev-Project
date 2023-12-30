@@ -13,14 +13,12 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - EFFECT_ALBEDO2
-  - EFFECT_FOAM
   - EFFECT_MICROWAVE
-  - EFFECT_MIRROR
   - EFFECT_NORMALMAP2
   - EFFECT_PARALLAX
   m_InvalidKeywords: []
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -31,7 +29,7 @@ Material:
     m_TexEnvs:
     - _AlbedoTex1:
         m_Texture: {fileID: 2800000, guid: d6840f77873948aeba2cdce3985ccf47, type: 3}
-        m_Scale: {x: 1000, y: 1000}
+        m_Scale: {x: 1500, y: 1500}
         m_Offset: {x: 0, y: 0}
     - _AlbedoTex2:
         m_Texture: {fileID: 2800000, guid: 21cbc816b57948b196ced72a3c33a909, type: 3}
@@ -115,7 +113,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _NormalMap1:
         m_Texture: {fileID: 2800000, guid: e7ee2ee1e448437e8de9a957ccc37298, type: 3}
-        m_Scale: {x: 1000, y: 1000}
+        m_Scale: {x: 1500, y: 1500}
         m_Offset: {x: 0, y: 0}
     - _NormalMap2:
         m_Texture: {fileID: 2800000, guid: b4b23fc51ba94ffab43b9704acdd1bfb, type: 3}
@@ -242,7 +240,7 @@ Material:
     - _WaveSpeed: 20
     - _ZWrite: 1
     m_Colors:
-    - _AlbedoColor: {r: 0.79, g: 0.62580395, b: 0.43682358, a: 1}
+    - _AlbedoColor: {r: 0.2, g: 0.2509804, b: 0.3019608, a: 1}
     - _BlendColor: {r: 0.29411763, g: 0.29411763, b: 0.29411763, a: 1}
     - _Color: {r: 1, g: 0.7924575, b: 0.55200005, a: 1}
     - _DiffuseColor: {r: 0.32352936, g: 0.32352936, b: 0.32352936, a: 1}

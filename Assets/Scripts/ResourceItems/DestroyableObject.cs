@@ -13,7 +13,7 @@ public class DestroyableObject : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void check()
     {
         if (health.health <= 0)
         {

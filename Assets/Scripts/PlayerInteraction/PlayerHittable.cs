@@ -18,5 +18,9 @@ public class PlayerHittable : MonoBehaviour
         Util.PlayClipAtPoint(onHitSound, transform.position, 1f);
         print("Player Hit");
         health -= dmg;
+
+        var des = GetComponent<DestroyableObject>();
+        if (des != null)
+            des.check();
     }
 }
