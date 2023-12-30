@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7879415430590193255}
   - component: {fileID: -1834017776946218762}
   - component: {fileID: 4032561207356943018}
-  - component: {fileID: 7915285750207022080}
+  - component: {fileID: 3018745834501465814}
   m_Layer: 0
   m_Name: TorchPickup
   m_TagString: Untagged
@@ -78,8 +78,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &7915285750207022080
-SphereCollider:
+--- !u!65 &3018745834501465814
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -97,8 +97,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.3, y: 1, z: 0.3}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1001 &3465976539514641347
 PrefabInstance:
   m_ObjectHideFlags: 0
