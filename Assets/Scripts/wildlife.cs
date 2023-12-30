@@ -33,7 +33,7 @@ public class wildlife : PlayerHittable
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (health <= 0 && !isDead)
         {
