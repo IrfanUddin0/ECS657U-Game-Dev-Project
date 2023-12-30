@@ -689,7 +689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnDiameter: 50
-  maxInstances: 30
+  maxInstances: 20
   minY: 13
   replaceDistance: 100
   npcPrefab: {fileID: 9089349214736428549, guid: fa79654bfd32fd8489dae22d182c9fef, type: 3}
@@ -706,7 +706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnDiameter: 50
-  maxInstances: 10
+  maxInstances: 20
   minY: 13
   replaceDistance: 100
   npcPrefab: {fileID: 6659502110971468479, guid: 472ae16840fb44c4db8bc7942e285ffa, type: 3}
