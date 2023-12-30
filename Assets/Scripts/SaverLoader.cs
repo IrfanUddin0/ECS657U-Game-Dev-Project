@@ -84,6 +84,7 @@ public class SaverLoader : MonoBehaviour
         // load player inventory
         JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("Inventory"), FindAnyObjectByType<Inventory>());
         FindAnyObjectByType<Inventory>().OnInventoryUpdated();
+        FindAnyObjectByType<InventoryEquipManager>().ChangeEquipIndex(1); FindAnyObjectByType<InventoryEquipManager>().ChangeEquipIndex(0);
 
         // load player survival
         PlayerSurvivalSave sa = JsonUtility.FromJson<PlayerSurvivalSave>(PlayerPrefs.GetString("PlayerSurvival"));
