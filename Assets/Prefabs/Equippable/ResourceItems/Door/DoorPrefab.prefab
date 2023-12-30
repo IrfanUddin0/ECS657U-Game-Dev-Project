@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactPromt: Open Door
-  onInteractSound: {fileID: 0}
+  onInteractSound: {fileID: 8300000, guid: b7c55986f277fc24ead1ad734133e03a, type: 3}
 --- !u!65 &9075921595338273001
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cookedVersion: {fileID: 4397353416604507779, guid: a46382fbf2b2a3a4da920ac730c0e95d, type: 3}
+  cookedSound: {fileID: 8300000, guid: 94feebf63111b904286605d54d996509, type: 3}
 --- !u!1001 &3465976539514641347
 PrefabInstance:
   m_ObjectHideFlags: 0

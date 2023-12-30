@@ -20,7 +20,7 @@ public class PlayerInteractable : MonoBehaviour
 
     public virtual void OnInteract()
     {
-        Util.PlayClipAtPoint(onInteractSound, transform.position, 1f);
+        Util.PlayClipAtPoint(onInteractSound, GameObject.FindGameObjectWithTag("Player").transform.position, 1f);
         print("Playing interacting");
     }
 }
