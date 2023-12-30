@@ -14,19 +14,13 @@ public class BuildingControlsVisibility : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (player.GetComponent<PlaceableEquipItem>() != null)
-            show();
+        if(player.GetComponentInChildren<PlaceableEquipItem>() != null)
+        {
+            canvas.enabled = true;
+        }
         else
-            hide();
-    }
-
-    void show()
-    {
-        canvas.enabled = false;
-    }
-
-    void hide()
-    {
-        canvas.enabled = true;
+        {
+            canvas.enabled = false;
+        }
     }
 }
