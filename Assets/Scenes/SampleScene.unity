@@ -2375,13 +2375,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fogOverTime:
     serializedVersion: 2
-    key0: {r: 0.67058825, g: 0.6156863, b: 0.36078432, a: 1}
+    key0: {r: 0.36078432, g: 0.5686275, b: 0.67058825, a: 1}
     key1: {r: 0.8862746, g: 0.9725491, b: 0.93725497, a: 1}
     key2: {r: 0.8862746, g: 0.9725491, b: 0.93725497, a: 0}
-    key3: {r: 0.67058825, g: 0.6156863, b: 0.36078432, a: 0}
+    key3: {r: 0.67058825, g: 0.51885396, b: 0.36078432, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0.67058825, g: 0.6156863, b: 0.36078432, a: 0}
+    key6: {r: 0.36078432, g: 0.5667389, b: 0.67058825, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
     ctime1: 5459
@@ -3223,37 +3223,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4289402460677342, guid: 512245daca745f64693d790c6c69d575, type: 3}
   m_PrefabInstance: {fileID: 1543820010}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1560591371
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1560591372}
-  m_Layer: 0
-  m_Name: Village
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1560591372
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1560591371}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 853.57306, y: -66.37506, z: 974.34924}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1736562137
 GameObject:
   m_ObjectHideFlags: 0
@@ -3774,7 +3743,6 @@ SceneRoots:
   - {fileID: 1136758471}
   - {fileID: 1736562138}
   - {fileID: 344696527}
-  - {fileID: 1560591372}
   - {fileID: 904222777}
   - {fileID: 1528546876}
   - {fileID: 227934891}

@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+public enum EnemyMode
+{
+    Normal,
+    Chasing,
+    Attacking,
+    Dead
+}
+
 public class Enemy : PlayerHittable
 {
     public float attackDamage;
@@ -24,6 +32,10 @@ public class Enemy : PlayerHittable
 
     private Animator animator;
     private bool isDead = false;
+
+    private float chaseDistance = 5f;
+    private float attackDistance = 2f;
+    private EnemyMode currentMode;
 
     // Start is called before the first frame update
     public override void Start()
@@ -48,32 +60,33 @@ public class Enemy : PlayerHittable
             StartCoroutine(Die());
 
         }
-        float distanceToTarget = Vector3.Distance(target.position, transform.position);
-        if (distanceToTarget <= 2f
-            && (Time.timeSinceLevelLoad - lastAttackTime >= attackTime)
-            && !isDead)
-        {
-            agent.speed = 3.5f;
-            lastAttackTime = Time.timeSinceLevelLoad;
-            animator.SetBool("isAttacking", true);
 
+        if (!agent.isOnNavMesh || isDead)
+            return;
+
+        // redordered these for optimization
+        float distanceToTarget = Vector3.Distance(target.position, transform.position);
+
+        // check this first as this is the case for most enemies
+        if(distanceToTarget > chaseDistance)
+        {
+            setMode(EnemyMode.Normal);
+            patrol();
+            return;
+        }
+
+        else if (distanceToTarget <= attackDistance
+            && (Time.timeSinceLevelLoad - lastAttackTime >= attackTime))
+        {
+            setMode(EnemyMode.Attacking);
+            lastAttackTime = Time.timeSinceLevelLoad;
             playerdamage.decreasePlayerHealth(attackDamage);
             Util.PlayClipAtPoint(AttackSound, transform.position, AttackSoundVolume);
         }
-        else if (distanceToTarget <= 5f
-            && agent.isOnNavMesh)
-        {
-            agent.speed = 3.5f;
-            agent.SetDestination(target.position);
-            animator.SetBool("isChasing", true);
-            animator.SetBool("isAttacking", false);
-        }
         else
         {
-            agent.speed = 1.7f;
-            patrol();
-            animator.SetBool("isChasing", false);
-            animator.SetBool("isAttacking", false);
+            setMode(EnemyMode.Chasing);
+            agent.SetDestination(target.position);
         }
     }
     private IEnumerator Die()
@@ -119,6 +132,36 @@ public class Enemy : PlayerHittable
         {
             return transform.position;
         }
+    }
+
+    private void setMode(EnemyMode mode)
+    {
+        if (mode == currentMode)
+            return;
+
+        switch (mode)
+        {
+            case EnemyMode.Normal:
+                agent.speed = 1.7f;
+                animator.SetBool("isChasing", false);
+                animator.SetBool("isAttacking", false); 
+                break;
+
+            case EnemyMode.Chasing:
+                agent.speed = 3.5f;
+                animator.SetBool("isChasing", true);
+                animator.SetBool("isAttacking", false);
+                break;
+
+            case EnemyMode.Attacking:
+                agent.speed = 3.5f;
+                animator.SetBool("isAttacking", true);
+                break;
+
+            case EnemyMode.Dead: break;
+        }
+
+        currentMode = mode;
     }
 
 }

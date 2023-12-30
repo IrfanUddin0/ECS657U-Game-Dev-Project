@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class BuildingControlsVisibility : MonoBehaviour
 {
+    GameObject player;
+    Canvas canvas;
+    private void Start()
+    {
+        player = GameObject.FindGameObjectsWithTag("Player")[0];
+        canvas = GetComponentInChildren<Canvas>();
+    }
     // Update is called once per frame
     void Update()
     {
-        PlaceableEquipItem equip = GameObject.FindGameObjectsWithTag("Player")[0].GetComponentInChildren<PlaceableEquipItem>();
+        var equip = player.GetComponentInChildren<PlaceableEquipItem>();
         if (equip != null)
-            GetComponentInChildren<Canvas>().enabled = true;
+            canvas.enabled = true;
         else
-            GetComponentInChildren<Canvas>().enabled = false;
+            canvas.enabled = false;
     }
 }
