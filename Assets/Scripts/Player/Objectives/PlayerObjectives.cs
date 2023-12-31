@@ -28,6 +28,7 @@ public class PlayerObjectives : MonoBehaviour
             {
                 // TODO: use mapping to get prefab
                 // Instantiate(objectives[i].reward, transform.position, transform.rotation);
+                FindAnyObjectByType<ObjectiveRewardManager>().OnObjectiveComplete(objectives[i]);
                 objectives.RemoveAt(i);
                 OnObjectivesUpdated();
                 i--;

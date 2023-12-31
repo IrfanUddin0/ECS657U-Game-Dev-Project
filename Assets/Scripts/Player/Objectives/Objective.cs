@@ -19,6 +19,7 @@ public class BreakTreeObjective : Objective
     public BreakTreeObjective()
     {
         description = "Break a tree";
+        reward_name = "Bow";
     }
     public override bool CheckObjectiveStatus(Dictionary<string, string> dataMap)
     {
@@ -38,6 +39,7 @@ public class DefeatEnemyObjective : Objective
     public DefeatEnemyObjective()
     {
         description = "Defeat an enemy";
+        reward_name = "Coal";
     }
     public override bool CheckObjectiveStatus(Dictionary<string, string> dataMap)
     {
@@ -57,6 +59,7 @@ public class CraftCampfireObjective : Objective
     public CraftCampfireObjective()
     {
         description = "Craft a campfire (Wood, Coal)";
+        reward_name = "RawMeat";
     }
     public override bool CheckObjectiveStatus(Dictionary<string, string> dataMap)
     {
@@ -76,6 +79,7 @@ public class CookMeatObjective : Objective
     public CookMeatObjective()
     {
         description = "Cook meat using the campfire";
+        reward_name = "Torch";
     }
     public override bool CheckObjectiveStatus(Dictionary<string, string> dataMap)
     {

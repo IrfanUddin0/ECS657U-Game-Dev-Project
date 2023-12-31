@@ -1951,6 +1951,7 @@ GameObject:
   - component: {fileID: 5850814788016474500}
   - component: {fileID: 4974864590857781788}
   - component: {fileID: 2936733568379522679}
+  - component: {fileID: 7393429028206892311}
   - component: {fileID: 8310881235615661480}
   - component: {fileID: 1696043515410667251}
   - component: {fileID: 3949330759943180327}
@@ -2143,7 +2144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentEquipIndex: -1
-  dropSoundClip: {fileID: 0}
+  dropSoundClip: {fileID: 8300000, guid: ecb51680f1c76f249869a33d270dd6bd, type: 3}
   dropSoundVolume: 1
   Drop: {fileID: -3654066884486588913, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
   InventorySlots:
@@ -2212,6 +2213,22 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d122a97925e69df4f93c48c4310e129c, type: 3}
   - {fileID: 8300000, guid: b35d290af2cea7c4ea4a0431cd41dc96, type: 3}
   - {fileID: 8300000, guid: e8144694da5956341afae00889845788, type: 3}
+--- !u!114 &7393429028206892311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3882264334022184889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c472bc1895129b444a74fba9ac2f109f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnRewardSound: {fileID: 8300000, guid: 40eb2a087f6a0f442bc09ba63320cb05, type: 3}
+  OnRewardVolume: 1
+  RewardViewPrefab: {fileID: 7327712576001038244, guid: 7651ac50c8a89664b81e374560abd002, type: 3}
+  prefabmapping: {fileID: 11400000, guid: 8aac15c160556834aad8e8abf75c5b21, type: 2}
 --- !u!114 &8310881235615661480
 MonoBehaviour:
   m_ObjectHideFlags: 0
