@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class wildlife : PlayerHittable
 {
-
     public AudioClip deathSound;
 
     public float deathSoundVolume = 1f;
@@ -45,7 +44,6 @@ public class wildlife : PlayerHittable
         {
             patrol();
         }
-
     }
     private IEnumerator Die()
     {
@@ -63,7 +61,6 @@ public class wildlife : PlayerHittable
         Destroy(gameObject);
     }
 
-
     void patrol()
     {
         // use square magnitude instead of distance for performance
@@ -72,13 +69,10 @@ public class wildlife : PlayerHittable
 
             StartCoroutine(Sit());
             roamPoint = findRandomPoint();
-
-
         }
         if (agent.isOnNavMesh && !isSitting)
             animator.SetBool("Run Forward", true);
         agent.SetDestination(roamPoint);
-
     }
     private IEnumerator Sit()
     {
@@ -95,15 +89,11 @@ public class wildlife : PlayerHittable
             animator.SetBool("Sleep", true);
         }
 
-
         yield return new WaitForSeconds(Random.Range(5f, 30f));
         animator.SetBool("Sit", false);
         animator.SetBool("Sleep", false);
         isSitting = false;
         agent.isStopped = false;
-
-
-
     }
     Vector3 findRandomPoint()
     {
@@ -122,5 +112,4 @@ public class wildlife : PlayerHittable
             return transform.position;
         }
     }
-
 }
