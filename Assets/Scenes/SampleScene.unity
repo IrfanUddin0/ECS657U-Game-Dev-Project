@@ -846,6 +846,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3345368566331333048, guid: 7c0b749d12bca4e4c9994f6ee9d782ce, type: 3}
+      propertyPath: dropSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ecb51680f1c76f249869a33d270dd6bd, type: 3}
     - target: {fileID: 3882264334022184889, guid: 7c0b749d12bca4e4c9994f6ee9d782ce, type: 3}
       propertyPath: m_Name
       value: Player
