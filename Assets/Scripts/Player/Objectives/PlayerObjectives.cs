@@ -1,26 +1,36 @@
+using OpenCover.Framework.Model;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class PlayerObjectives : MonoBehaviour
 {
+    [SerializeField]
     List<Objective> objectives = new List<Objective>();
+    [SerializeField]
     Dictionary<string, string> data_map = new Dictionary<string, string>();
 
     private void Start()
     {
-        OnObjectivesUpdated();
+        AddObjective(new BreakTreeObjective());
+        AddObjective(new DefeatEnemyObjective());
+        AddObjective(new CraftCampfireObjective());
+        AddObjective(new CookMeatObjective());
     }
 
     private void FixedUpdate()
     {
         for (int i = 0; i < objectives.Count; i++)
         {
-            if (objectives[i].CheckObjectiveStatus())
+            if (objectives[i].CheckObjectiveStatus(data_map))
             {
-                Instantiate(objectives[i].reward, transform.position, transform.rotation);
-                Destroy(objectives[i]);
+                // TODO: use mapping to get prefab
+                // Instantiate(objectives[i].reward, transform.position, transform.rotation);
+                objectives.RemoveAt(i);
                 OnObjectivesUpdated();
+                i--;
             }
         }
     }
@@ -32,7 +42,13 @@ public class PlayerObjectives : MonoBehaviour
 
     public void addDataEntry(string key, string value)
     {
-        data_map.Add(key, value);
+        if(!data_map.ContainsKey(key))
+            data_map.Add(key, value);
+    }
+
+    public Dictionary<string, string> getDataMap()
+    {
+        return data_map;
     }
 
     public void OnObjectivesUpdated()

@@ -15,6 +15,11 @@ public class ObjectivesUIScript : MonoBehaviour
         var objpanel1 = Instantiate(objectivePanelPrefab, panel.transform);
         objpanel1.GetComponentInChildren<TextMeshProUGUI>().text = "test";
 
+        foreach (Transform child in panel.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
         foreach (var objective in FindAnyObjectByType<PlayerObjectives>().GetObjectives())
         {
             GameObject objpanel = Instantiate(objectivePanelPrefab, panel.transform);

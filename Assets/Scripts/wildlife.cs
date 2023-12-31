@@ -115,12 +115,10 @@ public class wildlife : PlayerHittable
         if (UnityEngine.AI.NavMesh.SamplePosition(randomPoint, out hit, 50, 1))
         {
             roamPoint = hit.position;
-            Debug.Log("Yes");
             return roamPoint;
         }
         else
         {
-            Debug.Log("NO");
             return transform.position;
         }
     }

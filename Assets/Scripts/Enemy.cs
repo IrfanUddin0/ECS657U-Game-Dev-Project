@@ -59,7 +59,7 @@ public class Enemy : PlayerHittable
             Util.PlayClipAtPoint(deathSound, transform.position, deathSoundVolume);
             isDead = true;
             StartCoroutine(Die());
-
+            FindAnyObjectByType<PlayerObjectives>().addDataEntry("Enemy", "defeated");
         }
 
         if (!agent.isOnNavMesh || isDead)
