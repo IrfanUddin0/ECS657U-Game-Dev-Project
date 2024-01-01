@@ -9,6 +9,7 @@ public class ProjectileLaunchWeapon : Weapon
     [Header("Weapon Details")]
     public GameObject projectilePrefab; // The projectile to be launched
     public Transform firePoint; // The point from which the projectile is fired
+    public float damageDropoffCoefficient;
     protected float projectileLaunchScale = 1.0f;
 
     private float max_damage;
@@ -47,7 +48,11 @@ public class ProjectileLaunchWeapon : Weapon
             hittable = hit_col.GetComponentInChildren<PlayerHittable>();
 
         if (hittable != null)
+        {
+            baseDamage = baseDamage * damageDropoffCoefficient / (Vector3.SqrMagnitude(transform.position - hit_pos));
             DamageEntity(hittable);
+        }
+            
 
         baseDamage = max_damage;
     }

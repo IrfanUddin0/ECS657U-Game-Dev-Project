@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BedScript : PlayerInteractable
 {
+    public AudioClip BedNextDaySound;
+    public float volume;
     Light mainLightRef;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class BedScript : PlayerInteractable
             && mainLightRef.GetComponent<Animator>() != null)
         {
             mainLightRef.GetComponent<Animator>().SetFloat("AnimPos", 0.0f);
+            Util.PlayClipAtPoint(BedNextDaySound, transform.position, volume);
         }
     }
 

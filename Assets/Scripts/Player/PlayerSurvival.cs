@@ -119,9 +119,7 @@ public class PlayerSurvival : MonoBehaviour
     {
         // drop all items
         Inventory inven = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Inventory>();
-        inven.dropSoundVolume = 0.0f;
         inven.RemoveEveryItem();
-        inven.dropSoundVolume = 1.0f;
 
         // display death screen
         Instantiate(DeathScreenUIPrefab, GetComponentInChildren<Canvas>().transform);

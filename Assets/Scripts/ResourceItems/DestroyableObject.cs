@@ -19,6 +19,8 @@ public class DestroyableObject : MonoBehaviour
         {
             Instantiate(PickupableToSpawn, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
+
+            FindAnyObjectByType<PlayerObjectives>().addDataEntry(gameObject.name + gameObject.GetInstanceID(), "destroyed");
         }
     }
 }

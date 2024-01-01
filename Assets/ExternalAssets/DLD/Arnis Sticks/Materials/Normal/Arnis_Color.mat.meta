@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 659a980e80620684f8ff9013c6dda48d
+timeCreated: 1486117753
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 85423
+  packageName: Arnis Sticks
+  packageVersion: 1.0
+  assetPath: Assets/DLD/Arnis Sticks/Materials/Normal/Arnis_Color.mat
+  uploadId: 177751

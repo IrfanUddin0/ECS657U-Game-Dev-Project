@@ -75,8 +75,8 @@ public class SaverLoader : MonoBehaviour
     void Start()
     {
         // if a key is missing then dont load
-        if(!SaveExists() || DEBUGResetsave)
-        { 
+        if (!SaveExists() || DEBUGResetsave)
+        {
             DeleteSave();
             return;
         }
@@ -84,6 +84,7 @@ public class SaverLoader : MonoBehaviour
         // load player inventory
         JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("Inventory"), FindAnyObjectByType<Inventory>());
         FindAnyObjectByType<Inventory>().OnInventoryUpdated();
+        FindAnyObjectByType<InventoryEquipManager>().ChangeEquipIndex(1); FindAnyObjectByType<InventoryEquipManager>().ChangeEquipIndex(0);
 
         // load player survival
         PlayerSurvivalSave sa = JsonUtility.FromJson<PlayerSurvivalSave>(PlayerPrefs.GetString("PlayerSurvival"));
@@ -226,7 +227,7 @@ public class SaverLoader : MonoBehaviour
 
     public static bool SaveExists()
     {
-        return 
+        return
             PlayerPrefs.HasKey("Inventory")
             && PlayerPrefs.HasKey("PlayerSurvival")
             && PlayerPrefs.HasKey("Spawn")

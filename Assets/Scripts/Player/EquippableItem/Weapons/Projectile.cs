@@ -29,9 +29,11 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (callback != null)
+        if (callback != null && collision.collider.GetType()!=typeof(CapsuleCollider))
         {
             callback.Invoke(transform.position, collision.collider);
+            print(collision.collider);
+            Destroy(gameObject);
         }
     }
 }

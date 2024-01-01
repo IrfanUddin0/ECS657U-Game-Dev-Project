@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8044322a4c592da4c822b14a0e1fe55c
+timeCreated: 1493746381
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 85423
+  packageName: Arnis Sticks
+  packageVersion: 1.0
+  assetPath: Assets/DLD/Arnis Sticks/Scene/Plane.prefab
+  uploadId: 177751
