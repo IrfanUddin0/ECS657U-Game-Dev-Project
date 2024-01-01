@@ -31,9 +31,12 @@ public class MainPlayerScript : MonoBehaviour
 
     [SerializeField]
     public InputActionReference Interact;
+
+    private int difficulty;
     void Start()
     {
         spawnTransform = new SpawnTransform(transform.position, transform.rotation);
+        difficulty = PlayerPrefs.HasKey("Difficulty") ? PlayerPrefs.GetInt("Difficulty") : 0;
     }
 
     private void OnEnable()
@@ -45,7 +48,6 @@ public class MainPlayerScript : MonoBehaviour
     {
         Interact.action.performed -= onInteractClicked;
     }
-
 
     void Update()
     {
@@ -107,5 +109,10 @@ public class MainPlayerScript : MonoBehaviour
         inputModeSetPlaying();
         transform.position = spawnTransform.pos;
         transform.rotation = spawnTransform.rot;
+    }
+
+    public int GetDifficulty()
+    {
+        return difficulty;
     }
 }
