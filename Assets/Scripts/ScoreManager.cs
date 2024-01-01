@@ -22,6 +22,8 @@ public class ScoreManager : MonoBehaviour
         countNext = false;
         lastDeathXLightPosition = 0f;
         lastDeathYLightPosition = 60f;
+
+        MainLight = GameObject.FindGameObjectWithTag("MainLight").transform;
     }
 
     // Update is called once per frame
