@@ -73,7 +73,7 @@ MonoBehaviour:
   interactPromt: Sleep
   onInteractSound: {fileID: 0}
   BedNextDaySound: {fileID: 8300000, guid: cd6e1239a60f314409454a392e597267, type: 3}
-  volume: 0
+  volume: 1
 --- !u!114 &2871940706707974225
 MonoBehaviour:
   m_ObjectHideFlags: 0
