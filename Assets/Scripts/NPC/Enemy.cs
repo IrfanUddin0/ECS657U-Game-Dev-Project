@@ -62,14 +62,6 @@ public class Enemy : PlayerHittable
 
     void FixedUpdate()
     {
-        if (health <= 0 && !isDead)
-        {
-            Util.PlayClipAtPoint(deathSound, transform.position, deathSoundVolume);
-            isDead = true;
-            StartCoroutine(Die());
-            FindAnyObjectByType<PlayerObjectives>().addDataEntry("Enemy", "defeated");
-        }
-
         if (!agent.isOnNavMesh || isDead)
             return;
 
@@ -82,7 +74,6 @@ public class Enemy : PlayerHittable
         {
             chase();
         }
-        // check this first as this is the case for most enemies
         else if (distanceToTargetSqr > chaseDistance * chaseDistance)
         {
             setMode(EnemyMode.Normal);
@@ -114,6 +105,14 @@ public class Enemy : PlayerHittable
     {
         base.OnPlayerHit(dmg);
         playerLastHit = Time.timeSinceLevelLoad;
+
+        if (health <= 0 && !isDead)
+        {
+            Util.PlayClipAtPoint(deathSound, transform.position, deathSoundVolume);
+            isDead = true;
+            StartCoroutine(Die());
+            FindAnyObjectByType<PlayerObjectives>().addDataEntry("Enemy", "defeated");
+        }
     }
     private IEnumerator Die()
     {
