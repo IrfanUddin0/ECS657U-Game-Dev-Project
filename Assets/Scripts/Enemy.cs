@@ -43,6 +43,7 @@ public class Enemy : PlayerHittable
     public float chaseDistance = 5f;
     public float attackDistance = 2f;
     private EnemyMode currentMode = EnemyMode.None;
+    private float playerLastHit;
 
     // Start is called before the first frame update
     public override void Start()
@@ -55,6 +56,7 @@ public class Enemy : PlayerHittable
         roamPoint = transform.position;
 
         lastAttackTime = Time.timeSinceLevelLoad;
+        playerLastHit = Time.timeSinceLevelLoad - 10f;
         setMode(EnemyMode.Normal);
     }
 
@@ -75,8 +77,13 @@ public class Enemy : PlayerHittable
         // use square for optimization
         float distanceToTargetSqr = Vector3.SqrMagnitude(target.position - transform.position);
 
+
+        if ((Time.timeSinceLevelLoad - playerLastHit <= 5f))
+        {
+            chase();
+        }
         // check this first as this is the case for most enemies
-        if(distanceToTargetSqr > chaseDistance * chaseDistance)
+        else if (distanceToTargetSqr > chaseDistance * chaseDistance)
         {
             setMode(EnemyMode.Normal);
             patrol();
@@ -93,9 +100,20 @@ public class Enemy : PlayerHittable
         }
         else
         {
-            setMode(EnemyMode.Chasing);
-            agent.SetDestination(target.position);
+            chase();
         }
+    }
+
+    private void chase()
+    {
+        setMode(EnemyMode.Chasing);
+        agent.SetDestination(target.position);
+    }
+
+    public override void OnPlayerHit(float dmg)
+    {
+        base.OnPlayerHit(dmg);
+        playerLastHit = Time.timeSinceLevelLoad;
     }
     private IEnumerator Die()
     {
