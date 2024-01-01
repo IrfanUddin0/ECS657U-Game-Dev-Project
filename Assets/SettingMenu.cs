@@ -14,7 +14,8 @@ public class SettingMenu : MonoBehaviour
 
    public void qualitySet (int quality){
 
-        QualitySettings.SetQualityLevel(quality);
+        //QualitySettings.SetQualityLevel(quality);
+        PlayerPrefs.SetInt("HighSettings", quality);
 
    }
 }
