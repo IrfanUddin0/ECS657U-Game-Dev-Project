@@ -25,7 +25,15 @@ public class ObjectiveRewardManager : MonoBehaviour
         {
             if(p.PrefabMappingName == objective.reward_name)
             {
-                Instantiate(p.keyPrefab, transform.position, transform.rotation);
+                // Instantiate(p.keyPrefab, transform.position, transform.rotation);
+                Item item = new Item();
+                item.PickupPrefab = p.keyPrefab;
+                item.EquipPrefab = p.valuePrefab;
+                item.itemName = p.PrefabMappingName;
+                item.description = p.ItemDescription;
+                item.image = p.image;
+                item.maxInStack = p.maxInStack;
+                FindAnyObjectByType<Inventory>().AddItem(item);
                 rewardUI.GetComponentInChildren<Image>().sprite = p.image;
             }
         }
