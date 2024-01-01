@@ -65,6 +65,7 @@ MonoBehaviour:
   FireVolume: 0.5
   projectilePrefab: {fileID: 4820509224401277567, guid: ce15d827f4101524899e72008927045f, type: 3}
   firePoint: {fileID: 5819195380961385954}
+  damageDropoffCoefficient: 250
   fullChargeTime: 1
   chargeClip: {fileID: 8300000, guid: f697be09c0442fe48a3852b7aaa19b4a, type: 3}
   chargeClipVolume: 1
