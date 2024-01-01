@@ -163,7 +163,9 @@ MonoBehaviour:
   attackTime: 1
   walkSpeed: 1.5
   chashingSpeed: 3.5
-  deathSound: {fileID: 8300000, guid: 36cd884fa0fd0374ebce6382a7b73fb3, type: 3}
+  onChaseSound: {fileID: 8300000, guid: 9d33b341c887a2848802d4e2781755fe, type: 3}
+  OnChaseSoundVolume: 1
+  deathSound: {fileID: 8300000, guid: 529286c770cb3c74cba66aee6a25b5d5, type: 3}
   deathSoundVolume: 1
   AttackSound: {fileID: 8300000, guid: 80151380c0f818243b66a78ef69c9fcd, type: 3}
   AttackSoundVolume: 1

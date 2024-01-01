@@ -20,6 +20,9 @@ public class Enemy : PlayerHittable
     public float walkSpeed = 1.5f;
     public float chashingSpeed = 3.5f;
 
+    public AudioClip onChaseSound;
+    public float OnChaseSoundVolume = 1f;
+
     public AudioClip deathSound;
     public float deathSoundVolume = 1f;
 
@@ -154,6 +157,7 @@ public class Enemy : PlayerHittable
                 break;
 
             case EnemyMode.Chasing:
+                Util.PlayClipAtPoint(onChaseSound, transform.position, OnChaseSoundVolume);
                 agent.speed = chashingSpeed;
                 animator.SetBool("isChasing", true);
                 animator.SetBool("isAttacking", false);
