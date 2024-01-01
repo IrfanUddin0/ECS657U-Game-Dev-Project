@@ -17,6 +17,7 @@ public class PlayerObjectives : MonoBehaviour
         AddObjective(new DefeatEnemyObjective());
         AddObjective(new CraftCampfireObjective());
         AddObjective(new CookMeatObjective());
+        AddObjective(new ExploreMineObjective());
     }
 
     private void FixedUpdate()

@@ -86,3 +86,16 @@ public class CookMeatObjective : Objective
         return dataMap.ContainsKey("cooked");
     }
 }
+
+public class ExploreMineObjective : Objective
+{
+    public ExploreMineObjective()
+    {
+        description = "Explore a mine";
+        reward_name = "Bed";
+    }
+    public override bool CheckObjectiveStatus(Dictionary<string, string> dataMap)
+    {
+        return dataMap.ContainsKey("MineExplored");
+    }
+}
