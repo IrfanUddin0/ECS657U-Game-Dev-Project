@@ -70,11 +70,8 @@ public class Enemy : PlayerHittable
         float distanceToTargetSqr = Vector3.SqrMagnitude(target.position - transform.position);
 
 
-        if ((Time.timeSinceLevelLoad - playerLastHit <= 5f))
-        {
-            chase();
-        }
-        else if (distanceToTargetSqr > chaseDistance * chaseDistance)
+        if (distanceToTargetSqr > chaseDistance * chaseDistance
+            && (Time.timeSinceLevelLoad - playerLastHit >= 5f))
         {
             setMode(EnemyMode.Normal);
             patrol();
