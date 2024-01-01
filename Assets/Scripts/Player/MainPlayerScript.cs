@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.PostProcessing;
 
 public enum InputMode
 {
@@ -32,11 +33,14 @@ public class MainPlayerScript : MonoBehaviour
     [SerializeField]
     public InputActionReference Interact;
 
+    public Material highQualityWaterMaterial;
+    public Material lowQualityWaterMaterial;
     private int difficulty;
     void Start()
     {
         spawnTransform = new SpawnTransform(transform.position, transform.rotation);
         difficulty = PlayerPrefs.HasKey("Difficulty") ? PlayerPrefs.GetInt("Difficulty") : 0;
+        SetGraphicalQuality();
     }
 
     private void OnEnable()
@@ -114,5 +118,18 @@ public class MainPlayerScript : MonoBehaviour
     public int GetDifficulty()
     {
         return difficulty;
+    }
+
+    private void SetGraphicalQuality()
+    {
+        // set quality level
+        int qualitylevel = PlayerPrefs.HasKey("HighSettings") ? PlayerPrefs.GetInt("HighSettings") : 0;
+        QualitySettings.SetQualityLevel(qualitylevel, true);
+        print(QualitySettings.names[0]);
+        // disable pp
+        GetComponentInChildren<PostProcessLayer>().enabled = (qualitylevel==0);
+        GetComponentInChildren<PostProcessVolume>().enabled = (qualitylevel==0);
+        // disable water shader
+        FindAnyObjectByType<WaterInteractScript>().gameObject.GetComponent<MeshRenderer>().material = (qualitylevel == 0) ? highQualityWaterMaterial : lowQualityWaterMaterial;
     }
 }
