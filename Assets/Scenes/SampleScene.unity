@@ -2503,6 +2503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactPromt: Drink Water
   onInteractSound: {fileID: 8300000, guid: 506da2be1fd02f34b8bd940f27e3fac6, type: 3}
+  soundVolume: 1
   thirstReplenishAmmount: 1
 --- !u!64 &1136758474
 MeshCollider:
