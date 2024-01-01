@@ -2119,6 +2119,8 @@ MonoBehaviour:
     pos: {x: 0, y: 0, z: 0}
     rot: {x: 0, y: 0, z: 0, w: 0}
   Interact: {fileID: 1692970930306199412, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
+  highQualityWaterMaterial: {fileID: 2100000, guid: e19529f3ff7a4aa091af92c2f4cf3963, type: 2}
+  lowQualityWaterMaterial: {fileID: 2100000, guid: a4d042eacfecf80429329fb9422f9caa, type: 2}
 --- !u!114 &6977569306313549548
 MonoBehaviour:
   m_ObjectHideFlags: 0
