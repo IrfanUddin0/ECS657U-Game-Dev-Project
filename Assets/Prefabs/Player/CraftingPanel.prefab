@@ -523,6 +523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   craftSound: {fileID: 8300000, guid: 2e8d2d6a8ec00b64a88262fcf8c31aef, type: 3}
+  craftable: 1
 --- !u!1 &5695676423980076693
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,13 +8,12 @@ public class CraftingPanelScript : MonoBehaviour
 {
     CraftingRecipe Recipe;
     public AudioClip craftSound;
+    public bool craftable = true;
     public void SetItem(CraftingRecipe item)
     {
         CraftingManager manager = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<CraftingManager>();
         Recipe = item;
         GetComponentsInChildren<Image>()[1].sprite = manager.GetMapping(item.ItemResult).image;
-
-        print(manager.GetMapping(item.ItemResult).PrefabMappingName);
 
         HorizontalLayoutGroup spacer = GetComponentInChildren<HorizontalLayoutGroup>();
         foreach(RecipeItem r in item.ItemsNeeded)
@@ -34,8 +33,14 @@ public class CraftingPanelScript : MonoBehaviour
             txt.GetComponent<TextMeshProUGUI>().alignment = TextAlignmentOptions.Center;
             txt.transform.SetParent(img.transform, false);
         }
-
-        GetComponentInChildren<Button>().onClick.AddListener(OnCraftClicked);
+        if (craftable)
+            GetComponentInChildren<Button>().onClick.AddListener(OnCraftClicked);
+        else
+        {
+            GetComponentInChildren<Button>().gameObject.SetActive(false);
+            GetComponentInChildren<Image>().color = new Color(1f,1f,1f,.4f);
+        }
+            
     }
 
     void OnCraftClicked()
