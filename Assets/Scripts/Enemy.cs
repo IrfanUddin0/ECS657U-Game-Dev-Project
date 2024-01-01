@@ -17,6 +17,9 @@ public class Enemy : PlayerHittable
     public float attackDamage;
     public float attackTime;
 
+    public float walkSpeed = 1.5f;
+    public float chashingSpeed = 3.5f;
+
     public AudioClip deathSound;
     public float deathSoundVolume = 1f;
 
@@ -34,8 +37,8 @@ public class Enemy : PlayerHittable
     private Animator animator;
     private bool isDead = false;
 
-    private float chaseDistance = 5f;
-    private float attackDistance = 2f;
+    public float chaseDistance = 5f;
+    public float attackDistance = 2f;
     private EnemyMode currentMode = EnemyMode.None;
 
     // Start is called before the first frame update
@@ -145,19 +148,19 @@ public class Enemy : PlayerHittable
         switch (mode)
         {
             case EnemyMode.Normal:
-                agent.speed = 1.5f;
+                agent.speed = walkSpeed;
                 animator.SetBool("isChasing", false);
                 animator.SetBool("isAttacking", false); 
                 break;
 
             case EnemyMode.Chasing:
-                agent.speed = 3.5f;
+                agent.speed = chashingSpeed;
                 animator.SetBool("isChasing", true);
                 animator.SetBool("isAttacking", false);
                 break;
 
             case EnemyMode.Attacking:
-                agent.speed = 3.5f;
+                agent.speed = chashingSpeed;
                 animator.SetBool("isAttacking", true);
                 break;
 
