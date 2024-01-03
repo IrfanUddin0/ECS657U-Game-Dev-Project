@@ -1,11 +1,7 @@
 fileFormatVersion: 2
-guid: d48863a3e3916df408151fabe9130598
-MonoImporter:
+guid: 34830808aeb3fd44c9a5e1a25e1424ff
+DefaultImporter:
   externalObjects: {}
-  serializedVersion: 2
-  defaultReferences: []
-  executionOrder: 0
-  icon: {instanceID: 0}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
@@ -14,5 +10,5 @@ AssetOrigin:
   productId: 122225
   packageName: Lowpoly Medieval Peasants - Free - MEDIEVAL FANTASY SERIES
   packageVersion: 4.2
-  assetPath: Assets/ExternalAssets/Polytope Studio/Lowpoly_Characters/Sources/Scripts/PT_Create_Prefab.cs
+  assetPath: Assets/ExternalAssets/Polytope Studio/Lowpoly_Characters/SRP/PT_Peasants_Free_URP_10.10.1.unitypackage
   uploadId: 626744
