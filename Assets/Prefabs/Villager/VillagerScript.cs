@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEngine.Rendering.PostProcessing.HistogramMonitor;
 
 public class VillagerScript : MonoBehaviour
 {
     // Start is called before the first frame update
     GameObject playerref;
     public float stopDistance = 3f;
+    public float dropChance = 0.33f;
+    public PrefabCollection mapping;
 
     public AudioClip nearSoound;
     public AudioClip tradeSound;
@@ -15,6 +19,8 @@ public class VillagerScript : MonoBehaviour
     private NavMeshAgent agent;
     private Vector3 roamPoint;
     private Animator animator;
+
+    private bool walkingMode = true;
 
     void Start()
     {
@@ -32,15 +38,42 @@ public class VillagerScript : MonoBehaviour
 
         if(Vector3.SqrMagnitude(playerref.transform.position - transform.position) >= stopDistance * stopDistance)
         {
-            animator.SetBool("close", false);
-            agent.speed = 1.5f;
+            setWalkMode(true);
             patrol();
         }
         else
         {
-            animator.SetBool("close", true);
+            setWalkMode(false);
             transform.rotation = Quaternion.LookRotation(-playerref.transform.forward);
-            agent.speed = 0f;
+
+            RaycastHit hit;
+            Physics.SphereCast(transform.position, 3f, transform.forward, out hit);
+            PickupItem[] items = GameObject.FindObjectsByType<PickupItem>(FindObjectsSortMode.None);
+            foreach (PickupItem item in items)
+            {
+                Destroy(item.gameObject);
+                spawnRandomItemChance();
+            }
+        }
+    }
+
+    void spawnRandomItemChance()
+    {
+        float rng = Random.Range(0.0f, 1.0f);
+        if (rng <= dropChance)
+        {
+            FindAnyObjectByType<PlayerObjectives>().addDataEntry("VillagerTrade", "true");
+            Util.PlayClipAtPoint(tradeSound, transform.position, 1f);
+
+            var p = mapping.prefabMappings[Random.Range(0, mapping.prefabMappings.Count)];
+            Item item = new Item();
+            item.PickupPrefab = p.keyPrefab;
+            item.EquipPrefab = p.valuePrefab;
+            item.itemName = p.PrefabMappingName;
+            item.description = p.ItemDescription;
+            item.image = p.image;
+            item.maxInStack = p.maxInStack;
+            FindAnyObjectByType<Inventory>().AddItem(item);
         }
     }
 
@@ -73,6 +106,24 @@ public class VillagerScript : MonoBehaviour
         else
         {
             return transform.position;
+        }
+    }
+
+    private void setWalkMode(bool mode)
+    {
+        if (mode == walkingMode) // if unchanged return
+            return;
+
+        if (mode) // if want to walk
+        {
+            animator.SetBool("close", false);
+            agent.speed = 1.5f;
+        }
+        else
+        {
+            Util.PlayClipAtPoint(nearSoound, transform.position, 1f);
+            animator.SetBool("close", true);
+            agent.speed = 0f;
         }
     }
 }
