@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3a61145181a5bc94fa4e9766e3fd364e, type: 3}
@@ -56,4 +57,55 @@ PrefabInstance:
       value: tower_001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3a61145181a5bc94fa4e9766e3fd364e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4716072801145275907}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3a61145181a5bc94fa4e9766e3fd364e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5800418187727851123}
   m_SourcePrefab: {fileID: 100100000, guid: 3a61145181a5bc94fa4e9766e3fd364e, type: 3}
+--- !u!1 &2412993712362194417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3a61145181a5bc94fa4e9766e3fd364e, type: 3}
+  m_PrefabInstance: {fileID: 3296007307062982816}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &4716072801145275907
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2412993712362194417}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.8394885, y: 9.229702, z: 7.839064}
+  m_Center: {x: -0.51124144, y: 4.6054993, z: -1.2859066}
+--- !u!208 &5800418187727851123
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2412993712362194417}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.42, y: 4.6150002, z: 3.92}
+  m_MoveThreshold: 100
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.51100004, y: 4.605, z: -1.286}
+  m_TimeToStationary: 0.5

@@ -1292,6 +1292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400550}
   - component: {fileID: 8156956060124875123}
+  - component: {fileID: 6888999405700212216}
   m_Layer: 0
   m_Name: OldHousePrefab
   m_TagString: Untagged
@@ -1354,6 +1355,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7, y: 7, z: 8}
   m_Center: {x: 0, y: 3, z: -3.5}
+--- !u!208 &6888999405700212216
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188958}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.5, y: 3.5, z: 4}
+  m_MoveThreshold: 100
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 3, z: -3.5}
+  m_TimeToStationary: 0.5
 --- !u!1 &190744
 GameObject:
   m_ObjectHideFlags: 0

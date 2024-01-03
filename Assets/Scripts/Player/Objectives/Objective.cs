@@ -112,3 +112,16 @@ public class VillagerTradeObjective : Objective
         return dataMap.ContainsKey("VillagerTrade");
     }
 }
+
+public class EnemyBaseObjective : Objective
+{
+    public EnemyBaseObjective()
+    {
+        description = "Infiltrate an enemy base";
+        reward_name = "Smg";
+    }
+    public override bool CheckObjectiveStatus(Dictionary<string, string> dataMap)
+    {
+        return dataMap.ContainsKey("EnteredBase");
+    }
+}
