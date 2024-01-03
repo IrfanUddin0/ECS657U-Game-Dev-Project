@@ -175,9 +175,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopDistance: 3
-  dropChance: 1
+  dropChance: 0.2
   mapping: {fileID: 11400000, guid: 8aac15c160556834aad8e8abf75c5b21, type: 2}
-  nearSoound: {fileID: 0}
+  nearSoound: {fileID: 8300000, guid: 76d845c06cbf89d46af0639b569c1e08, type: 3}
   tradeSound: {fileID: 8300000, guid: 2e8d2d6a8ec00b64a88262fcf8c31aef, type: 3}
 --- !u!1001 &1506614120242393445
 PrefabInstance:

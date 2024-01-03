@@ -99,3 +99,16 @@ public class ExploreMineObjective : Objective
         return dataMap.ContainsKey("MineExplored");
     }
 }
+
+public class VillagerTradeObjective : Objective
+{
+    public VillagerTradeObjective()
+    {
+        description = "Make a successful trade with a villager";
+        reward_name = "Pistol";
+    }
+    public override bool CheckObjectiveStatus(Dictionary<string, string> dataMap)
+    {
+        return dataMap.ContainsKey("VillagerTrade");
+    }
+}

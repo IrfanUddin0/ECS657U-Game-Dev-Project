@@ -20,7 +20,7 @@ public class VillagerScript : MonoBehaviour
     private Vector3 roamPoint;
     private Animator animator;
 
-    private bool walkingMode = true;
+    private bool walkingMode;
 
     void Start()
     {
@@ -28,10 +28,12 @@ public class VillagerScript : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         roamPoint = transform.position;
         animator = GetComponentInChildren<Animator>();
+        walkingMode = false;
+        setWalkMode(true);
     }
 
-    // Update is called once per frame
-    void Update()
+
+    void FixedUpdate()
     {
         if (!agent.isOnNavMesh)
             return;
@@ -125,5 +127,7 @@ public class VillagerScript : MonoBehaviour
             animator.SetBool("close", true);
             agent.speed = 0f;
         }
+
+        walkingMode = mode;
     }
 }

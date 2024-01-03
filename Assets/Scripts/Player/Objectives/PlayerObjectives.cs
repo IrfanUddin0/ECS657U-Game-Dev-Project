@@ -18,6 +18,7 @@ public class PlayerObjectives : MonoBehaviour
         AddObjective(new CraftCampfireObjective());
         AddObjective(new CookMeatObjective());
         AddObjective(new ExploreMineObjective());
+        AddObjective(new VillagerTradeObjective());
     }
 
     private void FixedUpdate()
