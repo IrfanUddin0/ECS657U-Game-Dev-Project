@@ -34,7 +34,7 @@ public class CampfireScript : MonoBehaviour
 
         foreach (var food in foods)
         {
-            if(Vector3.Distance(food.transform.position, transform.position) <= effectDistance)
+            if(Vector3.SqrMagnitude(food.transform.position - transform.position) <= effectDistance * effectDistance)
             {
                 food.OnCook();
             }

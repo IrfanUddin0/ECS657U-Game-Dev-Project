@@ -60,8 +60,9 @@ public class Enemy : PlayerHittable
         setMode(EnemyMode.Normal);
 
         int difficulty = PlayerPrefs.HasKey("Difficulty") ? PlayerPrefs.GetInt("Difficulty") : 0;
-        maxHealth = maxHealth + 100 * difficulty;
+        maxHealth = maxHealth + 100f * difficulty;
         health = maxHealth;
+        attackDamage = attackDamage/3f * + 3f * (difficulty+1f);
     }
 
     void FixedUpdate()

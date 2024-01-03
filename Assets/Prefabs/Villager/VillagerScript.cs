@@ -53,8 +53,11 @@ public class VillagerScript : MonoBehaviour
             PickupItem[] items = GameObject.FindObjectsByType<PickupItem>(FindObjectsSortMode.None);
             foreach (PickupItem item in items)
             {
-                Destroy(item.gameObject);
-                spawnRandomItemChance();
+                if(Vector3.SqrMagnitude(item.transform.position - transform.position) <= stopDistance * stopDistance)
+                {
+                    Destroy(item.gameObject);
+                    spawnRandomItemChance();
+                }
             }
         }
     }
