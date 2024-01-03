@@ -19,13 +19,11 @@ public class DropItemChance : MonoBehaviour
     {
         if(!isQuitting)
         {
-            float rng = Random.Range(0.0f, 1.0f);
-            if (rng <= chance)
+            if (Util.RngDifficultyScaled(chance))
             {
                 Instantiate(dropItem, transform.position+ spawn_up_distance * Vector3.up, transform.rotation);
                 Util.PlayClipAtPoint(playOnDrop, transform.position, 1f);
             }
-                
         }
     }
 }

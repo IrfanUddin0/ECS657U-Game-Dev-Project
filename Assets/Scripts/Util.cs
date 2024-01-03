@@ -17,4 +17,11 @@ public static class Util
         audioSource.Play();
         Object.Destroy(gameObject, clip.length * ((Time.timeScale < 0.01f) ? 0.01f : Time.timeScale));
     }
+
+    public static bool RngDifficultyScaled(float chance)
+    {
+        int difficulty = PlayerPrefs.HasKey("Difficulty") ? PlayerPrefs.GetInt("Difficulty") : 0;
+        float rng = Random.Range(0.0f, 1.0f);
+        return (rng <= chance * 1/Mathf.Pow(difficulty+1, 0.5f));
+    }
 }

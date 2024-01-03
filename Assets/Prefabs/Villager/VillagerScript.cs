@@ -61,8 +61,7 @@ public class VillagerScript : MonoBehaviour
 
     void spawnRandomItemChance()
     {
-        float rng = Random.Range(0.0f, 1.0f);
-        if (rng <= dropChance)
+        if (Util.RngDifficultyScaled(dropChance))
         {
             FindAnyObjectByType<PlayerObjectives>().addDataEntry("VillagerTrade", "true");
             Util.PlayClipAtPoint(tradeSound, transform.position, 1f);
