@@ -58,6 +58,10 @@ public class Enemy : PlayerHittable
         lastAttackTime = Time.timeSinceLevelLoad;
         playerLastHit = Time.timeSinceLevelLoad - 10f;
         setMode(EnemyMode.Normal);
+
+        int difficulty = PlayerPrefs.HasKey("Difficulty") ? PlayerPrefs.GetInt("Difficulty") : 0;
+        maxHealth = maxHealth + 100 * difficulty;
+        health = maxHealth;
     }
 
     void FixedUpdate()
