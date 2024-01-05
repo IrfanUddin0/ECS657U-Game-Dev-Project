@@ -3,17 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-public abstract class Objective
+[System.Serializable]
+public class Objective
 {
-    [SerializeField]
     public string description;
-    [SerializeField]
     public string reward_name;
-    public abstract bool CheckObjectiveStatus(Dictionary<string, string> dataMap);
+    public virtual bool CheckObjectiveStatus(Dictionary<string, string> dataMap) { return false; }
 }
 
 
+[System.Serializable]
 public class BreakTreeObjective : Objective
 {
     public BreakTreeObjective()
@@ -34,6 +33,7 @@ public class BreakTreeObjective : Objective
     }
 }
 
+[System.Serializable]
 public class DefeatEnemyObjective : Objective
 {
     public DefeatEnemyObjective()
@@ -54,6 +54,7 @@ public class DefeatEnemyObjective : Objective
     }
 }
 
+[System.Serializable]
 public class CraftCampfireObjective : Objective
 {
     public CraftCampfireObjective()
@@ -74,6 +75,7 @@ public class CraftCampfireObjective : Objective
     }
 }
 
+[System.Serializable]
 public class CookMeatObjective : Objective
 {
     public CookMeatObjective()
@@ -87,6 +89,7 @@ public class CookMeatObjective : Objective
     }
 }
 
+[System.Serializable]
 public class ExploreMineObjective : Objective
 {
     public ExploreMineObjective()
@@ -100,6 +103,7 @@ public class ExploreMineObjective : Objective
     }
 }
 
+[System.Serializable]
 public class VillagerTradeObjective : Objective
 {
     public VillagerTradeObjective()
@@ -113,6 +117,7 @@ public class VillagerTradeObjective : Objective
     }
 }
 
+[System.Serializable]
 public class EnemyBaseObjective : Objective
 {
     public EnemyBaseObjective()
@@ -126,6 +131,7 @@ public class EnemyBaseObjective : Objective
     }
 }
 
+[System.Serializable]
 public class DragonObjective : Objective
 {
     public DragonObjective()

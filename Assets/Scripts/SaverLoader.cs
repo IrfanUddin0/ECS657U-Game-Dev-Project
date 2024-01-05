@@ -137,6 +137,10 @@ public class SaverLoader : MonoBehaviour
             Instantiate(map.Prefab, obj.pos, obj.rot);
         }
 
+        // load objectives
+        JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("Objectives"), FindAnyObjectByType<PlayerObjectives>());
+        FindAnyObjectByType<PlayerObjectives>().OnObjectivesUpdated();
+
         lastUpdateTime = Time.timeSinceLevelLoad;
     }
 
@@ -208,6 +212,9 @@ public class SaverLoader : MonoBehaviour
         PlayerPrefs.SetString("WorldObjects", JsonUtility.ToJson(newobjsSave));
 
 
+        // save objectives
+        PlayerPrefs.SetString("Objectives", JsonUtility.ToJson(FindAnyObjectByType<PlayerObjectives>()));
+
         PlayerPrefs.Save();
     }
 
@@ -221,6 +228,7 @@ public class SaverLoader : MonoBehaviour
         PlayerPrefs.DeleteKey("SunPos");
         PlayerPrefs.DeleteKey("Score");
         PlayerPrefs.DeleteKey("WorldObjects");
+        PlayerPrefs.DeleteKey("Objectives");
 
         PlayerPrefs.Save();
     }
@@ -235,6 +243,7 @@ public class SaverLoader : MonoBehaviour
             && PlayerPrefs.HasKey("CameraRot")
             && PlayerPrefs.HasKey("SunPos")
             && PlayerPrefs.HasKey("Score")
-            && PlayerPrefs.HasKey("WorldObjects");
+            && PlayerPrefs.HasKey("WorldObjects")
+            && PlayerPrefs.HasKey("Objectives");
     }
 }

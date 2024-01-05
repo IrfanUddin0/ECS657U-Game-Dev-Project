@@ -1,26 +1,29 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
 public class PlayerObjectives : MonoBehaviour
 {
     [SerializeField]
-    List<Objective> objectives = new List<Objective>();
+    public List<Objective> objectives = new List<Objective>();
     [SerializeField]
-    Dictionary<string, string> data_map = new Dictionary<string, string>();
+    public Dictionary<string, string> data_map = new Dictionary<string, string>();
 
     private void Start()
     {
         AddObjective(new BreakTreeObjective());
-        //AddObjective(new DefeatEnemyObjective());
-        //AddObjective(new CraftCampfireObjective());
-        //AddObjective(new CookMeatObjective());
-        //AddObjective(new ExploreMineObjective());
-        //AddObjective(new VillagerTradeObjective());
-        //AddObjective(new EnemyBaseObjective());
+        AddObjective(new DefeatEnemyObjective());
+        AddObjective(new CraftCampfireObjective());
+        AddObjective(new CookMeatObjective());
+        AddObjective(new ExploreMineObjective());
+        AddObjective(new VillagerTradeObjective());
+        AddObjective(new EnemyBaseObjective());
         AddObjective(new DragonObjective());
+    }
+
+    public string ToJson()
+    {
+        return JsonUtility.ToJson(this);
     }
 
     private void FixedUpdate()
@@ -29,8 +32,6 @@ public class PlayerObjectives : MonoBehaviour
         {
             if (objectives[i].CheckObjectiveStatus(data_map))
             {
-                // TODO: use mapping to get prefab
-                // Instantiate(objectives[i].reward, transform.position, transform.rotation);
                 FindAnyObjectByType<ObjectiveRewardManager>().OnObjectiveComplete(objectives[i]);
                 objectives.RemoveAt(i);
                 OnObjectivesUpdated();
