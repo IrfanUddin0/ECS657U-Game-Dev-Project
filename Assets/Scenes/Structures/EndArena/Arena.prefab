@@ -1323,8 +1323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9769caff3a160144b58fd4ff73704a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 300
-  health: 300
+  maxHealth: 1000
+  health: 1000
   onHitSound: {fileID: 8300000, guid: 594f0333237e10545801bf9fd48f7069, type: 3}
   speed: 15
   flyingPoints:
