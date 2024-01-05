@@ -8,16 +8,24 @@ public enum DragonState
     grounded,
     dead
 }
-public class DragonScript : MonoBehaviour
+public class DragonScript : PlayerHittable
 {
     public float speed;
     public List<Transform> flyingPoints;
-    public GameObject groundedPoint;
+    public ArenaTriggerScript arenaTrigger;
+
+    public GameObject healthBar;
+    public GameObject dragonProjectile;
+    public GameObject deathEffect;
+
+    public AudioClip flyingSound;
+    public AudioClip attackSound;
+    public AudioClip deadSound;
    
     private PlayerSurvival player;
     private DragonState state;
     private int currentFlyingPointIndex = 0;
-    void Start()
+    public override void Start()
     {
         player = FindAnyObjectByType<PlayerSurvival>();
 
@@ -34,22 +42,66 @@ public class DragonScript : MonoBehaviour
                 flyToNext();
                 break;
             case DragonState.grounded:
+                flyToPlayer();
                 break;
             case DragonState.dead:
                 return;
         }
     }
 
+    public override void OnPlayerHit(float dmg)
+    {
+        base.OnPlayerHit(dmg);
+        healthBar.transform.localScale = new Vector3((health / maxHealth) * 4f, 0.2f, 0.02f);
+        if(health<=0)
+        {
+            setMode(DragonState.dead);
+            FindAnyObjectByType<PlayerObjectives>().addDataEntry("DragonKilled", "true");
+            var effect = Instantiate(deathEffect, transform.position, transform.rotation);
+            effect.transform.localScale = new Vector3(20f, 20f, 20f);
+            Destroy(gameObject);
+        }
+            
+    }
+
+    private void flyToPlayer()
+    {
+        var nextLookRot = Quaternion.LookRotation(player.transform.position - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, nextLookRot, Time.deltaTime * 3f);
+        transform.position = transform.position + transform.forward * speed * Time.deltaTime;
+
+        if (Vector3.SqrMagnitude(transform.position - player.transform.position) <= 36f)
+        {
+            setMode(DragonState.flying);
+            attackPlayer();
+            for (int i = 0; i < (flyingPoints.Count/2); i++)
+            {
+                incrementFlyingPointIndex();
+            }
+        }
+    }
+
     private void flyToNext()
     {
         // get to next, if distance nearly== 0, go next
-        transform.rotation = Quaternion.LookRotation(flyingPoints[currentFlyingPointIndex].position - transform.position);
+        var nextLookRot = Quaternion.LookRotation(flyingPoints[currentFlyingPointIndex].position - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, nextLookRot, Time.deltaTime * 3f);
         transform.position = transform.position + transform.forward * speed * Time.deltaTime;
 
         if(Vector3.SqrMagnitude(transform.position - flyingPoints[currentFlyingPointIndex].position) <= 0.1f)
         {
-            incrementFlyingPointIndex();
+            attackPlayer();
+            if (arenaTrigger.PlayerInArena() && Util.RngDifficultyScaled(0.1f))
+                setMode(DragonState.grounded);
+            else
+                incrementFlyingPointIndex();
         }
+    }
+
+    private void attackPlayer()
+    {
+        if (arenaTrigger.PlayerInArena())
+            Instantiate(dragonProjectile, transform.position, Quaternion.LookRotation(player.transform.position- transform.position));
     }
 
     private void incrementFlyingPointIndex()
@@ -63,13 +115,6 @@ public class DragonScript : MonoBehaviour
     {
         if (state == mode)
             return;
-
-        switch(mode)
-        {
-            case DragonState.flying:break;
-            case DragonState.grounded:break;
-            case DragonState.dead:break;
-        }
 
         state = mode;
     }

@@ -125,3 +125,16 @@ public class EnemyBaseObjective : Objective
         return dataMap.ContainsKey("EnteredBase");
     }
 }
+
+public class DragonObjective : Objective
+{
+    public DragonObjective()
+    {
+        description = "Kill the final dragon boss";
+        reward_name = "Smg";
+    }
+    public override bool CheckObjectiveStatus(Dictionary<string, string> dataMap)
+    {
+        return dataMap.ContainsKey("DragonKilled");
+    }
+}

@@ -14,12 +14,13 @@ public class PlayerObjectives : MonoBehaviour
     private void Start()
     {
         AddObjective(new BreakTreeObjective());
-        AddObjective(new DefeatEnemyObjective());
-        AddObjective(new CraftCampfireObjective());
-        AddObjective(new CookMeatObjective());
-        AddObjective(new ExploreMineObjective());
-        AddObjective(new VillagerTradeObjective());
-        AddObjective(new EnemyBaseObjective());
+        //AddObjective(new DefeatEnemyObjective());
+        //AddObjective(new CraftCampfireObjective());
+        //AddObjective(new CookMeatObjective());
+        //AddObjective(new ExploreMineObjective());
+        //AddObjective(new VillagerTradeObjective());
+        //AddObjective(new EnemyBaseObjective());
+        AddObjective(new DragonObjective());
     }
 
     private void FixedUpdate()
