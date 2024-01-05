@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.InputSystem;
 
 public class PlaceableEquipItem : EquippableItemEvents
@@ -33,6 +34,11 @@ public class PlaceableEquipItem : EquippableItemEvents
         }
 
         foreach(Collider i in PreviewItemPlace.GetComponentsInChildren<Collider>())
+        {
+            i.enabled = false;
+        }
+
+        foreach(NavMeshObstacle i in PreviewItemPlace.GetComponentsInChildren<NavMeshObstacle>())
         {
             i.enabled = false;
         }
