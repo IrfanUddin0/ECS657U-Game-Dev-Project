@@ -59,6 +59,9 @@ public class PlayerObjectives : MonoBehaviour
     public void OnObjectivesUpdated()
     {
         FindAnyObjectByType<ObjectivesUIScript>().OnObjectivesUpdated();
+
+        if(objectives.Count == 0)
+            Destroy(FindAnyObjectByType<DragonScript>().gameObject);
     }
 
     public List<Objective> GetObjectives()
