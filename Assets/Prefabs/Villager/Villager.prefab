@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1326106bee27e414cb0979f405638b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopDistance: 3
+  stopDistance: 5
   dropChance: 0.2
   mapping: {fileID: 11400000, guid: 8aac15c160556834aad8e8abf75c5b21, type: 2}
   nearSoound: {fileID: 8300000, guid: 76d845c06cbf89d46af0639b569c1e08, type: 3}
