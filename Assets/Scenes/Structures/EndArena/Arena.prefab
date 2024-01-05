@@ -1325,7 +1325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1000
   health: 1000
-  onHitSound: {fileID: 8300000, guid: 594f0333237e10545801bf9fd48f7069, type: 3}
+  onHitSound: {fileID: 8300000, guid: 3a59495e176c4bc4bbb1487cf9b7fc0a, type: 3}
   speed: 15
   flyingPoints:
   - {fileID: 449091688303588603}
@@ -1340,9 +1340,9 @@ MonoBehaviour:
   healthBar: {fileID: 7749580061243153608}
   dragonProjectile: {fileID: 1968910006612611562, guid: 3469e4f5f0bd6f1459e112b867e937ba, type: 3}
   deathEffect: {fileID: 100012, guid: 1f1aa87040db08846a4332981b0a6fa7, type: 3}
-  flyingSound: {fileID: 0}
-  attackSound: {fileID: 0}
-  deadSound: {fileID: 0}
+  flyingSound: {fileID: 8300000, guid: 183b2c89725055743b7af5764e69637e, type: 3}
+  attackSound: {fileID: 8300000, guid: 3a59495e176c4bc4bbb1487cf9b7fc0a, type: 3}
+  deadSound: {fileID: 8300000, guid: a8e9033a2b9df40499c5bd0d4e7efa25, type: 3}
 --- !u!1001 &4118451135292056381
 PrefabInstance:
   m_ObjectHideFlags: 0

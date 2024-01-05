@@ -55,10 +55,11 @@ public class DragonScript : PlayerHittable
         healthBar.transform.localScale = new Vector3((health / maxHealth) * 4f, 0.2f, 0.02f);
         if(health<=0)
         {
+            Util.PlayClipAtPoint(deadSound, transform.position, 100f);
             setMode(DragonState.dead);
             FindAnyObjectByType<PlayerObjectives>().addDataEntry("DragonKilled", "true");
             var effect = Instantiate(deathEffect, transform.position, transform.rotation);
-            effect.transform.localScale = new Vector3(20f, 20f, 20f);
+            effect.transform.localScale = new Vector3(5f, 5f, 5f);
             Destroy(gameObject);
         }
             
@@ -90,6 +91,8 @@ public class DragonScript : PlayerHittable
 
         if(Vector3.SqrMagnitude(transform.position - flyingPoints[currentFlyingPointIndex].position) <= 0.1f)
         {
+            Util.PlayClipAtPoint(flyingSound, transform.position, 100f);
+            Util.PlayClipAtPoint(attackSound, transform.position, 100f);
             attackPlayer();
             if (arenaTrigger.PlayerInArena() && Util.RngDifficultyScaled(0.1f))
                 setMode(DragonState.grounded);
