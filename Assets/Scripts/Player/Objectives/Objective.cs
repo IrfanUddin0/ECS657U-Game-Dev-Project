@@ -8,7 +8,26 @@ public class Objective
 {
     public string description;
     public string reward_name;
-    public virtual bool CheckObjectiveStatus(Dictionary<string, string> dataMap) { return false; }
+    public string data_key_name;
+    public bool CheckObjectiveStatus(Dictionary<string, string> dataMap)
+    {
+        return dataMap.ContainsKey(data_key_name);
+        /*
+        if(dataMap.ContainsKey(data_key_name))
+            return true;
+
+        
+        foreach(var entry in dataMap)
+        {
+            if (entry.Key.Contains(data_key_name))
+            {
+                return true;
+            }
+        }
+
+        return false;
+        */
+    }
 }
 
 
@@ -19,17 +38,7 @@ public class BreakTreeObjective : Objective
     {
         description = "Break a tree";
         reward_name = "Bow";
-    }
-    public override bool CheckObjectiveStatus(Dictionary<string, string> dataMap)
-    {
-        foreach(var entry in dataMap)
-        {
-            if(entry.Key.Contains("Tree") && entry.Value.Contains("destroyed"))
-            {
-                return true;
-            }
-        }
-        return false;
+        data_key_name = "TreePrefabDestroyed";
     }
 }
 
@@ -40,17 +49,7 @@ public class DefeatEnemyObjective : Objective
     {
         description = "Defeat an enemy";
         reward_name = "Coal";
-    }
-    public override bool CheckObjectiveStatus(Dictionary<string, string> dataMap)
-    {
-        foreach (var entry in dataMap)
-        {
-            if (entry.Key.Contains("Enemy") && entry.Value.Contains("defeated"))
-            {
-                return true;
-            }
-        }
-        return false;
+        data_key_name = "EnemyDefeated";
     }
 }
 
@@ -61,17 +60,7 @@ public class CraftCampfireObjective : Objective
     {
         description = "Craft a campfire (Wood, Coal)";
         reward_name = "RawMeat";
-    }
-    public override bool CheckObjectiveStatus(Dictionary<string, string> dataMap)
-    {
-        foreach (var entry in dataMap)
-        {
-            if (entry.Key.Contains("Campfire") && entry.Value.Contains("crafted"))
-            {
-                return true;
-            }
-        }
-        return false;
+        data_key_name = "CampfireCrafted";
     }
 }
 
@@ -82,10 +71,7 @@ public class CookMeatObjective : Objective
     {
         description = "Cook meat using the campfire";
         reward_name = "Torch";
-    }
-    public override bool CheckObjectiveStatus(Dictionary<string, string> dataMap)
-    {
-        return dataMap.ContainsKey("cooked");
+        data_key_name = "cooked";
     }
 }
 
@@ -96,10 +82,7 @@ public class ExploreMineObjective : Objective
     {
         description = "Explore a mine";
         reward_name = "Bed";
-    }
-    public override bool CheckObjectiveStatus(Dictionary<string, string> dataMap)
-    {
-        return dataMap.ContainsKey("MineExplored");
+        data_key_name = "MineExplored";
     }
 }
 
@@ -110,10 +93,7 @@ public class VillagerTradeObjective : Objective
     {
         description = "Make a successful trade with a villager";
         reward_name = "Pistol";
-    }
-    public override bool CheckObjectiveStatus(Dictionary<string, string> dataMap)
-    {
-        return dataMap.ContainsKey("VillagerTrade");
+        data_key_name = "VillagerTrade";
     }
 }
 
@@ -124,10 +104,7 @@ public class EnemyBaseObjective : Objective
     {
         description = "Infiltrate an enemy base";
         reward_name = "Smg";
-    }
-    public override bool CheckObjectiveStatus(Dictionary<string, string> dataMap)
-    {
-        return dataMap.ContainsKey("EnteredBase");
+        data_key_name = "EnteredBase";
     }
 }
 
@@ -138,9 +115,6 @@ public class DragonObjective : Objective
     {
         description = "Kill the final dragon boss";
         reward_name = "Smg";
-    }
-    public override bool CheckObjectiveStatus(Dictionary<string, string> dataMap)
-    {
-        return dataMap.ContainsKey("DragonKilled");
+        data_key_name = "DragonKilled";
     }
 }

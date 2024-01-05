@@ -84,7 +84,7 @@ public class CraftingManager : InventoryUIElement
             }
         }
         inventory.AddItem(add);
-        FindAnyObjectByType<PlayerObjectives>().addDataEntry(add.itemName, "crafted");
+        FindAnyObjectByType<PlayerObjectives>().addDataEntry(add.itemName+ "Crafted", "true");
         foreach (RecipeItem item in recipe.ItemsNeeded)
         {
             for (int i = 0; i < item.count; i++)

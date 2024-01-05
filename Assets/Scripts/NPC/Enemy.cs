@@ -113,7 +113,7 @@ public class Enemy : PlayerHittable
             Util.PlayClipAtPoint(deathSound, transform.position, deathSoundVolume);
             isDead = true;
             StartCoroutine(Die());
-            FindAnyObjectByType<PlayerObjectives>().addDataEntry("Enemy", "defeated");
+            FindAnyObjectByType<PlayerObjectives>().addDataEntry("EnemyDefeated", "true");
         }
     }
     private IEnumerator Die()
