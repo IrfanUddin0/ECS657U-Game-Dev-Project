@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.2904225, g: 0.27760983, b: 0.16786423, a: 1}
+  m_IndirectSpecularColor: {r: 0.2904226, g: 0.27760983, b: 0.16786422, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -416,6 +416,8 @@ MonoBehaviour:
   treeCount: 500
   waterLevel: 0
   TreePrefab: {fileID: 9089349214736428549, guid: fa79654bfd32fd8489dae22d182c9fef, type: 3}
+  regen: 0
+  regenTime: 0
 --- !u!114 &296115343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,6 +433,8 @@ MonoBehaviour:
   treeCount: 2000
   waterLevel: 13
   TreePrefab: {fileID: 2816486115205184337, guid: e375cc3cda24a76449583aefdbb21514, type: 3}
+  regen: 0
+  regenTime: 0
 --- !u!95 &296115344
 Animator:
   serializedVersion: 7
@@ -468,6 +472,8 @@ MonoBehaviour:
   treeCount: 2000
   waterLevel: 13
   TreePrefab: {fileID: 7377417115897789480, guid: 1e9d3fb52d12e864392c72c76cde8b08, type: 3}
+  regen: 0
+  regenTime: 0
 --- !u!1001 &344696527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -941,6 +947,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactPromt: Drink Water
+  onInteractSound: {fileID: 0}
+  soundVolume: 1
   thirstReplenishAmmount: 1
 --- !u!1 &443351227
 GameObject:
@@ -1905,7 +1913,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.6784314, g: 1, b: 1, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
