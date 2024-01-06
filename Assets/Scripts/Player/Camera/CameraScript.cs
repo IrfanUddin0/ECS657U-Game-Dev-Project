@@ -34,6 +34,7 @@ public class CameraScript : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
+        
         var loadedsens = PlayerPrefs.GetFloat("MouseSensitivity");
         if (PlayerPrefs.HasKey("MouseSensitivity") && loadedsens>=0f && loadedsens<=1f)
         {
@@ -43,8 +44,8 @@ public class CameraScript : MonoBehaviour
         }
         else
         {
-            sensitivityX = 0.5F;
-            sensitivityY = 0.5F;
+            sensitivityX = 0.05F;
+            sensitivityY = 0.05F;
         }
             
     }

@@ -55,7 +55,7 @@ public class SettingMenu : MonoBehaviour
         PlayerPrefs.SetInt("HighSettings", quality);
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         print(actionAsset.ToJson());
         // save input bindings

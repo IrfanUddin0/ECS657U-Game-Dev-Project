@@ -23,6 +23,13 @@ public class PauseMenu : MonoBehaviour
         IsPaused = false;
     }
 
+    private void OnDestroy()
+    {
+        PauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        IsPaused = false;
+    }
+
     public void ResumeButton()
     {
         GetComponentInParent<InventoryVisibilityScript>().hide();
