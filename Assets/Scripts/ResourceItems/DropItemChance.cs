@@ -15,6 +15,11 @@ public class DropItemChance : MonoBehaviour
         isQuitting = true;
     }
 
+    public void setQuitTrue()
+    {
+        isQuitting = true;
+    }
+
     private void OnDestroy()
     {
         if(!isQuitting)

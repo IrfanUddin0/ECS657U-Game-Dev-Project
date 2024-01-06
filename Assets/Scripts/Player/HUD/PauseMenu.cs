@@ -38,6 +38,10 @@ public class PauseMenu : MonoBehaviour
     public void MainMenu()
     {
         Time.timeScale = 1f;
+        foreach(DropItemChance i in FindObjectsByType<DropItemChance>(FindObjectsSortMode.None))
+        {
+            i.setQuitTrue();
+        }
         SceneManager.LoadScene("main_menu");
     }
 }
