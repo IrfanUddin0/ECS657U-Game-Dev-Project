@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c0f21a5db63306f4f8d06c6b90f520bd
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189090
+  packageName: Input Rebinder
+  packageVersion: 1.1.2
+  assetPath: Assets/Input Rebinder/Runtime/ActionMapDisplayScroll.cs
+  uploadId: 515190

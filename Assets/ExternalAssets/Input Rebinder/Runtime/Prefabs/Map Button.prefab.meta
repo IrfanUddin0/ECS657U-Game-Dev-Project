@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 893b73a6925c43341a0dfa36ba810da0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189090
+  packageName: Input Rebinder
+  packageVersion: 1.1.2
+  assetPath: Assets/Input Rebinder/Runtime/Prefabs/Map Button.prefab
+  uploadId: 515190

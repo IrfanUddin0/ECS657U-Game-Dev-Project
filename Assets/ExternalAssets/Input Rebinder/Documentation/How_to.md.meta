@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ec0e6117e91043c4d872cdcb18b679e3
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189090
+  packageName: Input Rebinder
+  packageVersion: 1.1.2
+  assetPath: Assets/Input Rebinder/Documentation/How_to.md
+  uploadId: 515190

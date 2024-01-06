@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e5b2d32b634493e469b03ce9c19b087a
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189090
+  packageName: Input Rebinder
+  packageVersion: 1.1.2
+  assetPath: Assets/Input Rebinder/package.json
+  uploadId: 515190

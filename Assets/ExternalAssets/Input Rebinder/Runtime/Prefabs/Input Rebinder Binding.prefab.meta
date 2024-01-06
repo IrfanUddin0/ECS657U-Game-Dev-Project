@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f9cfb32fe1612844580558986584ce3e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189090
+  packageName: Input Rebinder
+  packageVersion: 1.1.2
+  assetPath: Assets/Input Rebinder/Runtime/Prefabs/Input Rebinder Binding.prefab
+  uploadId: 515190

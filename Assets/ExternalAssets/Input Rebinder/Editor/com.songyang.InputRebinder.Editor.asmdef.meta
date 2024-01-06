@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 27c2f0580b3f4d2478fc516d2c0463dc
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189090
+  packageName: Input Rebinder
+  packageVersion: 1.1.2
+  assetPath: Assets/Input Rebinder/Editor/com.songyang.InputRebinder.Editor.asmdef
+  uploadId: 515190

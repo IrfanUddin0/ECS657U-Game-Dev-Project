@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9de07e8a9b80a8d4db8f25b8495b4d09
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189090
+  packageName: Input Rebinder
+  packageVersion: 1.1.2
+  assetPath: Assets/Input Rebinder/Documentation/Ignore_Actions.md
+  uploadId: 515190

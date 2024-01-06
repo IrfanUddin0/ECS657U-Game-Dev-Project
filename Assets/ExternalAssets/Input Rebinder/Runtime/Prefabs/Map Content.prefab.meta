@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 342bdb29f7ae1584f9eb8ad752ca1f33
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 189090
+  packageName: Input Rebinder
+  packageVersion: 1.1.2
+  assetPath: Assets/Input Rebinder/Runtime/Prefabs/Map Content.prefab
+  uploadId: 515190
