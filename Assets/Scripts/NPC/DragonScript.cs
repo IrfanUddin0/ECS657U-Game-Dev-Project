@@ -71,7 +71,7 @@ public class DragonScript : PlayerHittable
         transform.rotation = Quaternion.Slerp(transform.rotation, nextLookRot, Time.deltaTime * 3f);
         transform.position = transform.position + transform.forward * speed * Time.deltaTime;
 
-        if (Vector3.SqrMagnitude(transform.position - player.transform.position) <= 36f)
+        if (Vector3.SqrMagnitude(transform.position - player.transform.position) <= 64f)
         {
             setMode(DragonState.flying);
             attackPlayer();
