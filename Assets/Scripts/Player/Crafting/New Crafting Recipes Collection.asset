@@ -31,5 +31,43 @@ MonoBehaviour:
     - Item: {fileID: 2691039409535011996, guid: cbd69267b325f8644a5af6b1a802f2ce, type: 3}
       count: 4
     - Item: {fileID: 2551231364484385431, guid: 902b991beb2c62a4d95d0b80a0ff0763, type: 3}
-      count: 2
+      count: 4
     ItemResult: {fileID: 5435844516253738363, guid: 397e66916c023c947b630eaf9b8771ce, type: 3}
+  - ItemsNeeded:
+    - Item: {fileID: 2691039409535011996, guid: cbd69267b325f8644a5af6b1a802f2ce, type: 3}
+      count: 2
+    ItemResult: {fileID: 2551231364484385431, guid: 46eed18ac67754846b3724282e37278c, type: 3}
+  - ItemsNeeded:
+    - Item: {fileID: 2691039409535011996, guid: cbd69267b325f8644a5af6b1a802f2ce, type: 3}
+      count: 2
+    ItemResult: {fileID: 2551231364484385431, guid: db85461f91e54dd41a39ba8138b40be4, type: 3}
+  - ItemsNeeded:
+    - Item: {fileID: 2551231364484385431, guid: 902b991beb2c62a4d95d0b80a0ff0763, type: 3}
+      count: 2
+    ItemResult: {fileID: 2551231364484385431, guid: 404984efd752c454e8d1c0bc52470594, type: 3}
+  - ItemsNeeded:
+    - Item: {fileID: 2551231364484385431, guid: 902b991beb2c62a4d95d0b80a0ff0763, type: 3}
+      count: 8
+    - Item: {fileID: 2691039409535011996, guid: cbd69267b325f8644a5af6b1a802f2ce, type: 3}
+      count: 8
+    ItemResult: {fileID: 5435844516253738363, guid: 6ec1ef7b82adf414e8c9862132f9dc85, type: 3}
+  - ItemsNeeded:
+    - Item: {fileID: 2691039409535011996, guid: cbd69267b325f8644a5af6b1a802f2ce, type: 3}
+      count: 1
+    - Item: {fileID: 3574299389808435369, guid: 85fac30185c455a4ba2eb4d813fce9a2, type: 3}
+      count: 1
+    ItemResult: {fileID: 2551231364484385431, guid: 9ee8ca7b8db45ae44bbe26c7ac884ddc, type: 3}
+  - ItemsNeeded:
+    - Item: {fileID: 2691039409535011996, guid: cbd69267b325f8644a5af6b1a802f2ce, type: 3}
+      count: 2
+    - Item: {fileID: 3574299389808435369, guid: 38934335ab6772d40a6e33125e90415f, type: 3}
+      count: 2
+    ItemResult: {fileID: 1883322863298995498, guid: 000091fce615852438fcc962e7b3a3e0, type: 3}
+  - ItemsNeeded:
+    - Item: {fileID: 2691039409535011996, guid: cbd69267b325f8644a5af6b1a802f2ce, type: 3}
+      count: 1
+    - Item: {fileID: 3574299389808435369, guid: 38934335ab6772d40a6e33125e90415f, type: 3}
+      count: 1
+    - Item: {fileID: 3574299389808435369, guid: 85fac30185c455a4ba2eb4d813fce9a2, type: 3}
+      count: 1
+    ItemResult: {fileID: 3574299389808435369, guid: 75e3a664fea57a64b85a84c925f3b18b, type: 3}

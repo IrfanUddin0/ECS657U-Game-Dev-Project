@@ -9,7 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Irfan/IrfanTestingScene.unity
     guid: f29b0a6d0449c31478ad8c1adfb2f004
   - enabled: 1
+    path: Assets/Scenes/Mohammed/main_menu.unity
+    guid: 9764826e2e5a244df8fc9b8bc2cf3271
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
-    guid: fb2d84f2854df6c4db469d36ef3d6224
+    guid: a90f014dcaa064d44b55a229926c2686
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

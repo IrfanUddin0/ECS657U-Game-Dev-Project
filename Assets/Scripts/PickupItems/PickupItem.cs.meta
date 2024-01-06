@@ -3,7 +3,9 @@ guid: 935976e617b5acc47b05515f304407f8
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - onInteractSound: {fileID: 8300000, guid: 61b5c22eddbbd4c4da222f2319203b3d, type: 3}
+  - prefabCollection: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

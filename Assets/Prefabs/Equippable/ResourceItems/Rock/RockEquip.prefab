@@ -47,11 +47,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ads_time: 0.1
-  ads_fov_scale: 0.8
+  ads_fov_scale: 1
   target_ads_transform_const: {x: 0, y: 0, z: 0}
   ItemToPlace: {fileID: 7377417115897789480, guid: 1e9d3fb52d12e864392c72c76cde8b08, type: 3}
   PlaceRange: 5
   PlaceMaterial: {fileID: 2100000, guid: be1d80516aabecc4fa4defcd30f268bd, type: 2}
+  Rotate90Y: {fileID: -818078309047226103, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
+  Rotate90Z: {fileID: 2608791369659022257, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
+  Mouse: {fileID: -3393964540960816287, guid: 8aa6eb091cdcb3e43a40d146d2b9a8c8, type: 3}
+  placeClip: {fileID: 8300000, guid: 984c9213da9f1dd43ac813022aff12d9, type: 3}
+  placeClipVolume: 1
 --- !u!1001 &2648908076754833441
 PrefabInstance:
   m_ObjectHideFlags: 0

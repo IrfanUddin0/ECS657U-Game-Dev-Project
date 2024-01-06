@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 7447651876076254354}
   - component: {fileID: 7408138947873337492}
   - component: {fileID: 9075921595338273001}
-  - component: {fileID: -9112049321523230225}
+  - component: {fileID: 822364705588070776}
   - component: {fileID: 3880984467866929616}
+  - component: {fileID: 8811422629979529728}
   m_Layer: 0
   m_Name: DoorPrefab
   m_TagString: Untagged
@@ -49,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactPromt: Open Door
+  onInteractSound: {fileID: 8300000, guid: b7c55986f277fc24ead1ad734133e03a, type: 3}
 --- !u!65 &9075921595338273001
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70,7 +72,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2, y: 2.4, z: 0.16}
   m_Center: {x: 0.6, y: 1.25, z: 0}
---- !u!114 &-9112049321523230225
+--- !u!114 &822364705588070776
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,11 +81,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 288119615157868066}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9801def95d09ee42a6f1a23642de0b2, type: 3}
+  m_Script: {fileID: 11500000, guid: b2e1487f3e23b1a40a961bc0e9e85b2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 100
+  onHitSound: {fileID: 8300000, guid: fc09fc5b64329a641b0fdd7b27b45bb4, type: 3}
+  SaveName: Door
 --- !u!114 &3880984467866929616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,6 +101,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PickupableToSpawn: {fileID: 749309338393534881, guid: ae2f9bf01c704714f91ef9b7086c9d25, type: 3}
+--- !u!208 &8811422629979529728
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288119615157868066}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.6, y: 1.2, z: 0.08}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.6, y: 1.25, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &3518502940977332353
 PrefabInstance:
   m_ObjectHideFlags: 0

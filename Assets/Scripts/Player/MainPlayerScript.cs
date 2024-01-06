@@ -1,4 +1,7 @@
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Rendering.PostProcessing;
 
 public enum InputMode
 {
@@ -6,6 +9,7 @@ public enum InputMode
     UI
 }
 
+[Serializable]
 public struct SpawnTransform
 {
     public SpawnTransform(Vector3 pos, Quaternion rot)
@@ -13,7 +17,9 @@ public struct SpawnTransform
         this.pos = pos;
         this.rot = rot;
     }
+    [SerializeField]
     public Vector3 pos;
+    [SerializeField]
     public Quaternion rot;
 }
 
@@ -23,22 +29,33 @@ public class MainPlayerScript : MonoBehaviour
     public InputMode inputMode = InputMode.Playing;
 
     public SpawnTransform spawnTransform;
+
+    [SerializeField]
+    public InputActionReference Interact;
+
+    public Material highQualityWaterMaterial;
+    public Material lowQualityWaterMaterial;
+    private int difficulty;
     void Start()
     {
         spawnTransform = new SpawnTransform(transform.position, transform.rotation);
+        difficulty = PlayerPrefs.HasKey("Difficulty") ? PlayerPrefs.GetInt("Difficulty") : 0;
+        SetGraphicalQuality();
     }
 
+    private void OnEnable()
+    {
+        Interact.action.performed += onInteractClicked;
+    }
+
+    private void OnDisable()
+    {
+        Interact.action.performed -= onInteractClicked;
+    }
 
     void Update()
     {
-        if(inputMode == InputMode.Playing)
-        {
-            checkForInteractable();
-            if (Input.GetButtonDown("Interact"))
-            {
-                onInteractClicked();
-            }
-        }
+        checkForInteractable();
     }
 
     public void inputModeSetUI()
@@ -72,10 +89,13 @@ public class MainPlayerScript : MonoBehaviour
             FocusedInteractableObject = hit.transform.gameObject;
     }
 
-    private void onInteractClicked()
+    private void onInteractClicked(InputAction.CallbackContext obj)
     {
-        if (FocusedInteractableObject != null)
-            FocusedInteractableObject.GetComponent<PlayerInteractable>().OnInteract();
+        if (inputMode == InputMode.Playing)
+        {
+            if (FocusedInteractableObject != null)
+                FocusedInteractableObject.GetComponent<PlayerInteractable>().OnInteract();
+        }
     }
 
     public GameObject getFocusedInteractableObject()
@@ -83,10 +103,33 @@ public class MainPlayerScript : MonoBehaviour
         return FocusedInteractableObject;
     }
 
+    public void SetNewSpawnTransform(SpawnTransform transform)
+    {
+        spawnTransform = transform;
+    }
+
     public void Respawn()
     {
         inputModeSetPlaying();
         transform.position = spawnTransform.pos;
         transform.rotation = spawnTransform.rot;
+    }
+
+    public int GetDifficulty()
+    {
+        return difficulty;
+    }
+
+    private void SetGraphicalQuality()
+    {
+        // set quality level
+        int qualitylevel = PlayerPrefs.HasKey("HighSettings") ? PlayerPrefs.GetInt("HighSettings") : 0;
+        QualitySettings.SetQualityLevel(qualitylevel, true);
+        print(QualitySettings.names[0]);
+        // disable pp
+        GetComponentInChildren<PostProcessLayer>().enabled = (qualitylevel==0);
+        GetComponentInChildren<PostProcessVolume>().enabled = (qualitylevel==0);
+        // disable water shader
+        FindAnyObjectByType<WaterInteractScript>().gameObject.GetComponent<MeshRenderer>().material = (qualitylevel == 0) ? highQualityWaterMaterial : lowQualityWaterMaterial;
     }
 }

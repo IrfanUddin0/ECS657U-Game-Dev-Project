@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4999405737812299576}
-  - component: {fileID: 5164098027825983821}
+  - component: {fileID: 4867995254073338849}
   - component: {fileID: 5230528001365399398}
+  - component: {fileID: 1284073753175429490}
   m_Layer: 0
   m_Name: WoodPlaced
   m_TagString: Untagged
@@ -34,7 +35,7 @@ Transform:
   - {fileID: 6865950809535645263}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5164098027825983821
+--- !u!114 &4867995254073338849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,11 +44,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1141923175744675908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9801def95d09ee42a6f1a23642de0b2, type: 3}
+  m_Script: {fileID: 11500000, guid: b2e1487f3e23b1a40a961bc0e9e85b2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 100
+  onHitSound: {fileID: 8300000, guid: fc09fc5b64329a641b0fdd7b27b45bb4, type: 3}
+  SaveName: Wood
 --- !u!114 &5230528001365399398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,6 +64,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PickupableToSpawn: {fileID: 2691039409535011996, guid: 149cdf200e796174ebfe8df3e020a242, type: 3}
+--- !u!208 &1284073753175429490
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141923175744675908}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15, y: 0.15, z: 1.25}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.1, z: -0.1}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1281217358427217212
 PrefabInstance:
   m_ObjectHideFlags: 0

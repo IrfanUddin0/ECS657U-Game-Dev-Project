@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0c742447bd6d3ab4792475f2f0c96fcf
+timeCreated: 1486118058
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 85423
+  packageName: Arnis Sticks
+  packageVersion: 1.0
+  assetPath: Assets/DLD/Arnis Sticks/Prefab/Arnis.prefab
+  uploadId: 177751

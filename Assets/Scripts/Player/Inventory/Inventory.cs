@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    [SerializeField]
     private List<Item> itemList = new List<Item>();
 
     // Method to add an item to the inventory.
@@ -55,21 +56,23 @@ public class Inventory : MonoBehaviour
         OnInventoryUpdated();
     }
 
-    public void RemoveItemByIndex(int index)
+    public bool RemoveItemByIndex(int index)
     {
         if (index >= 0 && index < itemList.Count)
         {
             Item item = itemList[index];
             RemoveItem(item);
+            return true;
         }
+        return false;
     }
 
     public void RemoveEveryItem()
     {
-        int count = itemList.Count;
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < itemList.Count; i++)
         {
             RemoveItem(itemList[i]);
+            i--;
         }
     }
 
@@ -126,7 +129,7 @@ public class Inventory : MonoBehaviour
         return outItem;
     }
 
-    private void OnInventoryUpdated()
+    public void OnInventoryUpdated()
     {
         foreach(InventoryUIElement UIElem in GameObject.FindGameObjectWithTag("Player").GetComponentsInChildren<InventoryUIElement>())
         {
@@ -158,6 +161,7 @@ public class Inventory : MonoBehaviour
 public class Item
 {
     public string itemName;
+    public string description;
     public GameObject PickupPrefab;
     public GameObject EquipPrefab;
     public Sprite image;

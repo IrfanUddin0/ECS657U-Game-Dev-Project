@@ -12,12 +12,12 @@ public class DestroyableObject : MonoBehaviour
         health = GetComponent<PlayerHittable>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void check()
     {
         if (health.health <= 0)
         {
             Instantiate(PickupableToSpawn, gameObject.transform.position, gameObject.transform.rotation);
+            FindAnyObjectByType<PlayerObjectives>().addDataEntry(gameObject.name.Split("(")[0]+"Destroyed", "true");
             Destroy(gameObject);
         }
     }

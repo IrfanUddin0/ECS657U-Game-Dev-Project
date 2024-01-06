@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CameraScript : MonoBehaviour
 {
@@ -21,7 +22,8 @@ public class CameraScript : MonoBehaviour
     private float fov_transform_velocity;
     private List<CameraShake> activeCameraShakes = new List<CameraShake>();
 
-
+    [SerializeField]
+    public InputActionReference Mouse;
     void Start()
     {
         GameObject.FindGameObjectsWithTag("CameraArm")[0].GetComponentInChildren<Camera>().fieldOfView = cameraFieldOfView;
@@ -38,13 +40,14 @@ public class CameraScript : MonoBehaviour
         InputMode mode = GameObject.FindGameObjectsWithTag("Player")[0].GetComponentInChildren<MainPlayerScript>().inputMode;
         if(mode==InputMode.Playing)
         {
-            rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+            Vector2 mouserot = Mouse.action.ReadValue<Vector2>();
+            rotationY += mouserot.y * sensitivityY;
             rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
 
-            rotationX += Input.GetAxis("Mouse X") * sensitivityX;
+            rotationX += mouserot.x * sensitivityX;
 
             transform.localEulerAngles = new Vector3(0, rotationX, 0);
-            transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
+            transform.Rotate(0, mouserot.x * sensitivityX, 0);
 
             GameObject.FindGameObjectsWithTag("CameraArm")[0].transform.localEulerAngles = new Vector3(-rotationY, 0, 0);
         }

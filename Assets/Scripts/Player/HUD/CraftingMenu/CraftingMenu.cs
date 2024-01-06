@@ -22,5 +22,19 @@ public class CraftingMenu : InventoryUIElement
             panel.transform.SetParent(transform, false);
             panel.transform.GetComponentInChildren<CraftingPanelScript>().SetItem(i);
         }
+
+        // if on easy then display non craftable
+        if(FindAnyObjectByType<MainPlayerScript>().GetDifficulty()==0)
+        {
+            foreach (var i in manager.NonCraftable)
+            {
+                GameObject panel = Instantiate(CraftingPanel);
+                panel.transform.SetParent(transform, false);
+                panel.transform.GetComponentInChildren<CraftingPanelScript>().craftable = false;
+                panel.transform.GetComponentInChildren<CraftingPanelScript>().SetItem(i);
+            }
+        }
+
+        GetComponent<RectTransform>().sizeDelta = new Vector2(0.0f, (manager.Craftables.Count + manager.NonCraftable.Count) * 96f);
     }
 }

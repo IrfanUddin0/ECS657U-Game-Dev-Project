@@ -3,7 +3,13 @@ guid: 253c16e3e80e74a47ba719a9c0f31107
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - ItemToPlace: {instanceID: 0}
+  - PlaceMaterial: {instanceID: 0}
+  - Rotate90Y: {instanceID: 0}
+  - Rotate90Z: {instanceID: 0}
+  - Mouse: {instanceID: 0}
+  - placeClip: {fileID: 8300000, guid: 984c9213da9f1dd43ac813022aff12d9, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

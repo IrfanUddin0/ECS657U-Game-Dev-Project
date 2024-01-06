@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TreeSpawner : MonoBehaviour
@@ -9,17 +7,38 @@ public class TreeSpawner : MonoBehaviour
 
     public GameObject TreePrefab;
 
+    public bool regen;
+    public float regenTime;
+
     private Terrain terrain;
+    private float lastSpawn;
     // Start is called before the first frame update
     void Start()
     {
         terrain = GetComponent<Terrain>();
-        SpawnTreesOnTerrain();
+        lastSpawn = Time.timeSinceLevelLoad;
+
+        // if using saver loader and save exists, then dont spawn anything in
+        if(!SaverLoader.SaveExists()
+            && FindAnyObjectByType<SaverLoader>()!= null)
+            SpawnTreesOnTerrain();
+    }
+
+    private void Update()
+    {
+        if (regen && Time.timeSinceLevelLoad - lastSpawn > regenTime)
+        {
+            float randomX = Random.Range(0f, 1f);
+            float randomZ = Random.Range(0f, 1f);
+            SpawnTreeAt(new Vector2(randomX, randomZ));
+            lastSpawn = Time.timeSinceLevelLoad;
+            print("Spawned tree");
+        }
     }
 
     private void SpawnTreesOnTerrain()
     {
-        TerrainData terrainData = terrain.terrainData;
+
         int currentTreeCount = 0;
         while(currentTreeCount < treeCount)
         {
@@ -27,22 +46,29 @@ public class TreeSpawner : MonoBehaviour
             float randomX = Random.Range(0f, 1f);
             float randomZ = Random.Range(0f, 1f);
 
-            // Calculate the world position based on the terrain's size
-            Vector3 spawnPosition = new Vector3(randomX * terrainData.size.x, 0f, randomZ * terrainData.size.z);
-
-            // Use SampleHeight to get the terrain height at that position
-            float terrainHeight = terrain.SampleHeight(spawnPosition);
-
-            if (terrainHeight <= waterLevel)
-                continue;
-
-            // Adjust the Y position to place the tree on the terrain surface
-            spawnPosition.y = terrainHeight;
-
-            // Instantiate your tree prefab at the calculated position
-            // Replace "TreePrefab" with the actual tree prefab you want to spawn
-            Instantiate(TreePrefab, spawnPosition, Quaternion.Euler(0, Random.Range(0f, 360f), 0));
-            currentTreeCount++;
+            if(SpawnTreeAt(new Vector2(randomX,randomZ)))
+                currentTreeCount++;
         }
+    }
+
+    private bool SpawnTreeAt(Vector2 pos)
+    {
+        TerrainData terrainData = terrain.terrainData;
+        // Calculate the world position based on the terrain's size
+        Vector3 spawnPosition = new Vector3(pos.x * terrainData.size.x, 0f, pos.y * terrainData.size.z);
+
+        // Use SampleHeight to get the terrain height at that position
+        float terrainHeight = terrain.SampleHeight(spawnPosition);
+
+        if (terrainHeight <= waterLevel)
+            return false;
+
+        // Adjust the Y position to place the tree on the terrain surface
+        spawnPosition.y = terrainHeight;
+
+        // Instantiate your tree prefab at the calculated position
+        // Replace "TreePrefab" with the actual tree prefab you want to spawn
+        Instantiate(TreePrefab, spawnPosition, Quaternion.Euler(0, Random.Range(0f, 360f), 0));
+        return true;
     }
 }
