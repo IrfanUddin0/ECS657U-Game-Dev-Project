@@ -59,6 +59,7 @@ public class SettingMenu : MonoBehaviour
     {
         print(actionAsset.ToJson());
         // save input bindings
-        PlayerPrefs.SetString("InputBindings", actionAsset.ToJson());
+        // disable for now causing issues
+        //PlayerPrefs.SetString("InputBindings", actionAsset.ToJson());
     }
 }
