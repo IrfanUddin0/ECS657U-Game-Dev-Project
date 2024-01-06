@@ -34,7 +34,7 @@ public class InventoryVisibilityScript : MonoBehaviour
             hide();
     }
 
-    void show()
+    public void show()
     {
         shown = true;
         transform.GetChild(0).gameObject.SetActive(true);
@@ -44,7 +44,7 @@ public class InventoryVisibilityScript : MonoBehaviour
         GameObject.FindGameObjectsWithTag("Player")[0].GetComponentInChildren<MainPlayerScript>().inputModeSetUI();
     }
 
-    void hide()
+    public void hide()
     {
         shown = false;
         transform.GetChild(0).gameObject.SetActive(false);

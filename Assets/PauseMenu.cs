@@ -8,30 +8,24 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool IsPaused = false;
     public GameObject PauseMenuUI;
-    void Update()
+
+    private void OnEnable()
     {
-        if (IsPaused)
-        {
-            Resume();
-        }
-        else
-        {
-            Pause();
-        }
+        PauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        IsPaused = true;
     }
 
-     public void Resume()
+    private void OnDisable()
     {
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         IsPaused = false;
     }
 
-    void Pause()
+    public void ResumeButton()
     {
-        PauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
-        IsPaused = true;
+        GetComponentInParent<InventoryVisibilityScript>().hide();
     }
 
     public void MainMenu()
