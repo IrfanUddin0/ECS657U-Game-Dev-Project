@@ -73,8 +73,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd5199ff60c7f8d42a072ab9aa1dc7e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
-  health: 200
+  maxHealth: 100
+  health: 100
   onHitSound: {fileID: 8300000, guid: ded7a26b35179d646b87dd2185df2ef7, type: 3}
   deathSound: {fileID: 8300000, guid: 0282c550a542d4a4199190fecc238560, type: 3}
   deathSoundVolume: 1

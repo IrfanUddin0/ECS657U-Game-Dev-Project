@@ -29,7 +29,7 @@ public class wildlife : PlayerHittable
         playerdamage = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerSurvival>();
         roamPoint = transform.position;
         animator = GetComponentInChildren<Animator>();
-        maxHealth = 100;
+
     }
 
     // Update is called once per frame
@@ -46,6 +46,8 @@ public class wildlife : PlayerHittable
             patrol();
         }
     }
+
+    //coroutine for death animation
     private IEnumerator Die()
     {
 
@@ -54,6 +56,7 @@ public class wildlife : PlayerHittable
             agent.isStopped = true;
             agent.enabled = false;
         }
+        //configure animations 
         animator.SetBool("Run Forward", false);
         animator.SetBool("Sit", false);
         animator.SetBool("Sleep", false);
@@ -68,8 +71,8 @@ public class wildlife : PlayerHittable
         if ((Vector3.SqrMagnitude(roamPoint - transform.position) < 9f) && !isSitting)
         {
 
-            StartCoroutine(Sit());
-            roamPoint = findRandomPoint();
+            StartCoroutine(Sit()); //named sit but also used for sleeping
+            roamPoint = findRandomPoint();  // finds new poitn to go to after coroutine is done
         }
         if (agent.isOnNavMesh && !isSitting)
             animator.SetBool("Run Forward", true);
@@ -80,7 +83,7 @@ public class wildlife : PlayerHittable
         agent.isStopped = true;
         isSitting = true;
         animator.SetBool("Run Forward", false);
-        int animation = Random.Range(1, 3);
+        int animation = Random.Range(1, 3);  //choose randomly to sit or sleep
         if (animation == 1)
         {
             animator.SetBool("Sit", true);
@@ -90,12 +93,14 @@ public class wildlife : PlayerHittable
             animator.SetBool("Sleep", true);
         }
 
-        yield return new WaitForSeconds(Random.Range(5f, 30f));
+        yield return new WaitForSeconds(Random.Range(5f, 30f)); // random time between 5 and 30 seconds
         animator.SetBool("Sit", false);
         animator.SetBool("Sleep", false);
         isSitting = false;
         agent.isStopped = false;
     }
+
+    //find random point on the navMesh
     Vector3 findRandomPoint()
     {
         Vector3 randomPoint = Random.insideUnitSphere * 50;
