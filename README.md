@@ -98,5 +98,4 @@ All scripts for the game were created by us, some of the 3d models, textures, ma
 - [Spring Birds Loop with Low-Cut (New Jersey)](https://freesound.org/people/hargissssound/sounds/345852/)<br>
 
 ## Plugins
-Input Rebinder<br>
-https://assetstore.unity.com/packages/tools/gui/input-rebinder-189090 <br>
+- [Input Rebinder](https://assetstore.unity.com/packages/tools/gui/input-rebinder-189090)<br>
