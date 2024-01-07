@@ -1343,7 +1343,7 @@ MonoBehaviour:
   arenaTrigger: {fileID: 7798528467909677485}
   healthBar: {fileID: 7749580061243153608}
   dragonProjectile: {fileID: 1968910006612611562, guid: 3469e4f5f0bd6f1459e112b867e937ba, type: 3}
-  deathEffect: {fileID: 100012, guid: 1f1aa87040db08846a4332981b0a6fa7, type: 3}
+  deathEffect: {fileID: 0}
   flyingSound: {fileID: 8300000, guid: 183b2c89725055743b7af5764e69637e, type: 3}
   attackSound: {fileID: 8300000, guid: 3a59495e176c4bc4bbb1487cf9b7fc0a, type: 3}
   deadSound: {fileID: 8300000, guid: a8e9033a2b9df40499c5bd0d4e7efa25, type: 3}
