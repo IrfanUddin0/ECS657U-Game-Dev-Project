@@ -79,7 +79,7 @@ public class Enemy : PlayerHittable
         // use square for optimization
         float distanceToTargetSqr = Vector3.SqrMagnitude(target.position - transform.position);
         if (distanceToTargetSqr > chaseDistance * chaseDistance
-            && (Time.timeSinceLevelLoad - playerLastHit > 5f))
+            && (Time.timeSinceLevelLoad - playerLastHit > 5f) || playerdamage.dead)
         {
             setMode(EnemyMode.Normal);
             patrol();
@@ -88,12 +88,13 @@ public class Enemy : PlayerHittable
         else if (distanceToTargetSqr <= attackDistance * attackDistance
          && (Time.timeSinceLevelLoad - lastAttackTime >= attackTime))
         {
+
             setMode(EnemyMode.Attacking);
             lastAttackTime = Time.timeSinceLevelLoad;
             playerdamage.decreasePlayerHealth(attackDamage);
             Util.PlayClipAtPoint(AttackSound, transform.position, AttackSoundVolume);
         }
-        else if (playerSeen(distanceToTargetSqr) || (Time.timeSinceLevelLoad - playerLastHit <= 5f))
+        else if ((playerSeen(distanceToTargetSqr)) || (Time.timeSinceLevelLoad - playerLastHit <= 5f))
         {
             chase();
         }
