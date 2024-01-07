@@ -2,6 +2,26 @@
 Link to WebGL Build:
 https://irfanuddin0.github.io/ECS657U-Game-Dev-Project/Build/index.html
 
+# How To Play
+Once Starting a new game you will spawn into a world. Main objective is to survive, you can complete side objectives for a challenge. The default controls are:<br>
+W,A,S,D - Movement<br>
+Mouse - Look<br>
+Space - Jump<br>
+Q - Drop current item<br>
+Esc - Pause<br>
+Left Mouse - Attack<br>
+Right Mouse - Aim<br>
+Left Shift - Sprint<br>
+F - Interact<br>
+C - Crouch<br>
+Tab - Inventory<br>
+keys 1-5 - Switch Equipped item<br>
+
+Building Controls:<br>
+Left Mouse - Place<br>
+Right Mouse + Mouse - Free Rotate Y<br>
+Left Shift - Rotate 90 Y<br>
+Left Ctrl - Rotate 90 Z<br>
 
 # Remarks
 In regards to the section:
