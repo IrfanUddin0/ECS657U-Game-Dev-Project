@@ -41,6 +41,7 @@ public class MainPlayerScript : MonoBehaviour
         spawnTransform = new SpawnTransform(transform.position, transform.rotation);
         difficulty = PlayerPrefs.HasKey("Difficulty") ? PlayerPrefs.GetInt("Difficulty") : 0;
         SetGraphicalQuality();
+        GetComponent<AudioSource>().volume = PlayerPrefs.HasKey("volume") ? PlayerPrefs.GetFloat("volume") : 1f;
     }
 
     private void OnEnable()
