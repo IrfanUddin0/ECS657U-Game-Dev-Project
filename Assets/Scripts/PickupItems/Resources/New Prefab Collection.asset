@@ -121,3 +121,9 @@ MonoBehaviour:
     valuePrefab: {fileID: 3574299389808435369, guid: 75e3a664fea57a64b85a84c925f3b18b, type: 3}
     image: {fileID: 21300000, guid: 6cfe80af9b42f5a45b62d8658e0becd7, type: 3}
     maxInStack: 64
+  - PrefabMappingName: Dragon Sword
+    ItemDescription: A Powerful Weapon from the Dragon
+    keyPrefab: {fileID: 994200610082977035, guid: 8642d73ba1859aa4c84e2c7519824bfc, type: 3}
+    valuePrefab: {fileID: 5435844516253738363, guid: 56f4439319a8ea748b3a45c3dcb6b4d5, type: 3}
+    image: {fileID: 21300000, guid: 11381dcf2e707f841a916a5a27c22913, type: 3}
+    maxInStack: 1

@@ -114,7 +114,7 @@ public class DragonObjective : Objective
     public DragonObjective()
     {
         description = "Kill the final dragon boss";
-        reward_name = "Smg";
+        reward_name = "Dragon Sword";
         data_key_name = "DragonKilled";
     }
 }
