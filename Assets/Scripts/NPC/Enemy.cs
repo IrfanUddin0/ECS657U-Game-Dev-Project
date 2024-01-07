@@ -61,6 +61,8 @@ public class Enemy : PlayerHittable
         playerLastHit = Time.timeSinceLevelLoad - 10f;
         setMode(EnemyMode.Normal);
 
+
+        //change parameters based on difficulty level
         int difficulty = PlayerPrefs.HasKey("Difficulty") ? PlayerPrefs.GetInt("Difficulty") : 0;
         maxHealth = maxHealth + 100f * difficulty;
         health = maxHealth;
@@ -78,6 +80,7 @@ public class Enemy : PlayerHittable
         // redordered these for optimization
         // use square for optimization
         float distanceToTargetSqr = Vector3.SqrMagnitude(target.position - transform.position);
+        //most common condition placed first for optimization
         if (distanceToTargetSqr > chaseDistance * chaseDistance
             && (Time.timeSinceLevelLoad - playerLastHit > 5f) || playerdamage.dead)
         {
@@ -126,6 +129,7 @@ public class Enemy : PlayerHittable
     public override void OnPlayerHit(float dmg)
     {
         base.OnPlayerHit(dmg);
+        //to detect when player is hit and space out attacks
         playerLastHit = Time.timeSinceLevelLoad;
 
         if (health <= 0 && !isDead)
