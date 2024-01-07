@@ -8,12 +8,14 @@ public static class Util
     {
         if (clip == null)
             return;
+
+        float volume_scale = PlayerPrefs.HasKey("volume") ? PlayerPrefs.GetFloat("volume") : 1f;
         GameObject gameObject = new GameObject("One shot audio");
         gameObject.transform.position = position;
         AudioSource audioSource = (AudioSource)gameObject.AddComponent(typeof(AudioSource));
         audioSource.clip = clip;
         audioSource.spatialBlend = 1f;
-        audioSource.volume = volume;
+        audioSource.volume = volume * volume_scale;
         audioSource.Play();
         Object.Destroy(gameObject, clip.length * ((Time.timeScale < 0.01f) ? 0.01f : Time.timeScale));
     }
