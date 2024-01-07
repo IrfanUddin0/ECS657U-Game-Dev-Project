@@ -233,6 +233,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4032561207356943018, guid: 7f9d8a27bd00f8649861f3be74740e2f, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4397353416604507779, guid: 7f9d8a27bd00f8649861f3be74740e2f, type: 3}
       propertyPath: m_Name
       value: ApplePickup
@@ -680,7 +684,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7158589022783991247, guid: 7c0b749d12bca4e4c9994f6ee9d782ce, type: 3}
       propertyPath: m_AnchoredPosition.y
+<<<<<<< Updated upstream
       value: 0.0005871546
+=======
+      value: 0.00048582445
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 7651506742816450104, guid: 7c0b749d12bca4e4c9994f6ee9d782ce, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1133,6 +1141,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8284011671099175134, guid: 149cdf200e796174ebfe8df3e020a242, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1259,6 +1271,10 @@ PrefabInstance:
     - target: {fileID: 994200610082977035, guid: ae70dbd9ca316ec48826977ccefe8bee, type: 3}
       propertyPath: m_Name
       value: PistolPickupItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421309231120250638, guid: ae70dbd9ca316ec48826977ccefe8bee, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5689311372325314551, guid: ae70dbd9ca316ec48826977ccefe8bee, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1622,6 +1638,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8284011671099175134, guid: 149cdf200e796174ebfe8df3e020a242, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1732,6 +1752,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SMGPickupItem
       objectReference: {fileID: 0}
+    - target: {fileID: 3421309231120250638, guid: 8dcfa32af0d826c4593c179d5bfc189f, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5689311372325314551, guid: 8dcfa32af0d826c4593c179d5bfc189f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 535.4781
@@ -1788,6 +1812,10 @@ PrefabInstance:
     - target: {fileID: 994200610082977035, guid: 4e309fa82b90ba3478d5ba1d6c2dd2d4, type: 3}
       propertyPath: m_Name
       value: AxePickupItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421309231120250638, guid: 4e309fa82b90ba3478d5ba1d6c2dd2d4, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5689311372325314551, guid: 4e309fa82b90ba3478d5ba1d6c2dd2d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1974,6 +2002,10 @@ PrefabInstance:
     - target: {fileID: 994200610082977035, guid: 6c32c05f3a9e09b43a67d39942b73f7a, type: 3}
       propertyPath: m_Name
       value: BowPickupItem (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421309231120250638, guid: 6c32c05f3a9e09b43a67d39942b73f7a, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5689311372325314551, guid: 6c32c05f3a9e09b43a67d39942b73f7a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2168,6 +2200,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7183048726380205806, guid: 149cdf200e796174ebfe8df3e020a242, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8284011671099175134, guid: 149cdf200e796174ebfe8df3e020a242, type: 3}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
