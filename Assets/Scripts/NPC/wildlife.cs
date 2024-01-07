@@ -29,6 +29,7 @@ public class wildlife : PlayerHittable
         playerdamage = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerSurvival>();
         roamPoint = transform.position;
         animator = GetComponentInChildren<Animator>();
+        maxHealth = 100;
     }
 
     // Update is called once per frame
